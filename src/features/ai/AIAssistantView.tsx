@@ -119,7 +119,7 @@ export function AIAssistantView() {
         <div className="flex items-center gap-2">
           <Badge variant="lime">
             <ShieldCheck className="h-3 w-3" />
-            {geminiActive ? `Gemini (${settings?.aiModel ?? 'gemini-2.5-flash'})` : 'Local Offline Engine'}
+            {geminiActive ? `Gemini (${settings?.aiModel ?? 'gemini-3.8-flash'})` : 'Local Offline Engine'}
           </Badge>
           <Button size="sm" variant="ghost" onClick={() => setSubView('settings')}>
             Configure AI

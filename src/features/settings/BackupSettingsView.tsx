@@ -22,7 +22,7 @@ export function BackupSettingsView() {
   const [geminiApiKey, setGeminiApiKey] = useState('');
   const [showKey, setShowKey] = useState(false);
   const [availableModels, setAvailableModels] = useState<GeminiModelOption[]>(DEFAULT_GEMINI_MODELS);
-  const [aiModel, setAiModel] = useState('gemini-2.5-flash');
+  const [aiModel, setAiModel] = useState('gemini-3.8-flash');
   const [aiEndpoint, setAiEndpoint] = useState('');
   const [aiConsent, setAiConsent] = useState(false);
   const [fetchingModels, setFetchingModels] = useState(false);
@@ -33,9 +33,16 @@ export function BackupSettingsView() {
     setAiProvider(settings.aiProvider);
     setGeminiApiKey(settings.geminiApiKey ?? '');
     if (settings.availableGeminiModels && settings.availableGeminiModels.length > 0) {
-      setAvailableModels(settings.availableGeminiModels);
+      const valid = settings.availableGeminiModels.filter((m) =>
+        DEFAULT_GEMINI_MODELS.some((d) => d.id === m.id)
+      );
+      setAvailableModels(valid.length > 0 ? valid : DEFAULT_GEMINI_MODELS);
     }
-    setAiModel(settings.aiModel ?? 'gemini-2.5-flash');
+    setAiModel(
+      settings.aiModel && DEFAULT_GEMINI_MODELS.some((d) => d.id === settings.aiModel)
+        ? settings.aiModel
+        : 'gemini-3.8-flash'
+    );
     setAiEndpoint(settings.aiEndpoint ?? '');
     setAiConsent(settings.aiConsentGranted);
   }, [settings]);
@@ -137,7 +144,7 @@ export function BackupSettingsView() {
       aiProvider,
       geminiApiKey: geminiApiKey.trim() || undefined,
       availableGeminiModels: availableModels,
-      aiModel: aiModel || 'gemini-2.5-flash',
+      aiModel: aiModel || 'gemini-3.8-flash',
       aiEndpoint: aiEndpoint.trim() || undefined,
       aiConsentGranted: aiConsent,
       schemaVersion: 1,

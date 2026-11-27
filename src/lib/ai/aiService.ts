@@ -153,7 +153,7 @@ export async function askFitnessAI(prompt: string, contextHint?: string): Promis
         .filter(Boolean)
         .join('\n\n');
 
-      const modelId = settings.aiModel || 'gemini-2.5-flash';
+      const modelId = settings.aiModel || 'gemini-3.8-flash';
       const rawReply = await callGeminiAPI({
         apiKey: settings.geminiApiKey,
         model: modelId,

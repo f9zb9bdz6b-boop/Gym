@@ -1,10 +1,8 @@
 import type { GeminiModelOption } from '@/db/types';
 
 export const DEFAULT_GEMINI_MODELS: GeminiModelOption[] = [
-  { id: 'gemini-2.5-flash', displayName: 'Gemini 2.5 Flash (Fast & Balanced)' },
-  { id: 'gemini-2.5-pro', displayName: 'Gemini 2.5 Pro (Deep Reasoning)' },
-  { id: 'gemini-2.5-flash-lite', displayName: 'Gemini 2.5 Flash-Lite (Lightweight)' },
-  { id: 'gemini-2.0-flash', displayName: 'Gemini 2.0 Flash' },
+  { id: 'gemini-3.8-flash', displayName: 'Gemini 3.8 Flash' },
+  { id: 'gemini-3.5-flash-lite', displayName: 'Gemini 3.5 Flash-Lite' },
 ];
 
 interface RawGeminiModel {
@@ -61,7 +59,7 @@ export async function callGeminiAPI(params: {
 }): Promise<string> {
   const { apiKey, model, systemPrompt, userPrompt } = params;
   const trimmedKey = apiKey.trim();
-  const modelId = (model || 'gemini-2.5-flash').replace(/^models\//, '');
+  const modelId = (model || 'gemini-3.8-flash').replace(/^models\//, '');
 
   if (!trimmedKey) {
     throw new Error('Gemini API key is not configured.');
