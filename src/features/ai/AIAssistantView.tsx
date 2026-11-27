@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/database';
 import type { AIConversationMessage, FoodLog } from '@/db/types';
-import { runLocalDeterministicAI } from '@/lib/ai/localEngine';
+import { askFitnessAI } from '@/lib/ai/aiService';
 import { nutritionRepo } from '@/db/repositories/nutritionRepo';
 import { generateId } from '@/lib/utils';
 import { useAppStore } from '@/stores/useAppStore';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { Sparkles, Send, Check, ShieldCheck } from 'lucide-react';
+import { Sparkles, Send, Check, ShieldCheck, Trash2 } from 'lucide-react';
 
 const QUICK_PROMPTS = [
   'What workout do I have today?',
@@ -19,20 +19,39 @@ const QUICK_PROMPTS = [
   'Suggest a 2,500-calorie Indian diet',
 ];
 
+const WELCOME_MSG: AIConversationMessage = {
+  id: 'welcome',
+  role: 'assistant',
+  content:
+    'Hi! I am your GYM APP AI Assistant. Ask me about your workouts, macros, 7-day progress, or say "Log my breakfast: 2 eggs and 2 roti".',
+  timestamp: new Date().toISOString(),
+};
+
 export function AIAssistantView() {
   const { addToast, setSubView } = useAppStore();
   const settings = useLiveQuery(() => db.appSettings.get('settings'), []);
-  const [messages, setMessages] = useState<AIConversationMessage[]>([
-    {
-      id: 'welcome',
-      role: 'assistant',
-      content:
-        'Hi! I am your GYM APP AI Assistant running locally on your device. Ask me about your workouts, macros, 7-day progress, or say "Log my breakfast: 2 eggs and 2 roti".',
-      timestamp: new Date().toISOString(),
-    },
-  ]);
+  const savedConv = useLiveQuery(() => db.aiConversations.get('main'), []);
+
+  const [messages, setMessages] = useState<AIConversationMessage[]>([WELCOME_MSG]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (savedConv && savedConv.messages.length > 0) {
+      setMessages(savedConv.messages);
+    }
+  }, [savedConv]);
+
+  const persistMessages = async (next: AIConversationMessage[]) => {
+    const now = new Date().toISOString();
+    await db.aiConversations.put({
+      id: 'main',
+      title: 'Primary Fitness Assistant',
+      messages: next,
+      createdAt: savedConv?.createdAt ?? now,
+      updatedAt: now,
+    });
+  };
 
   const handleSend = async (text?: string) => {
     const query = (text ?? input).trim();
@@ -45,20 +64,27 @@ export function AIAssistantView() {
       content: query,
       timestamp: new Date().toISOString(),
     };
-    setMessages((prev) => [...prev, userMsg]);
+    const withUser = [...messages, userMsg];
+    setMessages(withUser);
     setLoading(true);
 
     try {
-      const response = await runLocalDeterministicAI(query);
+      const response = await askFitnessAI(query, 'Main AI Assistant Chat');
+      const fullContent = response.fallbackNotice
+        ? `⚠️ ${response.fallbackNotice}\n\n${response.content}`
+        : response.content;
+
       const assistantMsg: AIConversationMessage = {
         id: generateId(),
         role: 'assistant',
-        content: response.content,
+        content: fullContent,
         proposedFoodLogs: response.proposedFoodLogs,
         confirmed: false,
         timestamp: new Date().toISOString(),
       };
-      setMessages((prev) => [...prev, assistantMsg]);
+      const next = [...withUser, assistantMsg];
+      setMessages(next);
+      await persistMessages(next);
     } finally {
       setLoading(false);
     }
@@ -68,11 +94,20 @@ export function AIAssistantView() {
     for (const log of logs) {
       await nutritionRepo.addFoodLog(log);
     }
-    setMessages((prev) =>
-      prev.map((m) => (m.id === msgId ? { ...m, confirmed: true } : m))
-    );
+    const next = messages.map((m) => (m.id === msgId ? { ...m, confirmed: true } : m));
+    setMessages(next);
+    await persistMessages(next);
     addToast({ title: 'Meals saved to Food Tracker', description: `${logs.length} item(s) logged.` });
   };
+
+  const handleClearChat = async () => {
+    setMessages([WELCOME_MSG]);
+    await persistMessages([WELCOME_MSG]);
+    addToast({ title: 'Chat history cleared' });
+  };
+
+  const geminiActive =
+    settings?.aiProvider === 'gemini' && settings?.aiConsentGranted && Boolean(settings?.geminiApiKey);
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)] md:h-[calc(100vh-4rem)] space-y-4">
@@ -84,12 +119,13 @@ export function AIAssistantView() {
         <div className="flex items-center gap-2">
           <Badge variant="lime">
             <ShieldCheck className="h-3 w-3" />
-            {settings?.aiProvider === 'local_deterministic' || !settings?.aiConsentGranted
-              ? 'Local Offline Engine'
-              : settings.aiProvider}
+            {geminiActive ? `Gemini (${settings?.aiModel ?? 'gemini-2.5-flash'})` : 'Local Offline Engine'}
           </Badge>
           <Button size="sm" variant="ghost" onClick={() => setSubView('settings')}>
             Configure AI
+          </Button>
+          <Button size="sm" variant="ghost" onClick={handleClearChat} title="Clear chat">
+            <Trash2 className="h-3.5 w-3.5 text-zinc-400" />
           </Button>
         </div>
       </div>
@@ -145,7 +181,7 @@ export function AIAssistantView() {
           </div>
         ))}
         {loading && (
-          <div className="text-xs text-zinc-500 animate-pulse">Analyzing local fitness records...</div>
+          <div className="text-xs text-zinc-500 animate-pulse">Analyzing your fitness records...</div>
         )}
       </Card>
 

@@ -4,6 +4,7 @@ import { db } from '@/db/database';
 import { daysAgoISO } from '@/lib/utils';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
+import { AIInlinePanel } from '@/components/ui/AIInlinePanel';
 import {
   ResponsiveContainer,
   AreaChart,
@@ -84,6 +85,13 @@ export function ProgressHub() {
           <p className="text-2xl font-bold text-amber-400 mt-1">{totalPRs}</p>
         </Card>
       </div>
+
+      <AIInlinePanel
+        title="AI Progress & Trend Analysis"
+        prompt={`Analyze my fitness progress over the selected ${range} range, including body weight trend, training volume, PRs, and nutrition adherence.`}
+        contextHint={`Progress Analytics (${range})`}
+        buttonLabel="Analyze Trends"
+      />
 
       {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

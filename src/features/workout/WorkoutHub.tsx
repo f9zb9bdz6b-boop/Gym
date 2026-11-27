@@ -9,6 +9,7 @@ import { ExerciseLibraryView } from './ExerciseLibraryView';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { AIInlinePanel } from '@/components/ui/AIInlinePanel';
 import { formatDate, formatDuration } from '@/lib/utils';
 import { Play, Copy, Trash2, CheckCircle2, Dumbbell, History, BookOpen, Calendar } from 'lucide-react';
 
@@ -86,7 +87,14 @@ export function WorkoutHub() {
       {tab === 'live' && <LiveWorkoutLogger />}
 
       {tab === 'plans' && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <AIInlinePanel
+            title="AI Workout & Progressive Overload Coach"
+            prompt="Review my active workout split and last 7 days of training. Suggest progressive overload targets and any exercise swaps if needed."
+            contextHint="Workout Plans"
+            buttonLabel="Analyze Split"
+          />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {plans.map((plan) => (
             <Card key={plan.id} className={plan.isActive ? 'border-lime-400/40' : ''}>
               <CardHeader>
@@ -144,6 +152,7 @@ export function WorkoutHub() {
               </div>
             </Card>
           ))}
+          </div>
         </div>
       )}
 

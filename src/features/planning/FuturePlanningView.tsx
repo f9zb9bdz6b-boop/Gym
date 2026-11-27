@@ -7,6 +7,7 @@ import { useAppStore } from '@/stores/useAppStore';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
+import { AIInlinePanel } from '@/components/ui/AIInlinePanel';
 import { CalendarClock, Plus } from 'lucide-react';
 
 export function FuturePlanningView() {
@@ -111,6 +112,13 @@ export function FuturePlanningView() {
           )}
         </div>
       </Card>
+
+      <AIInlinePanel
+        title="AI Future Planning & Deload Advisor"
+        prompt="Based on my active split, workout frequency, and recent training volume, suggest an optimal weekly schedule and when to plan a deload week."
+        contextHint="Future Planning"
+        buttonLabel="Plan My Week"
+      />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { EmptyState } from '@/components/ui/EmptyState';
+import { AIInlinePanel } from '@/components/ui/AIInlinePanel';
 import { wellnessRepo } from '@/db/repositories/wellnessRepo';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
 import { useWorkoutStore } from '@/stores/useWorkoutStore';
@@ -244,35 +245,14 @@ export function HomeDashboard() {
         </Card>
 
         {/* AI Insights */}
-        <Card className="lg:col-span-2">
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <Sparkles className="h-4 w-4 text-lime-400" />
-              <CardTitle>AI Fitness Insights</CardTitle>
-            </div>
-            <Button size="sm" variant="ghost" onClick={() => setActiveTab('ai')}>
-              Open Assistant
-            </Button>
-          </CardHeader>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div className="rounded-xl bg-zinc-900/70 p-3.5 border border-zinc-800/60">
-              <p className="font-semibold text-zinc-200 mb-1">Nutrition Check</p>
-              <p className="text-zinc-400">
-                {remainingProt > 0
-                  ? `You still need ${remainingProt}g of protein today. Consider 1 scoop whey (25g) or 100g chicken breast (31g).`
-                  : 'Great job! You have hit your daily protein target.'}
-              </p>
-            </div>
-            <div className="rounded-xl bg-zinc-900/70 p-3.5 border border-zinc-800/60">
-              <p className="font-semibold text-zinc-200 mb-1">Hydration & Readiness</p>
-              <p className="text-zinc-400">
-                {waterMl < waterTarget * 0.5
-                  ? `Hydration is at ${Math.round((waterMl / waterTarget) * 100)}%. Drink 500ml water before your next meal.`
-                  : 'Hydration is on track. Keep energy steady for your training session.'}
-              </p>
-            </div>
-          </div>
-        </Card>
+        <div className="lg:col-span-2 space-y-4">
+          <AIInlinePanel
+            title="AI Daily Coaching Brief"
+            prompt="Give me a concise 3-bullet daily coaching brief covering my remaining macros, today's workout focus, and hydration/recovery."
+            contextHint="Home Dashboard"
+            buttonLabel="Generate Daily Brief"
+          />
+        </div>
       </div>
     </div>
   );

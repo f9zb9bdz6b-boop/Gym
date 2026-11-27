@@ -328,10 +328,17 @@ export interface AIConversation {
   createdAt: string;
 }
 
+export interface GeminiModelOption {
+  id: string;
+  displayName: string;
+}
+
 export interface AppSettings {
   id: string; // 'settings'
   weightUnit: 'kg' | 'lbs';
-  aiProvider: 'local_deterministic' | 'ollama' | 'openai_compatible';
+  aiProvider: 'local_deterministic' | 'gemini' | 'ollama' | 'openai_compatible';
+  geminiApiKey?: string;
+  availableGeminiModels?: GeminiModelOption[];
   aiEndpoint?: string;
   aiModel?: string;
   aiConsentGranted: boolean;

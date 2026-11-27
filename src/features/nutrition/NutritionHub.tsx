@@ -10,7 +10,9 @@ import { Button } from '@/components/ui/Button';
 import { Input, Select } from '@/components/ui/Input';
 import { Badge } from '@/components/ui/Badge';
 import { ProgressBar } from '@/components/ui/ProgressBar';
-import { Plus, Search, Trash2, Calculator, Star, Utensils } from 'lucide-react';
+import { AIInlinePanel } from '@/components/ui/AIInlinePanel';
+import { askFitnessAI } from '@/lib/ai/aiService';
+import { Plus, Search, Trash2, Calculator, Star, Utensils, Sparkles, Check } from 'lucide-react';
 
 const MEAL_CATEGORIES: MealCategory[] = ['Breakfast', 'Lunch', 'Dinner', 'Snacks', 'Pre-workout', 'Post-workout'];
 const FOOD_CATEGORIES: FoodCategory[] = [
@@ -34,6 +36,11 @@ export function NutritionHub() {
   const [cfProt, setCfProt] = useState(10);
   const [cfCarb, setCfCarb] = useState(15);
   const [cfFat, setCfFat] = useState(5);
+
+  // AI Quick-Log Meal
+  const [aiMealInput, setAiMealInput] = useState('');
+  const [aiMealLoading, setAiMealLoading] = useState(false);
+  const [aiProposed, setAiProposed] = useState<Omit<import('@/db/types').FoodLog, 'id' | 'createdAt'>[] | null>(null);
 
   const targets = useLiveQuery(() => db.nutritionTargets.get('active'), []);
   const logs = useLiveQuery(() => db.foodLogs.where('date').equals(selectedDate).toArray(), [selectedDate]) ?? [];
@@ -91,6 +98,33 @@ export function NutritionHub() {
     addToast({ title: 'Custom food saved to database' });
   };
 
+  const handleAIParseMeal = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!aiMealInput.trim() || aiMealLoading) return;
+    setAiMealLoading(true);
+    setAiProposed(null);
+    try {
+      const res = await askFitnessAI(`Log my ${activeCategory.toLowerCase()}: ${aiMealInput.trim()}`, 'Nutrition Tracker');
+      if (res.proposedFoodLogs && res.proposedFoodLogs.length > 0) {
+        setAiProposed(res.proposedFoodLogs.map((l) => ({ ...l, date: selectedDate, mealCategory: activeCategory })));
+      } else {
+        addToast({ title: 'Could not parse foods', description: res.content, type: 'info' });
+      }
+    } finally {
+      setAiMealLoading(false);
+    }
+  };
+
+  const handleConfirmAIProposed = async () => {
+    if (!aiProposed) return;
+    for (const item of aiProposed) {
+      await nutritionRepo.addFoodLog(item);
+    }
+    addToast({ title: 'AI meal logged', description: `${aiProposed.length} item(s) saved to ${activeCategory}.` });
+    setAiProposed(null);
+    setAiMealInput('');
+  };
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -138,6 +172,49 @@ export function NutritionHub() {
           </div>
         </div>
       </Card>
+
+      {/* AI Meal Suggestions & Quick-Log */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <Card className="border-lime-400/20">
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-lime-400" />
+              <CardTitle>AI Quick-Log ({activeCategory})</CardTitle>
+            </div>
+          </CardHeader>
+          <form onSubmit={handleAIParseMeal} className="flex gap-2">
+            <input
+              value={aiMealInput}
+              onChange={(e) => setAiMealInput(e.target.value)}
+              placeholder="e.g. 2 boiled eggs and 2 rotis"
+              className="flex-1 h-10 rounded-xl border border-zinc-800 bg-zinc-900 px-3 text-xs text-white placeholder:text-zinc-500"
+            />
+            <Button type="submit" size="sm" disabled={aiMealLoading || !aiMealInput.trim()}>
+              {aiMealLoading ? 'Parsing...' : 'Parse'}
+            </Button>
+          </form>
+          {aiProposed && (
+            <div className="mt-3 rounded-xl bg-zinc-900 p-3 border border-zinc-800 space-y-2">
+              {aiProposed.map((item, idx) => (
+                <div key={idx} className="flex justify-between text-xs text-zinc-200">
+                  <span>{item.foodName} ({item.servingLabel})</span>
+                  <span className="text-lime-400 font-semibold">{item.calories} kcal · {item.proteinG}g P</span>
+                </div>
+              ))}
+              <Button size="sm" className="w-full" onClick={handleConfirmAIProposed}>
+                <Check className="h-3.5 w-3.5" /> Confirm &amp; Save to {activeCategory}
+              </Button>
+            </div>
+          )}
+        </Card>
+
+        <AIInlinePanel
+          title="AI Macro & Meal Advisor"
+          prompt="Based on my remaining calories and protein for today, suggest 2 practical high-protein meal options."
+          contextHint="Nutrition Hub"
+          buttonLabel="Suggest Meals"
+        />
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left: Daily Meal Logs */}

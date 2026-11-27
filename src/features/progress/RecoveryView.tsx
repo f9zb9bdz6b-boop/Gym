@@ -7,6 +7,7 @@ import { useAppStore } from '@/stores/useAppStore';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import { AIInlinePanel } from '@/components/ui/AIInlinePanel';
 import { HeartPulse, Moon, Droplets } from 'lucide-react';
 
 export function RecoveryView() {
@@ -96,6 +97,13 @@ export function RecoveryView() {
           </form>
         </Card>
       </div>
+
+      <AIInlinePanel
+        title="AI Recovery & Readiness Advisor"
+        prompt="Analyze my sleep duration, hydration, soreness, energy, and fatigue today. Give cautious, practical recovery and training intensity recommendations."
+        contextHint="Recovery & Wellness"
+        buttonLabel="Check Readiness"
+      />
     </div>
   );
 }
