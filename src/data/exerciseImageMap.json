@@ -1,15 +1,17 @@
 {
   "abs-core.floor-crunch": {
-    "image": null,
-    "imageAlt": "Floor Crunch placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.floor-crunch.jpg",
+    "imageAlt": "Floor Crunch exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Crunches"
   },
   "abs-core.weighted-crunch": {
-    "image": null,
-    "imageAlt": "Weighted Crunch placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.weighted-crunch.png",
+    "imageAlt": "Weighted Crunch exercise demonstration",
+    "imageSource": "wger (AlucardEvil40)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1648"
   },
   "abs-core.reverse-crunch": {
     "image": "exercises/core/abs-core.reverse-crunch.jpg",
@@ -19,16 +21,18 @@
     "matchedId": "Reverse_Crunch"
   },
   "abs-core.bicycle-crunch": {
-    "image": null,
-    "imageAlt": "Bicycle Crunch placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.bicycle-crunch.jpg",
+    "imageAlt": "Bicycle Crunch exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Air_Bike"
   },
   "abs-core.decline-sit-up": {
-    "image": null,
-    "imageAlt": "Decline Sit-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.decline-sit-up.jpg",
+    "imageAlt": "Decline Sit-Up exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Decline_Crunch"
   },
   "abs-core.weighted-sit-up": {
     "image": "exercises/core/abs-core.weighted-sit-up.jpg",
@@ -86,10 +90,11 @@
     "matchedId": "Hanging_Leg_Raise"
   },
   "abs-core.captains-chair-knee-raise": {
-    "image": null,
-    "imageAlt": "Captain’s Chair Knee Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.captains-chair-knee-raise.webp",
+    "imageAlt": "Captain’s Chair Knee Raise exercise demonstration",
+    "imageSource": "wger (2)",
+    "imageStatus": "matched",
+    "matchedId": "wger:2674"
   },
   "abs-core.captains-chair-leg-raise": {
     "image": null,
@@ -105,16 +110,18 @@
     "matchedId": "Russian_Twist"
   },
   "abs-core.cable-woodchop-high-low": {
-    "image": null,
-    "imageAlt": "High-to-Low Cable Wood Chop placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.cable-woodchop-high-low.jpg",
+    "imageAlt": "High-to-Low Cable Wood Chop exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Standing_Cable_Wood_Chop"
   },
   "abs-core.cable-woodchop-low-high": {
-    "image": null,
-    "imageAlt": "Low-to-High Cable Wood Chop placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.cable-woodchop-low-high.jpg",
+    "imageAlt": "Low-to-High Cable Wood Chop exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Standing_Cable_Wood_Chop"
   },
   "abs-core.landmine-rotation": {
     "image": null,
@@ -182,16 +189,18 @@
     "matchedId": "Dead_Bug"
   },
   "abs-core.ab-wheel-rollout": {
-    "image": null,
-    "imageAlt": "Ab Wheel Rollout placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.ab-wheel-rollout.jpg",
+    "imageAlt": "Ab Wheel Rollout exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Ab_Roller"
   },
   "abs-core.kneeling-ab-wheel-rollout": {
-    "image": null,
-    "imageAlt": "Kneeling Ab Wheel Rollout placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.kneeling-ab-wheel-rollout.jpg",
+    "imageAlt": "Kneeling Ab Wheel Rollout exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Ab_Roller"
   },
   "abs-core.stability-ball-rollout": {
     "image": "exercises/core/abs-core.stability-ball-rollout.jpg",
@@ -221,10 +230,11 @@
     "matchedId": "Exercise_Ball_Pull-In"
   },
   "abs-core.hollow-body-hold": {
-    "image": null,
-    "imageAlt": "Hollow-Body Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.hollow-body-hold.png",
+    "imageAlt": "Hollow-Body Hold exercise demonstration",
+    "imageSource": "wger (2)",
+    "imageStatus": "matched",
+    "matchedId": "wger:297"
   },
   "abs-core.bear-plank-hold": {
     "image": null,
@@ -246,10 +256,11 @@
     "matchedId": "Pallof_Press"
   },
   "abs-core.half-kneeling-pallof-press": {
-    "image": null,
-    "imageAlt": "Half-Kneeling Pallof Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.half-kneeling-pallof-press.jpg",
+    "imageAlt": "Half-Kneeling Pallof Press exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Pallof_Press"
   },
   "abs-core.pallof-press-walkout": {
     "image": "exercises/core/abs-core.pallof-press-walkout.jpg",
@@ -259,10 +270,11 @@
     "matchedId": "Pallof_Press"
   },
   "abs-core.tall-kneeling-pallof-press": {
-    "image": null,
-    "imageAlt": "Tall-Kneeling Pallof Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.tall-kneeling-pallof-press.jpg",
+    "imageAlt": "Tall-Kneeling Pallof Press exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Pallof_Press"
   },
   "abs-core.plank-shoulder-tap": {
     "image": null,
@@ -284,10 +296,11 @@
     "imageStatus": "unavailable"
   },
   "abs-core.banded-dead-bug": {
-    "image": null,
-    "imageAlt": "Banded Dead Bug placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.banded-dead-bug.jpg",
+    "imageAlt": "Banded Dead Bug exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Dead_Bug"
   },
   "abs-core.quadruped-band-lift": {
     "image": null,
@@ -352,10 +365,11 @@
     "imageStatus": "unavailable"
   },
   "abs-core.bird-dog-core": {
-    "image": null,
-    "imageAlt": "Bird Dog placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.bird-dog-core.png",
+    "imageAlt": "Bird Dog exercise demonstration",
+    "imageSource": "wger (Settebello)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1572"
   },
   "abs-core.prone-back-extension": {
     "image": null,
@@ -403,10 +417,11 @@
     "imageStatus": "unavailable"
   },
   "abs-core.bird-dog-hold": {
-    "image": null,
-    "imageAlt": "Bird Dog Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.bird-dog-hold.png",
+    "imageAlt": "Bird Dog Hold exercise demonstration",
+    "imageSource": "wger (Settebello)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1572"
   },
   "abs-core.hip-hinge-back-extension": {
     "image": null,
@@ -884,10 +899,11 @@
     "imageStatus": "unavailable"
   },
   "back.barbell-bent-over-row": {
-    "image": null,
-    "imageAlt": "Barbell Bent-Over Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-bent-over-row.jpg",
+    "imageAlt": "Barbell Bent-Over Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Bent_Over_Barbell_Row"
   },
   "back.barbell-pendlay-row": {
     "image": null,
@@ -1059,10 +1075,11 @@
     "imageStatus": "unavailable"
   },
   "back.seated-row-machine": {
-    "image": null,
-    "imageAlt": "Seated Row Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.seated-row-machine.png",
+    "imageAlt": "Seated Row Machine exercise demonstration",
+    "imageSource": "wger (barry)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1725"
   },
   "back.chest-supported-row-machine": {
     "image": null,
@@ -1083,10 +1100,11 @@
     "imageStatus": "unavailable"
   },
   "back.back-extension-machine": {
-    "image": null,
-    "imageAlt": "Seated Back Extension Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.back-extension-machine.png",
+    "imageAlt": "Seated Back Extension Machine exercise demonstration",
+    "imageSource": "wger (Franpol)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1143"
   },
   "back.reverse-hyperextension-machine": {
     "image": "exercises/back/back.reverse-hyperextension-machine.jpg",
@@ -1135,10 +1153,11 @@
     "imageStatus": "unavailable"
   },
   "back.cable-rear-delt-fly": {
-    "image": null,
-    "imageAlt": "Cable Rear-Delt Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-rear-delt-fly.png",
+    "imageAlt": "Cable Rear-Delt Fly exercise demonstration",
+    "imageSource": "wger (cshep442)",
+    "imageStatus": "matched",
+    "matchedId": "wger:822"
   },
   "back.cable-one-arm-pulldown": {
     "image": null,
@@ -1240,10 +1259,11 @@
     "matchedId": "Superman"
   },
   "back.bird-dog": {
-    "image": null,
-    "imageAlt": "Bird Dog placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.bird-dog.png",
+    "imageAlt": "Bird Dog exercise demonstration",
+    "imageSource": "wger (Settebello)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1572"
   },
   "back.scapular-pull-up": {
     "image": "exercises/back/back.scapular-pull-up.jpg",
@@ -1960,10 +1980,11 @@
     "matchedId": "Floor_Glute-Ham_Raise"
   },
   "legs.slider-leg-curl": {
-    "image": null,
-    "imageAlt": "Slider Leg Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/legs.slider-leg-curl.png",
+    "imageAlt": "Slider Leg Curl exercise demonstration",
+    "imageSource": "wger (Franpol)",
+    "imageStatus": "matched",
+    "matchedId": "wger:364"
   },
   "legs.stability-ball-leg-curl": {
     "image": "exercises/legs/legs.stability-ball-leg-curl.jpg",
@@ -2132,10 +2153,11 @@
     "imageStatus": "unavailable"
   },
   "legs.hip-adduction-machine": {
-    "image": null,
-    "imageAlt": "Hip Adduction Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.hip-adduction-machine.jpg",
+    "imageAlt": "Hip Adduction Machine exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Thigh_Adductor"
   },
   "legs.cable-hip-adduction": {
     "image": "exercises/legs/legs.cable-hip-adduction.jpg",
@@ -2157,10 +2179,11 @@
     "imageStatus": "unavailable"
   },
   "legs.lateral-lunge-adductor": {
-    "image": null,
-    "imageAlt": "Lateral Lunge placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/legs.lateral-lunge-adductor.png",
+    "imageAlt": "Lateral Lunge exercise demonstration",
+    "imageSource": "wger (RiccaBaro)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1604"
   },
   "legs.sumo-squat-adductor": {
     "image": null,
@@ -2169,10 +2192,11 @@
     "imageStatus": "unavailable"
   },
   "legs.hip-abduction-machine": {
-    "image": null,
-    "imageAlt": "Hip Abduction Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.hip-abduction-machine.jpg",
+    "imageAlt": "Hip Abduction Machine exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Thigh_Abductor"
   },
   "legs.standing-cable-hip-abduction": {
     "image": null,
@@ -2315,10 +2339,11 @@
     "matchedId": "Cable_Seated_Lateral_Raise"
   },
   "shoulders.machine-lateral-raise": {
-    "image": null,
-    "imageAlt": "Lateral Raise Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.machine-lateral-raise.png",
+    "imageAlt": "Lateral Raise Machine exercise demonstration",
+    "imageSource": "wger (roneydya)",
+    "imageStatus": "matched",
+    "matchedId": "wger:1654"
   },
   "shoulders.dumbbell-front-raise": {
     "image": "exercises/shoulders/shoulders.dumbbell-front-raise.jpg",
@@ -2361,10 +2386,11 @@
     "imageStatus": "unavailable"
   },
   "shoulders.dumbbell-rear-delt-fly": {
-    "image": null,
-    "imageAlt": "Bent-Over Dumbbell Rear-Delt Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.dumbbell-rear-delt-fly.jpg",
+    "imageAlt": "Bent-Over Dumbbell Rear-Delt Fly exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Seated_Bent-Over_Rear_Delt_Raise"
   },
   "shoulders.chest-supported-rear-delt-fly": {
     "image": null,
@@ -2529,10 +2555,11 @@
     "imageStatus": "unavailable"
   },
   "shoulders.pike-push-up": {
-    "image": null,
-    "imageAlt": "Pike Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.pike-push-up.png",
+    "imageAlt": "Pike Push-Up exercise demonstration",
+    "imageSource": "wger (2)",
+    "imageStatus": "matched",
+    "matchedId": "wger:454"
   },
   "shoulders.feet-elevated-pike-push-up": {
     "image": null,
@@ -2661,10 +2688,11 @@
     "matchedId": "Pullups"
   },
   "ex-barbell-row": {
-    "image": null,
-    "imageAlt": "Bent-Over Barbell Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/ex-barbell-row.jpg",
+    "imageAlt": "Bent-Over Barbell Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Bent_Over_Barbell_Row"
   },
   "ex-overhead-press": {
     "image": "exercises/shoulders/ex-overhead-press.jpg",
@@ -2688,10 +2716,11 @@
     "matchedId": "Barbell_Curl"
   },
   "ex-tricep-pushdown": {
-    "image": null,
-    "imageAlt": "Cable Tricep Pushdown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/ex-tricep-pushdown.jpg",
+    "imageAlt": "Cable Tricep Pushdown exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Triceps_Pushdown"
   },
   "ex-wrist-curl": {
     "image": "exercises/arms/ex-wrist-curl.jpg",
