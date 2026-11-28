@@ -3,13 +3,14 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/database';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
 import { generateExerciseDetailsWithAI } from '@/lib/ai/aiService';
+import { ExerciseDetailView } from './ExerciseDetailView';
 import type { ExerciseDifficulty, ExerciseLibraryItem, MuscleGroup } from '@/db/types';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Input, Select } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { useAppStore } from '@/stores/useAppStore';
-import { Search, Star, Plus, X, Dumbbell, Sparkles, Pencil } from 'lucide-react';
+import { Search, Star, Plus, Sparkles, Pencil } from 'lucide-react';
 
 const MUSCLE_GROUPS: MuscleGroup[] = [
   'Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Forearms',
@@ -396,71 +397,14 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
       </div>
 
       {selectedEx && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
-          <Card className="w-full max-w-lg max-h-[85vh] overflow-y-auto">
-            <CardHeader>
-              <div className="flex items-center gap-2">
-                <Dumbbell className="h-5 w-5 text-lime-400" />
-                <CardTitle>{selectedEx.name}</CardTitle>
-              </div>
-              <div className="flex items-center gap-2">
-                <Button size="sm" variant="outline" onClick={() => { setSelectedEx(null); openEdit(selectedEx); }}>
-                  <Pencil className="h-3.5 w-3.5" /> Edit
-                </Button>
-                <button onClick={() => setSelectedEx(null)} className="text-zinc-400 hover:text-white cursor-pointer">
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-            </CardHeader>
-            <div className="space-y-4 text-xs">
-              <div className="flex flex-wrap gap-1.5">
-                <Badge variant="lime">{selectedEx.primaryMuscle}</Badge>
-                {selectedEx.subregion && <Badge>{selectedEx.subregion}</Badge>}
-                {selectedEx.secondaryMuscles.map((m) => <Badge key={m}>{m}</Badge>)}
-                <Badge>{selectedEx.equipment}</Badge>
-              </div>
-              {selectedEx.primaryMuscles && (
-                <div>
-                  <p className="font-semibold text-zinc-200 mb-1">Primary &amp; Secondary Muscles</p>
-                  <p className="text-zinc-300">Primary: {selectedEx.primaryMuscles.join(', ')}</p>
-                  {selectedEx.secondaryMuscleLabels && selectedEx.secondaryMuscleLabels.length > 0 && (
-                    <p className="text-zinc-400">Secondary: {selectedEx.secondaryMuscleLabels.join(', ')}</p>
-                  )}
-                </div>
-              )}
-              {selectedEx.safetyCautions && selectedEx.safetyCautions.length > 0 && (
-                <div>
-                  <p className="font-semibold text-amber-300 mb-1">Safety Cautions</p>
-                  <ul className="list-disc list-inside space-y-1 text-zinc-400">
-                    {selectedEx.safetyCautions.map((c, i) => <li key={i}>{c}</li>)}
-                  </ul>
-                </div>
-              )}
-              {selectedEx.calorieEstimation?.metAssumption.sourceStatus === 'to_be_configured' && (
-                <div className="rounded-xl bg-zinc-900 p-3 border border-zinc-800 text-zinc-400">
-                  <p className="font-semibold text-zinc-200 mb-0.5">Calorie Estimation</p>
-                  <p>Not configured yet (requires documented MET value &amp; source).</p>
-                </div>
-              )}
-              <div>
-                <p className="font-semibold text-zinc-200 mb-1">Instructions</p>
-                <ol className="list-decimal list-inside space-y-1 text-zinc-400">
-                  {selectedEx.instructions.map((step, i) => <li key={i}>{step}</li>)}
-                </ol>
-              </div>
-              <div>
-                <p className="font-semibold text-zinc-200 mb-1">Form Guidance</p>
-                <p className="text-zinc-400">{selectedEx.formGuidance}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-zinc-200 mb-1">Common Mistakes</p>
-                <ul className="list-disc list-inside space-y-1 text-zinc-400">
-                  {selectedEx.commonMistakes.map((m, i) => <li key={i}>{m}</li>)}
-                </ul>
-              </div>
-            </div>
-          </Card>
-        </div>
+        <ExerciseDetailView
+          exercise={selectedEx}
+          allExercises={exercises}
+          onClose={() => setSelectedEx(null)}
+          onEdit={(ex) => openEdit(ex)}
+          onSelectExercise={onSelectExercise}
+          onNavigateExercise={(ex) => setSelectedEx(ex)}
+        />
       )}
     </div>
   );
