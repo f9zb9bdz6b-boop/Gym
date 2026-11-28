@@ -287,6 +287,22 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
         </Card>
       )}
 
+      <div className="flex flex-wrap gap-1.5">
+        {(['ALL', 'Chest', 'Back', 'Shoulders'] as const).map((region) => (
+          <button
+            key={region}
+            onClick={() => setMuscleFilter(region)}
+            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+              muscleFilter === region
+                ? 'bg-lime-400 text-zinc-950'
+                : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
+            }`}
+          >
+            {region === 'ALL' ? `All (${exercises.length})` : `${region} (${exercises.filter((e) => e.primaryMuscle === region).length})`}
+          </button>
+        ))}
+      </div>
+
       <div className="flex flex-col sm:flex-row gap-3">
         <div className="relative flex-1">
           <Search className="absolute left-3 top-3 h-4 w-4 text-zinc-500" />
