@@ -24,7 +24,7 @@ import { workoutRepo } from '@/db/repositories/workoutRepo';
 import { generateExerciseDetailsWithAI } from '@/lib/ai/aiService';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { MuscleAnatomyDiagram } from './MuscleAnatomyDiagram';
+import { AnatomyViewerPanel } from '@/features/anatomy/components/AnatomyViewerPanel';
 
 type DetailTab = 'overview' | 'anatomy' | 'instructions' | 'safety' | 'met';
 type GallerySlot = 'starting' | 'mid' | 'finishing' | 'angles' | 'video';
@@ -408,42 +408,13 @@ export function ExerciseDetailView({
 
           {/* 2. MUSCLE ANATOMY */}
           {activeTab === 'anatomy' && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              <div className="lg:col-span-8">
-                <MuscleAnatomyDiagram exercise={exercise} />
-              </div>
-              <div className="lg:col-span-4 space-y-4">
-                {anatomyUri && (
-                  <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
-                    <img src={anatomyUri} alt={`${exercise.name} anatomy`} className="w-full h-auto" />
-                  </div>
-                )}
-                <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4 space-y-3">
-                  <h3 className="text-xs font-semibold uppercase tracking-wider text-zinc-400">
-                    Muscle Breakdown
-                  </h3>
-                  <div className="space-y-2 text-xs">
-                    <div>
-                      <p className="text-lime-300 font-medium mb-1">Primary Muscles</p>
-                      <p className="text-zinc-300">
-                        {(exercise.primaryMuscles?.length
-                          ? exercise.primaryMuscles
-                          : [exercise.primaryMuscle]
-                        ).join(', ')}
-                      </p>
-                    </div>
-                    <div>
-                      <p className="text-purple-300 font-medium mb-1">Secondary Muscles</p>
-                      <p className="text-zinc-400">
-                        {(exercise.secondaryMuscleLabels?.length
-                          ? exercise.secondaryMuscleLabels
-                          : exercise.secondaryMuscles
-                        ).join(', ') || 'None specified'}
-                      </p>
-                    </div>
-                  </div>
+            <div className="space-y-4">
+              {anatomyUri && (
+                <div className="rounded-2xl border border-zinc-800 bg-zinc-900/50 overflow-hidden max-w-xs">
+                  <img src={anatomyUri} alt={`${exercise.name} anatomy`} className="w-full h-auto" />
                 </div>
-              </div>
+              )}
+              <AnatomyViewerPanel exercise={exercise} />
             </div>
           )}
 
