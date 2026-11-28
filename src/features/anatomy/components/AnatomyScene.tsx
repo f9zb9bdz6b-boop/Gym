@@ -72,10 +72,21 @@ function AnatomyModelMesh({
 
       const baseMat = obj.material instanceof THREE.MeshStandardMaterial
         ? obj.material.clone()
-        : new THREE.MeshStandardMaterial({ color: meta?.color || '#9a443b', roughness: 0.55 });
+        : new THREE.MeshStandardMaterial({ color: meta?.color || '#a33b34', roughness: 0.45 });
 
-      baseMat.roughness = system === 'skin' ? 0.65 : 0.48;
-      baseMat.metalness = 0.05;
+      if (system === 'muscles') {
+        baseMat.color.set(meta?.color || '#a33b34').lerp(new THREE.Color('#8f2d27'), 0.25);
+        baseMat.roughness = 0.38;
+        baseMat.metalness = 0.08;
+      } else if (system === 'skeleton') {
+        baseMat.color.set('#e8e2d5');
+        baseMat.roughness = 0.42;
+        baseMat.metalness = 0.04;
+      } else {
+        baseMat.roughness = system === 'skin' ? 0.65 : 0.45;
+        baseMat.metalness = 0.05;
+      }
+      baseMat.userData.baseColor = baseMat.color.clone();
       obj.material = baseMat;
 
       if (key) {
@@ -108,7 +119,7 @@ function AnatomyModelMesh({
   const hoverColor = useMemo(() => new THREE.Color(ANATOMY_COLORS.hovered), []);
 
   useFrame(({ clock }) => {
-    const pulse = 0.42 + 0.18 * Math.sin(clock.elapsedTime * 3);
+    const pulse = 0.62 + 0.18 * Math.sin(clock.elapsedTime * 3);
     for (const part of parts.values()) {
       const isSelected = part.key === selectedKey;
       const isHovered = part.key === hoveredKey;
@@ -116,19 +127,26 @@ function AnatomyModelMesh({
       const isSecondary = secondaryKeys.has(part.key);
 
       for (const mat of part.materials) {
+        const baseCol = (mat.userData.baseColor as THREE.Color | undefined) || mat.color;
         if (isSelected) {
+          mat.color.copy(baseCol).lerp(selectedColor, 0.55);
           mat.emissive.copy(selectedColor);
-          mat.emissiveIntensity = 0.78;
+          mat.emissiveIntensity = 0.9;
         } else if (isHovered) {
-          mat.emissive.copy(isPrimary ? primaryColor : isSecondary ? secondaryColor : hoverColor);
-          mat.emissiveIntensity = 0.65;
+          const hoverTint = isPrimary ? primaryColor : isSecondary ? secondaryColor : hoverColor;
+          mat.color.copy(baseCol).lerp(hoverTint, 0.45);
+          mat.emissive.copy(hoverTint);
+          mat.emissiveIntensity = 0.8;
         } else if (isPrimary) {
+          mat.color.copy(baseCol).lerp(primaryColor, 0.65);
           mat.emissive.copy(primaryColor);
           mat.emissiveIntensity = pulse;
         } else if (isSecondary) {
+          mat.color.copy(baseCol).lerp(secondaryColor, 0.55);
           mat.emissive.copy(secondaryColor);
-          mat.emissiveIntensity = pulse * 0.85;
+          mat.emissiveIntensity = pulse * 0.82;
         } else {
+          mat.color.copy(baseCol);
           mat.emissiveIntensity = 0;
         }
 
@@ -248,12 +266,21 @@ export default function AnatomyScene({
   const controlsRef = useRef<OrbitControlsImpl | null>(null);
 
   return (
-    <Canvas dpr={[1, 2]} gl={{ antialias: true, alpha: true }} className="w-full h-full">
+    <Canvas
+      dpr={[1, 2]}
+      gl={{
+        antialias: true,
+        alpha: true,
+        toneMapping: THREE.ACESFilmicToneMapping,
+        toneMappingExposure: 1.15,
+      }}
+      className="w-full h-full"
+    >
       <PerspectiveCamera makeDefault position={[0, 0.96, DEFAULT_DISTANCE]} fov={32} near={0.05} far={50} />
-      <hemisphereLight args={['#ffffff', '#8c7a6b', 1.15]} />
-      <directionalLight position={[2.5, 4, 3]} intensity={1.7} />
-      <directionalLight position={[-3, 2, -2]} intensity={0.85} />
-      <directionalLight position={[0, 1.5, -4]} intensity={0.7} />
+      <hemisphereLight args={['#f8fafc', '#27272a', 0.95]} />
+      <directionalLight position={[3, 4.5, 3.5]} intensity={2.1} color="#fff7ed" />
+      <directionalLight position={[-3.5, 2.5, -2.5]} intensity={1.15} color="#a5f3fc" />
+      <directionalLight position={[0, 1.5, -4]} intensity={1.0} color="#c4b5fd" />
 
       <LoadingReporter onProgress={onProgress} />
 
