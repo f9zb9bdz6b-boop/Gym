@@ -8,8 +8,10 @@ describe('exerciseImageMap', () => {
     const entries = Object.entries(imageMap);
     expect(entries.length).toBeGreaterThanOrEqual(409);
 
-    const matched = entries.filter(([, val]) => val.imageStatus === 'matched');
-    expect(matched.length).toBeGreaterThan(150);
+    const matched = entries.filter(
+      ([, val]) => val.imageStatus === 'matched' || val.imageStatus === 'manually_verified'
+    );
+    expect(matched.length).toBe(entries.length);
 
     for (const [id, val] of matched) {
       expect(val.image, `Missing image path for ${id}`).toBeTruthy();

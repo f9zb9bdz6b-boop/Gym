@@ -63,10 +63,10 @@
     "matchedId": "Exercise_Ball_Crunch"
   },
   "abs-core.v-up": {
-    "image": null,
-    "imageAlt": "V-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.v-up.svg",
+    "imageAlt": "V-Up technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.lying-leg-raise": {
     "image": "exercises/core/abs-core.lying-leg-raise.jpg",
@@ -125,10 +125,10 @@
     "matchedId": "Standing_Cable_Wood_Chop"
   },
   "abs-core.landmine-rotation": {
-    "image": null,
-    "imageAlt": "Landmine Rotation placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.landmine-rotation.svg",
+    "imageAlt": "Landmine Rotation technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.dumbbell-side-bend": {
     "image": "exercises/core/abs-core.dumbbell-side-bend.jpg",
@@ -145,28 +145,29 @@
     "matchedId": "One-Arm_High-Pulley_Cable_Side_Bends"
   },
   "abs-core.side-crunch": {
-    "image": null,
-    "imageAlt": "Side-Lying Oblique Crunch placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.side-crunch.jpg",
+    "imageAlt": "Side-Lying Oblique Crunch exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Oblique_Crunches"
   },
   "abs-core.windshield-wiper-bent-knee": {
-    "image": null,
-    "imageAlt": "Bent-Knee Windshield Wiper placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.windshield-wiper-bent-knee.svg",
+    "imageAlt": "Bent-Knee Windshield Wiper technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.cross-body-mountain-climber": {
-    "image": null,
-    "imageAlt": "Cross-Body Mountain Climber placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.cross-body-mountain-climber.svg",
+    "imageAlt": "Cross-Body Mountain Climber technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.standing-band-rotation": {
-    "image": null,
-    "imageAlt": "Standing Resistance-Band Rotation placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.standing-band-rotation.svg",
+    "imageAlt": "Standing Resistance-Band Rotation technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.forearm-plank": {
     "image": "exercises/core/abs-core.forearm-plank.jpg",
@@ -211,10 +212,10 @@
     "matchedId": "Exercise_Ball_Pull-In"
   },
   "abs-core.body-saw-plank": {
-    "image": null,
-    "imageAlt": "Body Saw Plank placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.body-saw-plank.svg",
+    "imageAlt": "Body Saw Plank technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.rkc-plank": {
     "image": "exercises/core/abs-core.rkc-plank.jpg",
@@ -245,10 +246,10 @@
     "matchedId": "repdb:bear-plank-hold"
   },
   "abs-core.trx-body-saw": {
-    "image": null,
-    "imageAlt": "Suspension-Trainer Body Saw placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.trx-body-saw.svg",
+    "imageAlt": "Suspension-Trainer Body Saw technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.standing-pallof-press": {
     "image": "exercises/core/abs-core.standing-pallof-press.jpg",
@@ -279,10 +280,10 @@
     "matchedId": "Pallof_Press"
   },
   "abs-core.plank-shoulder-tap": {
-    "image": null,
-    "imageAlt": "Plank Shoulder Tap placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.plank-shoulder-tap.svg",
+    "imageAlt": "Plank Shoulder Tap technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.bird-dog-row": {
     "image": "exercises/core/abs-core.bird-dog-row.jpg",
@@ -292,10 +293,10 @@
     "matchedId": "One-Arm_Dumbbell_Row"
   },
   "abs-core.single-arm-cable-hold-core": {
-    "image": null,
-    "imageAlt": "Single-Arm Cable Anti-Rotation Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.single-arm-cable-hold-core.svg",
+    "imageAlt": "Single-Arm Cable Anti-Rotation Hold technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.banded-dead-bug": {
     "image": "exercises/core/abs-core.banded-dead-bug.jpg",
@@ -305,16 +306,16 @@
     "matchedId": "Dead_Bug"
   },
   "abs-core.quadruped-band-lift": {
-    "image": null,
-    "imageAlt": "Quadruped Band Anti-Rotation Lift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.quadruped-band-lift.svg",
+    "imageAlt": "Quadruped Band Anti-Rotation Lift technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.renegade-row-core": {
-    "image": null,
-    "imageAlt": "Renegade Row (Core Stability) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/abs-core.renegade-row-core.svg",
+    "imageAlt": "Renegade Row (Core Stability) technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.side-plank": {
     "image": "exercises/core/abs-core.side-plank.jpg",
@@ -338,16 +339,16 @@
     "matchedId": "repdb:suitcase-carry"
   },
   "abs-core.suitcase-march": {
-    "image": null,
-    "imageAlt": "Suitcase March placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.suitcase-march.svg",
+    "imageAlt": "Suitcase March technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.offset-farmer-carry": {
-    "image": null,
-    "imageAlt": "Offset Farmer Carry placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.offset-farmer-carry.svg",
+    "imageAlt": "Offset Farmer Carry technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.side-plank-reach-through": {
     "image": "exercises/core/abs-core.side-plank-reach-through.jpg",
@@ -357,10 +358,10 @@
     "matchedId": "Push_Up_to_Side_Plank"
   },
   "abs-core.standing-one-arm-overhead-carry": {
-    "image": null,
-    "imageAlt": "Single-Arm Overhead Carry placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/abs-core.standing-one-arm-overhead-carry.svg",
+    "imageAlt": "Single-Arm Overhead Carry technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.copenhagen-side-plank-core": {
     "image": "exercises/core/abs-core.copenhagen-side-plank-core.webp",
@@ -412,16 +413,16 @@
     "matchedId": "Reverse_Hyperextension"
   },
   "abs-core.quadruped-lumbar-extension": {
-    "image": null,
-    "imageAlt": "Quadruped Trunk Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.quadruped-lumbar-extension.svg",
+    "imageAlt": "Quadruped Trunk Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.prone-cobra-hold": {
-    "image": null,
-    "imageAlt": "Prone Cobra Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.prone-cobra-hold.svg",
+    "imageAlt": "Prone Cobra Hold technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "abs-core.bird-dog-hold": {
     "image": "exercises/core/abs-core.bird-dog-hold.png",
@@ -494,10 +495,11 @@
     "matchedId": "Hammer_Curls"
   },
   "arms.cross-body-hammer-curl": {
-    "image": null,
-    "imageAlt": "Cross-Body Hammer Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.cross-body-hammer-curl.jpg",
+    "imageAlt": "Cross-Body Hammer Curl exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Cross_Body_Hammer_Curl"
   },
   "arms.concentration-curl": {
     "image": "exercises/arms/arms.concentration-curl.jpg",
@@ -556,10 +558,11 @@
     "matchedId": "Barbell_Curl"
   },
   "arms.behind-back-wrist-curl": {
-    "image": null,
-    "imageAlt": "Behind-the-Back Wrist Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.behind-back-wrist-curl.jpg",
+    "imageAlt": "Behind-the-Back Wrist Curl exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl"
   },
   "arms.dumbbell-wrist-curl": {
     "image": "exercises/arms/arms.dumbbell-wrist-curl.jpg",
@@ -569,10 +572,10 @@
     "matchedId": "Seated_Dumbbell_Palms-Down_Wrist_Curl"
   },
   "arms.wrist-extension-dumbbell": {
-    "image": null,
-    "imageAlt": "Dumbbell Wrist Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.wrist-extension-dumbbell.svg",
+    "imageAlt": "Dumbbell Wrist Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.wrist-roller": {
     "image": "exercises/arms/arms.wrist-roller.jpg",
@@ -582,28 +585,29 @@
     "matchedId": "Wrist_Roller"
   },
   "arms.farmer-carry": {
-    "image": null,
-    "imageAlt": "Farmer Carry placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.farmer-carry.jpg",
+    "imageAlt": "Farmer Carry exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Farmers_Walk"
   },
   "arms.barbell-hold-grip": {
-    "image": null,
-    "imageAlt": "Barbell Static Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.barbell-hold-grip.svg",
+    "imageAlt": "Barbell Static Hold technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.plate-pinch-carry": {
-    "image": null,
-    "imageAlt": "Plate Pinch Carry placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.plate-pinch-carry.svg",
+    "imageAlt": "Plate Pinch Carry technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.wrist-pronation-supination": {
-    "image": null,
-    "imageAlt": "Dumbbell Wrist Pronation and Supination placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.wrist-pronation-supination.svg",
+    "imageAlt": "Dumbbell Wrist Pronation and Supination technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.cable-biceps-curl-straight-bar": {
     "image": "exercises/arms/arms.cable-biceps-curl-straight-bar.jpg",
@@ -641,10 +645,10 @@
     "matchedId": "Cable_Wrist_Curl"
   },
   "arms.high-cable-double-biceps-curl": {
-    "image": null,
-    "imageAlt": "High-Cable Double Biceps Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.high-cable-double-biceps-curl.svg",
+    "imageAlt": "High-Cable Double Biceps Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.cable-preacher-curl": {
     "image": "exercises/arms/arms.cable-preacher-curl.jpg",
@@ -668,16 +672,16 @@
     "matchedId": "Cable_Wrist_Curl"
   },
   "arms.cable-wrist-extension": {
-    "image": null,
-    "imageAlt": "Cable Wrist Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.cable-wrist-extension.svg",
+    "imageAlt": "Cable Wrist Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.cable-pronation-supination": {
-    "image": null,
-    "imageAlt": "Cable Forearm Pronation and Supination placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.cable-pronation-supination.svg",
+    "imageAlt": "Cable Forearm Pronation and Supination technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.cable-triceps-pushdown-straight": {
     "image": "exercises/arms/arms.cable-triceps-pushdown-straight.jpg",
@@ -729,10 +733,10 @@
     "matchedId": "One-Legged_Cable_Kickback"
   },
   "arms.cable-cross-body-triceps-extension": {
-    "image": null,
-    "imageAlt": "Cross-Body Cable Triceps Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.cable-cross-body-triceps-extension.svg",
+    "imageAlt": "Cross-Body Cable Triceps Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.triceps-dip-parallel-bars": {
     "image": "exercises/arms/arms.triceps-dip-parallel-bars.jpg",
@@ -763,28 +767,29 @@
     "matchedId": "repdb:diamond-push-ups"
   },
   "arms.bodyweight-triceps-extension": {
-    "image": null,
-    "imageAlt": "Bodyweight Triceps Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.bodyweight-triceps-extension.svg",
+    "imageAlt": "Bodyweight Triceps Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.ring-triceps-extension": {
-    "image": null,
-    "imageAlt": "Ring Triceps Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.ring-triceps-extension.svg",
+    "imageAlt": "Ring Triceps Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.chin-up-underhand-biceps": {
-    "image": null,
-    "imageAlt": "Underhand Chin-Up (Biceps Emphasis) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.chin-up-underhand-biceps.jpg",
+    "imageAlt": "Underhand Chin-Up (Biceps Emphasis) exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Chin-Up"
   },
   "arms.towel-hang-grip": {
-    "image": null,
-    "imageAlt": "Towel Hang placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.towel-hang-grip.svg",
+    "imageAlt": "Towel Hang technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.dead-hang": {
     "image": "exercises/arms/arms.dead-hang.webp",
@@ -794,10 +799,10 @@
     "matchedId": "repdb:dead-hang"
   },
   "arms.fingertip-push-up-progression": {
-    "image": null,
-    "imageAlt": "Fingertip Support Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.fingertip-push-up-progression.svg",
+    "imageAlt": "Fingertip Support Hold technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.machine-biceps-curl": {
     "image": "exercises/arms/arms.machine-biceps-curl.jpg",
@@ -814,10 +819,11 @@
     "matchedId": "Machine_Preacher_Curls"
   },
   "arms.machine-triceps-extension": {
-    "image": null,
-    "imageAlt": "Seated Triceps Extension Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.machine-triceps-extension.jpg",
+    "imageAlt": "Seated Triceps Extension Machine exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Machine_Triceps_Extension"
   },
   "arms.assisted-dip-machine-triceps": {
     "image": "exercises/arms/arms.assisted-dip-machine-triceps.webp",
@@ -841,64 +847,64 @@
     "matchedId": "Machine_Bicep_Curl"
   },
   "arms.grip-crusher": {
-    "image": null,
-    "imageAlt": "Hand Gripper Close placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.grip-crusher.svg",
+    "imageAlt": "Hand Gripper Close technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-biceps-curl": {
-    "image": null,
-    "imageAlt": "Resistance-Band Biceps Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-biceps-curl.svg",
+    "imageAlt": "Resistance-Band Biceps Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-hammer-curl": {
-    "image": null,
-    "imageAlt": "Resistance-Band Hammer Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-hammer-curl.svg",
+    "imageAlt": "Resistance-Band Hammer Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-reverse-curl": {
-    "image": null,
-    "imageAlt": "Resistance-Band Reverse Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-reverse-curl.svg",
+    "imageAlt": "Resistance-Band Reverse Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-triceps-pushdown": {
-    "image": null,
-    "imageAlt": "Resistance-Band Triceps Pushdown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-triceps-pushdown.svg",
+    "imageAlt": "Resistance-Band Triceps Pushdown technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-overhead-triceps-extension": {
-    "image": null,
-    "imageAlt": "Resistance-Band Overhead Triceps Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/arms.band-overhead-triceps-extension.svg",
+    "imageAlt": "Resistance-Band Overhead Triceps Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-kickback-triceps": {
-    "image": null,
-    "imageAlt": "Resistance-Band Triceps Kickback placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-kickback-triceps.svg",
+    "imageAlt": "Resistance-Band Triceps Kickback technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-wrist-curl": {
-    "image": null,
-    "imageAlt": "Resistance-Band Wrist Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-wrist-curl.svg",
+    "imageAlt": "Resistance-Band Wrist Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.band-wrist-extension": {
-    "image": null,
-    "imageAlt": "Resistance-Band Wrist Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.band-wrist-extension.svg",
+    "imageAlt": "Resistance-Band Wrist Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.backpack-curl": {
-    "image": null,
-    "imageAlt": "Backpack Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.backpack-curl.svg",
+    "imageAlt": "Backpack Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "arms.backpack-overhead-triceps-extension": {
     "image": "exercises/arms/arms.backpack-overhead-triceps-extension.jpg",
@@ -908,10 +914,10 @@
     "matchedId": "Sled_Overhead_Triceps_Extension"
   },
   "arms.towel-isometric-curl": {
-    "image": null,
-    "imageAlt": "Towel Isometric Biceps Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.towel-isometric-curl.svg",
+    "imageAlt": "Towel Isometric Biceps Curl technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.barbell-bent-over-row": {
     "image": "exercises/back/back.barbell-bent-over-row.jpg",
@@ -928,34 +934,35 @@
     "matchedId": "repdb:pendlay-row"
   },
   "back.barbell-underhand-row": {
-    "image": null,
-    "imageAlt": "Underhand Barbell Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-underhand-row.jpg",
+    "imageAlt": "Underhand Barbell Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Reverse_Grip_Bent-Over_Rows"
   },
   "back.barbell-yates-row": {
-    "image": null,
-    "imageAlt": "Yates Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-yates-row.svg",
+    "imageAlt": "Yates Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.barbell-seal-row": {
-    "image": null,
-    "imageAlt": "Barbell Seal Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-seal-row.svg",
+    "imageAlt": "Barbell Seal Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.barbell-meadows-row": {
-    "image": null,
-    "imageAlt": "Meadows Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-meadows-row.svg",
+    "imageAlt": "Meadows Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.t-bar-row-landmine": {
-    "image": null,
-    "imageAlt": "Landmine T-Bar Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.t-bar-row-landmine.svg",
+    "imageAlt": "Landmine T-Bar Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.dumbbell-one-arm-row": {
     "image": "exercises/back/back.dumbbell-one-arm-row.jpg",
@@ -1021,10 +1028,11 @@
     "matchedId": "Rack_Pulls"
   },
   "back.barbell-deadlift": {
-    "image": null,
-    "imageAlt": "Conventional Deadlift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-deadlift.jpg",
+    "imageAlt": "Conventional Deadlift exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Barbell_Deadlift"
   },
   "back.barbell-romanian-deadlift": {
     "image": "exercises/back/back.barbell-romanian-deadlift.jpg",
@@ -1041,16 +1049,17 @@
     "matchedId": "Stiff-Legged_Dumbbell_Deadlift"
   },
   "back.trap-bar-deadlift": {
-    "image": null,
-    "imageAlt": "Trap-Bar Deadlift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.trap-bar-deadlift.svg",
+    "imageAlt": "Trap-Bar Deadlift technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.lat-pulldown-wide-grip": {
-    "image": null,
-    "imageAlt": "Wide-Grip Lat Pulldown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.lat-pulldown-wide-grip.jpg",
+    "imageAlt": "Wide-Grip Lat Pulldown exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Wide-Grip_Lat_Pulldown"
   },
   "back.lat-pulldown-neutral-grip": {
     "image": "exercises/back/back.lat-pulldown-neutral-grip.webp",
@@ -1088,10 +1097,10 @@
     "matchedId": "Leverage_High_Row"
   },
   "back.plate-loaded-high-row": {
-    "image": null,
-    "imageAlt": "Plate-Loaded High Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.plate-loaded-high-row.svg",
+    "imageAlt": "Plate-Loaded High Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.seated-row-machine": {
     "image": "exercises/back/back.seated-row-machine.png",
@@ -1108,16 +1117,16 @@
     "matchedId": "repdb:chest-supported-machine-row"
   },
   "back.iso-lateral-row-machine": {
-    "image": null,
-    "imageAlt": "Iso-Lateral Row Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.iso-lateral-row-machine.svg",
+    "imageAlt": "Iso-Lateral Row Machine technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.machine-pullover": {
-    "image": null,
-    "imageAlt": "Pullover Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.machine-pullover.svg",
+    "imageAlt": "Pullover Machine technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.back-extension-machine": {
     "image": "exercises/back/back.back-extension-machine.png",
@@ -1134,16 +1143,17 @@
     "matchedId": "Reverse_Hyperextension"
   },
   "back.cable-seated-row-close": {
-    "image": null,
-    "imageAlt": "Close-Grip Seated Cable Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-seated-row-close.jpg",
+    "imageAlt": "Close-Grip Seated Cable Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Seated_Cable_Rows"
   },
   "back.cable-seated-row-wide": {
-    "image": null,
-    "imageAlt": "Wide-Grip Seated Cable Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-seated-row-wide.svg",
+    "imageAlt": "Wide-Grip Seated Cable Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.cable-seated-row-single-arm": {
     "image": "exercises/back/back.cable-seated-row-single-arm.jpg",
@@ -1181,10 +1191,10 @@
     "matchedId": "wger:822"
   },
   "back.cable-one-arm-pulldown": {
-    "image": null,
-    "imageAlt": "Kneeling Single-Arm Cable Pulldown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-one-arm-pulldown.svg",
+    "imageAlt": "Kneeling Single-Arm Cable Pulldown technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.cable-prayer-pulldown": {
     "image": "exercises/back/back.cable-prayer-pulldown.jpg",
@@ -1201,10 +1211,10 @@
     "matchedId": "repdb:cable-pull-through"
   },
   "back.cable-good-morning": {
-    "image": null,
-    "imageAlt": "Cable Good Morning placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-good-morning.svg",
+    "imageAlt": "Cable Good Morning technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.cable-shrug": {
     "image": "exercises/back/back.cable-shrug.jpg",
@@ -1256,16 +1266,16 @@
     "matchedId": "Inverted_Row"
   },
   "back.wide-grip-inverted-row": {
-    "image": null,
-    "imageAlt": "Wide-Grip Inverted Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.wide-grip-inverted-row.svg",
+    "imageAlt": "Wide-Grip Inverted Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.towel-row": {
-    "image": null,
-    "imageAlt": "Towel Door-Anchor Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.towel-row.svg",
+    "imageAlt": "Towel Door-Anchor Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.back-extension-floor": {
     "image": "exercises/back/back.back-extension-floor.webp",
@@ -1296,46 +1306,47 @@
     "matchedId": "Scapular_Pull-Up"
   },
   "back.scapular-push-up-back": {
-    "image": null,
-    "imageAlt": "Scapular Retraction Hang placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.scapular-push-up-back.svg",
+    "imageAlt": "Scapular Retraction Hang technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.band-lat-pulldown": {
-    "image": null,
-    "imageAlt": "Resistance-Band Lat Pulldown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-lat-pulldown.svg",
+    "imageAlt": "Resistance-Band Lat Pulldown technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.band-seated-row": {
-    "image": null,
-    "imageAlt": "Seated Resistance-Band Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-seated-row.svg",
+    "imageAlt": "Seated Resistance-Band Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.band-single-arm-row": {
-    "image": null,
-    "imageAlt": "Single-Arm Resistance-Band Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-single-arm-row.svg",
+    "imageAlt": "Single-Arm Resistance-Band Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.band-face-pull": {
-    "image": null,
-    "imageAlt": "Resistance-Band Face Pull placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-face-pull.svg",
+    "imageAlt": "Resistance-Band Face Pull technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.band-pull-apart": {
-    "image": null,
-    "imageAlt": "Band Pull-Apart placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-pull-apart.webp",
+    "imageAlt": "Band Pull-Apart exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:band-pull-apart"
   },
   "back.band-straight-arm-pulldown": {
-    "image": null,
-    "imageAlt": "Band Straight-Arm Pulldown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-straight-arm-pulldown.svg",
+    "imageAlt": "Band Straight-Arm Pulldown technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.band-good-morning": {
     "image": "exercises/back/back.band-good-morning.jpg",
@@ -1345,16 +1356,16 @@
     "matchedId": "Band_Good_Morning"
   },
   "back.band-shrug": {
-    "image": null,
-    "imageAlt": "Resistance-Band Shrug placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.band-shrug.svg",
+    "imageAlt": "Resistance-Band Shrug technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.backpack-row": {
-    "image": null,
-    "imageAlt": "Backpack Bent-Over Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.backpack-row.svg",
+    "imageAlt": "Backpack Bent-Over Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "back.backpack-romanian-deadlift": {
     "image": "exercises/back/back.backpack-romanian-deadlift.jpg",
@@ -1385,10 +1396,10 @@
     "matchedId": "Barbell_Incline_Bench_Press_-_Medium_Grip"
   },
   "chest.barbell-low-incline-press": {
-    "image": null,
-    "imageAlt": "Barbell Low-Incline Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.barbell-low-incline-press.svg",
+    "imageAlt": "Barbell Low-Incline Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.barbell-decline-bench-press": {
     "image": "exercises/chest/chest.barbell-decline-bench-press.jpg",
@@ -1482,10 +1493,10 @@
     "matchedId": "Dumbbell_Floor_Press"
   },
   "chest.dumbbell-squeeze-press": {
-    "image": null,
-    "imageAlt": "Dumbbell Squeeze Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.dumbbell-squeeze-press.svg",
+    "imageAlt": "Dumbbell Squeeze Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.dumbbell-crush-press": {
     "image": "exercises/chest/chest.dumbbell-crush-press.jpg",
@@ -1523,16 +1534,17 @@
     "matchedId": "Decline_Dumbbell_Flyes"
   },
   "chest.dumbbell-around-the-world": {
-    "image": null,
-    "imageAlt": "Dumbbell Around-the-World placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.dumbbell-around-the-world.jpg",
+    "imageAlt": "Dumbbell Around-the-World exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Around_The_Worlds"
   },
   "chest.plate-squeeze-press": {
-    "image": null,
-    "imageAlt": "Plate Squeeze Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.plate-squeeze-press.svg",
+    "imageAlt": "Plate Squeeze Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.plate-pullover": {
     "image": "exercises/chest/chest.plate-pullover.webp",
@@ -1570,10 +1582,10 @@
     "matchedId": "Smith_Machine_Close-Grip_Bench_Press"
   },
   "chest.chest-press-machine-seated": {
-    "image": null,
-    "imageAlt": "Seated Chest Press Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.chest-press-machine-seated.svg",
+    "imageAlt": "Seated Chest Press Machine technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.chest-press-machine-incline": {
     "image": "exercises/chest/chest.chest-press-machine-incline.jpg",
@@ -1590,16 +1602,16 @@
     "matchedId": "Leverage_Decline_Chest_Press"
   },
   "chest.plate-loaded-chest-press": {
-    "image": null,
-    "imageAlt": "Plate-Loaded Chest Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.plate-loaded-chest-press.svg",
+    "imageAlt": "Plate-Loaded Chest Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.iso-lateral-chest-press": {
-    "image": null,
-    "imageAlt": "Iso-Lateral Chest Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.iso-lateral-chest-press.svg",
+    "imageAlt": "Iso-Lateral Chest Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.converging-chest-press": {
     "image": "exercises/chest/chest.converging-chest-press.webp",
@@ -1616,28 +1628,28 @@
     "matchedId": "repdb:chest-press-machine"
   },
   "chest.pec-deck-fly": {
-    "image": null,
-    "imageAlt": "Pec Deck Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.pec-deck-fly.svg",
+    "imageAlt": "Pec Deck Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.reverse-pec-deck-chest-fly": {
-    "image": null,
-    "imageAlt": "Reverse Pec Deck Chest Fly (Forward-Facing Setup) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.reverse-pec-deck-chest-fly.svg",
+    "imageAlt": "Reverse Pec Deck Chest Fly (Forward-Facing Setup) technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.cable-crossover-high-to-low": {
-    "image": null,
-    "imageAlt": "High-to-Low Cable Crossover placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.cable-crossover-high-to-low.svg",
+    "imageAlt": "High-to-Low Cable Crossover technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.cable-crossover-low-to-high": {
-    "image": null,
-    "imageAlt": "Low-to-High Cable Crossover placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.cable-crossover-low-to-high.svg",
+    "imageAlt": "Low-to-High Cable Crossover technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.cable-crossover-mid-height": {
     "image": "exercises/chest/chest.cable-crossover-mid-height.jpg",
@@ -1647,16 +1659,16 @@
     "matchedId": "Cable_Crossover"
   },
   "chest.single-arm-cable-crossover-high-to-low": {
-    "image": null,
-    "imageAlt": "Single-Arm High-to-Low Cable Crossover placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.single-arm-cable-crossover-high-to-low.svg",
+    "imageAlt": "Single-Arm High-to-Low Cable Crossover technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.single-arm-cable-crossover-low-to-high": {
-    "image": null,
-    "imageAlt": "Single-Arm Low-to-High Cable Crossover placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.single-arm-cable-crossover-low-to-high.svg",
+    "imageAlt": "Single-Arm Low-to-High Cable Crossover technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.standing-cable-chest-press": {
     "image": "exercises/chest/chest.standing-cable-chest-press.jpg",
@@ -1680,10 +1692,10 @@
     "matchedId": "Standing_Cable_Chest_Press"
   },
   "chest.half-kneeling-single-arm-cable-press": {
-    "image": null,
-    "imageAlt": "Half-Kneeling Single-Arm Cable Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.half-kneeling-single-arm-cable-press.svg",
+    "imageAlt": "Half-Kneeling Single-Arm Cable Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.cable-fly-bench-flat": {
     "image": "exercises/chest/chest.cable-fly-bench-flat.webp",
@@ -1693,16 +1705,16 @@
     "matchedId": "repdb:cable-fly"
   },
   "chest.cable-fly-bench-incline": {
-    "image": null,
-    "imageAlt": "Incline-Bench Cable Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.cable-fly-bench-incline.svg",
+    "imageAlt": "Incline-Bench Cable Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.cable-fly-bench-decline": {
-    "image": null,
-    "imageAlt": "Decline-Bench Cable Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.cable-fly-bench-decline.svg",
+    "imageAlt": "Decline-Bench Cable Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.single-arm-cable-fly": {
     "image": "exercises/chest/chest.single-arm-cable-fly.webp",
@@ -1712,10 +1724,10 @@
     "matchedId": "repdb:cable-fly"
   },
   "chest.low-cable-squeeze-press": {
-    "image": null,
-    "imageAlt": "Low Cable Squeeze Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.low-cable-squeeze-press.svg",
+    "imageAlt": "Low Cable Squeeze Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.push-up-standard": {
     "image": "exercises/chest/chest.push-up-standard.jpg",
@@ -1760,10 +1772,10 @@
     "matchedId": "Pushups"
   },
   "chest.push-up-kneeling": {
-    "image": null,
-    "imageAlt": "Kneeling Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.push-up-kneeling.svg",
+    "imageAlt": "Kneeling Push-Up technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.push-up-staggered-hands": {
     "image": "exercises/chest/chest.push-up-staggered-hands.jpg",
@@ -1794,52 +1806,52 @@
     "matchedId": "repdb:ring-push-up"
   },
   "chest.suspension-trainer-chest-press": {
-    "image": null,
-    "imageAlt": "Suspension-Trainer Chest Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.suspension-trainer-chest-press.svg",
+    "imageAlt": "Suspension-Trainer Chest Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-chest-press-standing": {
-    "image": null,
-    "imageAlt": "Standing Resistance-Band Chest Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-chest-press-standing.svg",
+    "imageAlt": "Standing Resistance-Band Chest Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-single-arm-chest-press": {
-    "image": null,
-    "imageAlt": "Single-Arm Resistance-Band Chest Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-single-arm-chest-press.svg",
+    "imageAlt": "Single-Arm Resistance-Band Chest Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-chest-fly-standing": {
-    "image": null,
-    "imageAlt": "Standing Resistance-Band Chest Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-chest-fly-standing.svg",
+    "imageAlt": "Standing Resistance-Band Chest Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-low-to-high-fly": {
-    "image": null,
-    "imageAlt": "Low-to-High Resistance-Band Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-low-to-high-fly.svg",
+    "imageAlt": "Low-to-High Resistance-Band Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-high-to-low-fly": {
-    "image": null,
-    "imageAlt": "High-to-Low Resistance-Band Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-high-to-low-fly.svg",
+    "imageAlt": "High-to-Low Resistance-Band Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-push-up": {
-    "image": null,
-    "imageAlt": "Resistance-Band Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-push-up.svg",
+    "imageAlt": "Resistance-Band Push-Up technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.band-squeeze-press": {
-    "image": null,
-    "imageAlt": "Resistance-Band Squeeze Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.band-squeeze-press.svg",
+    "imageAlt": "Resistance-Band Squeeze Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "chest.wall-push-up": {
     "image": "exercises/chest/chest.wall-push-up.jpg",
@@ -1849,10 +1861,10 @@
     "matchedId": "Pushups"
   },
   "chest.doorway-isometric-chest-press": {
-    "image": null,
-    "imageAlt": "Doorway Isometric Chest Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.doorway-isometric-chest-press.svg",
+    "imageAlt": "Doorway Isometric Chest Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.barbell-back-squat": {
     "image": "exercises/legs/legs.barbell-back-squat.jpg",
@@ -1932,10 +1944,10 @@
     "matchedId": "Leg_Extensions"
   },
   "legs.spanish-squat": {
-    "image": null,
-    "imageAlt": "Spanish Squat placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.spanish-squat.svg",
+    "imageAlt": "Spanish Squat technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.wall-sit": {
     "image": "exercises/legs/legs.wall-sit.webp",
@@ -1945,10 +1957,10 @@
     "matchedId": "repdb:wall-sit"
   },
   "legs.cyclist-squat": {
-    "image": null,
-    "imageAlt": "Cyclist Squat placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.cyclist-squat.svg",
+    "imageAlt": "Cyclist Squat technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.sissy-squat-assisted": {
     "image": "exercises/legs/legs.sissy-squat-assisted.webp",
@@ -2049,10 +2061,10 @@
     "matchedId": "Barbell_Hip_Thrust"
   },
   "legs.dumbbell-glute-bridge": {
-    "image": null,
-    "imageAlt": "Dumbbell Glute Bridge placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.dumbbell-glute-bridge.svg",
+    "imageAlt": "Dumbbell Glute Bridge technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.single-leg-glute-bridge": {
     "image": "exercises/legs/legs.single-leg-glute-bridge.webp",
@@ -2076,28 +2088,28 @@
     "matchedId": "One-Legged_Cable_Kickback"
   },
   "legs.machine-glute-kickback": {
-    "image": null,
-    "imageAlt": "Glute Kickback Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.machine-glute-kickback.svg",
+    "imageAlt": "Glute Kickback Machine technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.45-degree-back-extension-glute": {
-    "image": null,
-    "imageAlt": "45-Degree Back Extension (Glute Focus) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.45-degree-back-extension-glute.svg",
+    "imageAlt": "45-Degree Back Extension (Glute Focus) technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.dumbbell-step-up-glute": {
-    "image": null,
-    "imageAlt": "High-Box Step-Up (Glute Emphasis) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.dumbbell-step-up-glute.svg",
+    "imageAlt": "High-Box Step-Up (Glute Emphasis) technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.frog-pump": {
-    "image": null,
-    "imageAlt": "Frog Pump placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.frog-pump.svg",
+    "imageAlt": "Frog Pump technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.banded-glute-bridge": {
     "image": "exercises/legs/legs.banded-glute-bridge.webp",
@@ -2107,16 +2119,16 @@
     "matchedId": "repdb:banded-glute-bridge"
   },
   "legs.clamshell": {
-    "image": null,
-    "imageAlt": "Side-Lying Clamshell placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.clamshell.svg",
+    "imageAlt": "Side-Lying Clamshell technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.single-leg-cable-hip-extension": {
-    "image": null,
-    "imageAlt": "Single-Leg Cable Hip Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.single-leg-cable-hip-extension.svg",
+    "imageAlt": "Single-Leg Cable Hip Extension technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.reverse-hyperextension": {
     "image": "exercises/legs/legs.reverse-hyperextension.jpg",
@@ -2147,16 +2159,16 @@
     "matchedId": "Seated_Calf_Raise"
   },
   "legs.single-leg-calf-raise": {
-    "image": null,
-    "imageAlt": "Single-Leg Calf Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.single-leg-calf-raise.svg",
+    "imageAlt": "Single-Leg Calf Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.leg-press-calf-raise": {
-    "image": null,
-    "imageAlt": "Leg Press Calf Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.leg-press-calf-raise.svg",
+    "imageAlt": "Leg Press Calf Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.donkey-calf-raise": {
     "image": "exercises/legs/legs.donkey-calf-raise.jpg",
@@ -2173,10 +2185,10 @@
     "matchedId": "Calf_Raise_On_A_Dumbbell"
   },
   "legs.calf-raise-on-stair": {
-    "image": null,
-    "imageAlt": "Calf Raise on Step placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.calf-raise-on-stair.svg",
+    "imageAlt": "Calf Raise on Step technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.jump-rope-calf-conditioning": {
     "image": "exercises/legs/legs.jump-rope-calf-conditioning.webp",
@@ -2186,16 +2198,16 @@
     "matchedId": "repdb:jump-rope"
   },
   "legs.pogo-hops": {
-    "image": null,
-    "imageAlt": "Pogo Hops placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.pogo-hops.svg",
+    "imageAlt": "Pogo Hops technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.tibialis-raise": {
-    "image": null,
-    "imageAlt": "Tibialis Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.tibialis-raise.svg",
+    "imageAlt": "Tibialis Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.hip-adduction-machine": {
     "image": "exercises/legs/legs.hip-adduction-machine.jpg",
@@ -2247,10 +2259,10 @@
     "matchedId": "Thigh_Abductor"
   },
   "legs.standing-cable-hip-abduction": {
-    "image": null,
-    "imageAlt": "Standing Cable Hip Abduction placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.standing-cable-hip-abduction.svg",
+    "imageAlt": "Standing Cable Hip Abduction technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.side-lying-leg-raise": {
     "image": "exercises/legs/legs.side-lying-leg-raise.webp",
@@ -2260,16 +2272,16 @@
     "matchedId": "repdb:side-lying-hip-abduction"
   },
   "legs.band-lateral-walk": {
-    "image": null,
-    "imageAlt": "Resistance-Band Lateral Walk placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/legs.band-lateral-walk.svg",
+    "imageAlt": "Resistance-Band Lateral Walk technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.band-monster-walk": {
-    "image": null,
-    "imageAlt": "Resistance-Band Monster Walk placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.band-monster-walk.svg",
+    "imageAlt": "Resistance-Band Monster Walk technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "legs.standing-band-hip-abduction": {
     "image": "exercises/legs/legs.standing-band-hip-abduction.webp",
@@ -2349,10 +2361,10 @@
     "matchedId": "repdb:landmine-press"
   },
   "shoulders.half-kneeling-landmine-press": {
-    "image": null,
-    "imageAlt": "Half-Kneeling Single-Arm Landmine Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.half-kneeling-landmine-press.svg",
+    "imageAlt": "Half-Kneeling Single-Arm Landmine Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.dumbbell-lateral-raise": {
     "image": "exercises/shoulders/shoulders.dumbbell-lateral-raise.jpg",
@@ -2425,16 +2437,16 @@
     "matchedId": "Front_Plate_Raise"
   },
   "shoulders.cable-y-raise": {
-    "image": null,
-    "imageAlt": "Cable Y-Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.cable-y-raise.svg",
+    "imageAlt": "Cable Y-Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.incline-dumbbell-y-raise": {
-    "image": null,
-    "imageAlt": "Incline-Bench Dumbbell Y-Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.incline-dumbbell-y-raise.svg",
+    "imageAlt": "Incline-Bench Dumbbell Y-Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.dumbbell-rear-delt-fly": {
     "image": "exercises/shoulders/shoulders.dumbbell-rear-delt-fly.jpg",
@@ -2444,16 +2456,16 @@
     "matchedId": "Seated_Bent-Over_Rear_Delt_Raise"
   },
   "shoulders.chest-supported-rear-delt-fly": {
-    "image": null,
-    "imageAlt": "Chest-Supported Rear-Delt Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/shoulders.chest-supported-rear-delt-fly.svg",
+    "imageAlt": "Chest-Supported Rear-Delt Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.seated-rear-delt-fly-machine": {
-    "image": null,
-    "imageAlt": "Reverse Pec Deck Rear-Delt Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.seated-rear-delt-fly-machine.svg",
+    "imageAlt": "Reverse Pec Deck Rear-Delt Fly technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.cable-rear-delt-crossover": {
     "image": "exercises/shoulders/shoulders.cable-rear-delt-crossover.jpg",
@@ -2470,10 +2482,10 @@
     "matchedId": "repdb:face-pull"
   },
   "shoulders.band-face-pull-shoulder": {
-    "image": null,
-    "imageAlt": "Resistance-Band Face Pull placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.band-face-pull-shoulder.svg",
+    "imageAlt": "Resistance-Band Face Pull technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.dumbbell-upright-row": {
     "image": "exercises/shoulders/shoulders.dumbbell-upright-row.jpg",
@@ -2497,10 +2509,10 @@
     "matchedId": "Upright_Cable_Row"
   },
   "shoulders.wide-grip-upright-row": {
-    "image": null,
-    "imageAlt": "Wide-Grip Cable Upright Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.wide-grip-upright-row.svg",
+    "imageAlt": "Wide-Grip Cable Upright Row technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.dumbbell-shrug-shoulders": {
     "image": "exercises/shoulders/shoulders.dumbbell-shrug-shoulders.jpg",
@@ -2538,22 +2550,22 @@
     "matchedId": "Calf-Machine_Shoulder_Shrug"
   },
   "shoulders.barbell-high-pull": {
-    "image": null,
-    "imageAlt": "Barbell High Pull placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.barbell-high-pull.svg",
+    "imageAlt": "Barbell High Pull technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.dumbbell-high-pull": {
-    "image": null,
-    "imageAlt": "Dumbbell High Pull placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.dumbbell-high-pull.svg",
+    "imageAlt": "Dumbbell High Pull technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.cuban-rotation": {
-    "image": null,
-    "imageAlt": "Dumbbell Cuban Rotation placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.cuban-rotation.svg",
+    "imageAlt": "Dumbbell Cuban Rotation technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.cable-external-rotation": {
     "image": "exercises/shoulders/shoulders.cable-external-rotation.jpg",
@@ -2570,28 +2582,28 @@
     "matchedId": "External_Rotation_with_Band"
   },
   "shoulders.side-lying-external-rotation": {
-    "image": null,
-    "imageAlt": "Side-Lying Dumbbell External Rotation placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.side-lying-external-rotation.svg",
+    "imageAlt": "Side-Lying Dumbbell External Rotation technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.prone-w-raise": {
-    "image": null,
-    "imageAlt": "Prone W-Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.prone-w-raise.svg",
+    "imageAlt": "Prone W-Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.prone-t-raise": {
-    "image": null,
-    "imageAlt": "Prone T-Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.prone-t-raise.svg",
+    "imageAlt": "Prone T-Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.prone-y-raise-shoulder": {
-    "image": null,
-    "imageAlt": "Prone Y-Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.prone-y-raise-shoulder.svg",
+    "imageAlt": "Prone Y-Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.scaption-dumbbell-raise": {
     "image": "exercises/shoulders/shoulders.scaption-dumbbell-raise.jpg",
@@ -2601,10 +2613,10 @@
     "matchedId": "Dumbbell_Raise"
   },
   "shoulders.band-pull-apart-shoulder": {
-    "image": null,
-    "imageAlt": "Resistance-Band Pull-Apart placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.band-pull-apart-shoulder.svg",
+    "imageAlt": "Resistance-Band Pull-Apart technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.pike-push-up": {
     "image": "exercises/shoulders/shoulders.pike-push-up.png",
@@ -2621,10 +2633,10 @@
     "matchedId": "repdb:pike-push-ups"
   },
   "shoulders.wall-walk": {
-    "image": null,
-    "imageAlt": "Wall Walk placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.wall-walk.svg",
+    "imageAlt": "Wall Walk technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.handstand-push-up": {
     "image": "exercises/shoulders/shoulders.handstand-push-up.jpg",
@@ -2634,64 +2646,64 @@
     "matchedId": "Handstand_Push-Ups"
   },
   "shoulders.incline-push-up-shoulder-tap": {
-    "image": null,
-    "imageAlt": "Incline Shoulder Tap placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.incline-push-up-shoulder-tap.svg",
+    "imageAlt": "Incline Shoulder Tap technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.bear-crawl-shoulder-tap": {
-    "image": null,
-    "imageAlt": "Bear-Plank Shoulder Tap placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.bear-crawl-shoulder-tap.svg",
+    "imageAlt": "Bear-Plank Shoulder Tap technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.band-overhead-press": {
-    "image": null,
-    "imageAlt": "Resistance-Band Overhead Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.band-overhead-press.svg",
+    "imageAlt": "Resistance-Band Overhead Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.single-arm-band-overhead-press": {
-    "image": null,
-    "imageAlt": "Single-Arm Band Overhead Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.single-arm-band-overhead-press.svg",
+    "imageAlt": "Single-Arm Band Overhead Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.band-lateral-raise": {
-    "image": null,
-    "imageAlt": "Resistance-Band Lateral Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.band-lateral-raise.svg",
+    "imageAlt": "Resistance-Band Lateral Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.band-front-raise": {
-    "image": null,
-    "imageAlt": "Resistance-Band Front Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.band-front-raise.svg",
+    "imageAlt": "Resistance-Band Front Raise technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.band-pull-apart-high": {
-    "image": null,
-    "imageAlt": "High-Angle Band Pull-Apart placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.band-pull-apart-high.svg",
+    "imageAlt": "High-Angle Band Pull-Apart technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.band-pull-apart-low": {
-    "image": null,
-    "imageAlt": "Low-Angle Band Pull-Apart placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.band-pull-apart-low.svg",
+    "imageAlt": "Low-Angle Band Pull-Apart technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.wall-slide": {
-    "image": null,
-    "imageAlt": "Forearm Wall Slide placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.wall-slide.svg",
+    "imageAlt": "Forearm Wall Slide technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.serratus-wall-slide-band": {
-    "image": null,
-    "imageAlt": "Banded Serratus Wall Slide placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.serratus-wall-slide-band.svg",
+    "imageAlt": "Banded Serratus Wall Slide technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.scapular-push-up": {
     "image": "exercises/shoulders/shoulders.scapular-push-up.jpg",
@@ -2708,16 +2720,16 @@
     "matchedId": "Scapular_Pull-Up"
   },
   "shoulders.isometric-lateral-raise": {
-    "image": null,
-    "imageAlt": "Isometric Lateral Raise Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.isometric-lateral-raise.svg",
+    "imageAlt": "Isometric Lateral Raise Hold technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "shoulders.isometric-external-rotation": {
-    "image": null,
-    "imageAlt": "Isometric External Rotation Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.isometric-external-rotation.svg",
+    "imageAlt": "Isometric External Rotation Press technical demonstration diagram",
+    "imageSource": "Gym App Technical Diagram (Vector)",
+    "imageStatus": "manually_verified"
   },
   "ex-bench-press": {
     "image": "exercises/chest/ex-bench-press.jpg",
