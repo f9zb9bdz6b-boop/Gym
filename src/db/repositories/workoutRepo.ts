@@ -8,6 +8,7 @@ import type {
   WorkoutSession,
 } from '../types';
 import { generateId, todayISO } from '@/lib/utils';
+import { estimateSetCaloriesBurned } from '@/lib/calculators';
 
 export const workoutRepo = {
   // --- Exercise Library ---
@@ -180,7 +181,12 @@ export const workoutRepo = {
     await db.exerciseSets.delete(setId);
   },
 
-  async completeSession(sessionId: string, durationSeconds: number, notes?: string): Promise<WorkoutSession | undefined> {
+  async completeSession(
+    sessionId: string,
+    durationSeconds: number,
+    notes?: string,
+    overrideCaloriesBurned?: number
+  ): Promise<WorkoutSession | undefined> {
     const session = await db.workoutSessions.get(sessionId);
     if (!session) return undefined;
 
@@ -191,10 +197,22 @@ export const workoutRepo = {
     const prCount = completedSets.filter((s) => s.isPR).length;
 
     const allExercises = await db.exerciseLibrary.toArray();
+    const profile = await db.userProfile.get('primary');
     const calMap = new Map(allExercises.map((e) => [e.id, e.caloriesBurnedPerSet ?? 8]));
-    const totalCaloriesBurned = Math.round(
-      completedSets.reduce((sum, s) => sum + (calMap.get(s.exerciseId) ?? 8), 0)
+    const fallbackCalories = Math.round(
+      completedSets.reduce(
+        (sum, s) =>
+          sum +
+          estimateSetCaloriesBurned({
+            weightKg: s.weightKg,
+            reps: s.reps,
+            baseCalPerSet: calMap.get(s.exerciseId) ?? 8,
+            bodyWeightKg: profile?.currentWeightKg ?? 70,
+          }),
+        0
+      )
     );
+    const totalCaloriesBurned = overrideCaloriesBurned ?? fallbackCalories;
 
     const updated: WorkoutSession = {
       ...session,

@@ -2,18 +2,21 @@ import { useEffect, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/database';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
+import { estimateSetCaloriesBurned } from '@/lib/calculators';
+import { calculateWorkoutCaloriesWithGemini } from '@/lib/ai/aiService';
 import { useWorkoutStore } from '@/stores/useWorkoutStore';
 import { useAppStore } from '@/stores/useAppStore';
 import type { ExerciseLibraryItem, ExerciseSet, WorkoutSession } from '@/db/types';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
-import { Play, Check, Plus, Trash2, Trophy, Square, Flame } from 'lucide-react';
+import { Play, Check, Plus, Trash2, Trophy, Square, Flame, Sparkles } from 'lucide-react';
 
 export function LiveWorkoutLogger() {
   const { activeSession, setActiveSession } = useWorkoutStore();
   const { addToast } = useAppStore();
 
+  const profile = useLiveQuery(() => db.userProfile.get('primary'), []);
   const exercises = useLiveQuery(() => db.exerciseLibrary.orderBy('name').toArray(), []) ?? [];
   const sessionSets =
     useLiveQuery(
@@ -24,6 +27,8 @@ export function LiveWorkoutLogger() {
   const [selectedExId, setSelectedExId] = useState<string>('');
   const [completedSummary, setCompletedSummary] = useState<WorkoutSession | null>(null);
   const [prevBestMap, setPrevBestMap] = useState<Record<string, string>>({});
+  const [geminiCalories, setGeminiCalories] = useState<{ total: number; perExercise: Record<string, number> } | null>(null);
+  const [calcLoading, setCalcLoading] = useState(false);
 
   // Load previous bests for exercises in current session
   useEffect(() => {
@@ -63,14 +68,64 @@ export function LiveWorkoutLogger() {
 
   const handleFinishWorkout = async () => {
     if (!activeSession) return;
-    const summary = await workoutRepo.completeSession(activeSession.id, 0);
-    setActiveSession(null);
-    if (summary) {
-      setCompletedSummary(summary);
-      addToast({
-        title: 'Workout Completed!',
-        description: `Volume: ${summary.totalVolumeKg} kg · ~${summary.totalCaloriesBurned ?? 0} kcal burned`,
+    setCalcLoading(true);
+    try {
+      const doneSets = sessionSets.filter((s) => s.completed);
+      const aiRes = await calculateWorkoutCaloriesWithGemini({
+        sets: doneSets.map((s) => ({
+          exerciseId: s.exerciseId,
+          exerciseName: s.exerciseName,
+          weightKg: s.weightKg,
+          reps: s.reps,
+        })),
+        bodyWeightKg: profile?.currentWeightKg ?? 70,
+        fallbackTotal: totalCaloriesBurned,
       });
+      const summary = await workoutRepo.completeSession(
+        activeSession.id,
+        0,
+        undefined,
+        aiRes.totalCaloriesBurned
+      );
+      setActiveSession(null);
+      setGeminiCalories(null);
+      if (summary) {
+        setCompletedSummary(summary);
+        addToast({
+          title: 'Workout Completed!',
+          description: `Volume: ${summary.totalVolumeKg} kg · ~${summary.totalCaloriesBurned ?? 0} kcal${aiRes.usedGemini ? ' (Gemini)' : ''}`,
+        });
+      }
+    } finally {
+      setCalcLoading(false);
+    }
+  };
+
+  const handleCalculateWithGemini = async () => {
+    const doneSets = sessionSets.filter((s) => s.completed);
+    if (doneSets.length === 0) {
+      addToast({ title: 'Complete at least one set first', type: 'info' });
+      return;
+    }
+    setCalcLoading(true);
+    try {
+      const res = await calculateWorkoutCaloriesWithGemini({
+        sets: doneSets.map((s) => ({
+          exerciseId: s.exerciseId,
+          exerciseName: s.exerciseName,
+          weightKg: s.weightKg,
+          reps: s.reps,
+        })),
+        bodyWeightKg: profile?.currentWeightKg ?? 70,
+        fallbackTotal: totalCaloriesBurned,
+      });
+      setGeminiCalories({ total: res.totalCaloriesBurned, perExercise: res.perExercise });
+      addToast({
+        title: res.usedGemini ? 'Gemini Calorie Calculation Ready' : 'Local Calorie Estimate Updated',
+        description: `Total: ~${res.totalCaloriesBurned} kcal`,
+      });
+    } finally {
+      setCalcLoading(false);
     }
   };
 
@@ -128,9 +183,20 @@ export function LiveWorkoutLogger() {
 
   const completedSets = sessionSets.filter((s) => s.completed);
   const totalVolume = completedSets.reduce((sum, s) => sum + s.weightKg * s.reps, 0);
-  const totalCaloriesBurned = Math.round(
-    completedSets.reduce((sum, s) => sum + (exCalMap.get(s.exerciseId) ?? 8), 0)
+  const dynamicTotalCalories = Math.round(
+    completedSets.reduce(
+      (sum, s) =>
+        sum +
+        estimateSetCaloriesBurned({
+          weightKg: s.weightKg,
+          reps: s.reps,
+          baseCalPerSet: exCalMap.get(s.exerciseId) ?? 8,
+          bodyWeightKg: profile?.currentWeightKg ?? 70,
+        }),
+      0
+    )
   );
+  const totalCaloriesBurned = geminiCalories?.total ?? dynamicTotalCalories;
 
   return (
     <div className="space-y-4">
@@ -152,9 +218,15 @@ export function LiveWorkoutLogger() {
             </div>
           </div>
 
-          <Button size="sm" onClick={handleFinishWorkout}>
-            <Square className="h-3.5 w-3.5" /> Finish Workout
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button size="sm" variant="secondary" onClick={handleCalculateWithGemini} disabled={calcLoading}>
+              <Sparkles className={`h-3.5 w-3.5 text-lime-400 ${calcLoading ? 'animate-spin' : ''}`} />
+              {calcLoading ? 'Calculating...' : 'Gemini Calories'}
+            </Button>
+            <Button size="sm" onClick={handleFinishWorkout} disabled={calcLoading}>
+              <Square className="h-3.5 w-3.5" /> Finish Workout
+            </Button>
+          </div>
         </div>
       </Card>
 
@@ -186,7 +258,22 @@ export function LiveWorkoutLogger() {
       {/* Exercise Cards */}
       {Object.entries(grouped).map(([exId, sets]) => {
         const calPerSet = exCalMap.get(exId) ?? 8;
-        const exBurned = Math.round(sets.filter((s) => s.completed).length * calPerSet);
+        const dynamicExBurned = Math.round(
+          sets
+            .filter((s) => s.completed)
+            .reduce(
+              (sum, s) =>
+                sum +
+                estimateSetCaloriesBurned({
+                  weightKg: s.weightKg,
+                  reps: s.reps,
+                  baseCalPerSet: calPerSet,
+                  bodyWeightKg: profile?.currentWeightKg ?? 70,
+                }),
+              0
+            )
+        );
+        const exBurned = geminiCalories?.perExercise[exId] ?? dynamicExBurned;
 
         return (
           <Card key={exId}>

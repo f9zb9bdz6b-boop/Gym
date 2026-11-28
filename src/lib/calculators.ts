@@ -157,3 +157,22 @@ export function calculateWeightProgression(
   const estimatedWeeks = Math.ceil(Math.abs(diffKg / weeklyChangeKg));
   return { weeklyChangeKg, estimatedWeeks };
 }
+
+/**
+ * Estimates realistic calories burned for a single resistance training set
+ * based on weight lifted, repetitions performed, and base exercise intensity.
+ */
+export function estimateSetCaloriesBurned(params: {
+  weightKg: number;
+  reps: number;
+  baseCalPerSet?: number;
+  bodyWeightKg?: number;
+}): number {
+  const { weightKg, reps, baseCalPerSet = 6, bodyWeightKg = 70 } = params;
+  const safeReps = Math.max(1, reps);
+  const safeWeight = Math.max(0, weightKg);
+  const volumeFactor = safeWeight * safeReps * 0.014;
+  const repEffort = safeReps * 0.35;
+  const bwFactor = bodyWeightKg / 70;
+  return Number(((baseCalPerSet * 0.4 + volumeFactor + repEffort) * bwFactor).toFixed(1));
+}

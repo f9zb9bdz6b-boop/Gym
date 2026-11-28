@@ -242,3 +242,47 @@ export async function generateExerciseDetailsWithAI(params: {
     usedGemini: false,
   };
 }
+
+export async function calculateWorkoutCaloriesWithGemini(params: {
+  sets: Array<{ exerciseId: string; exerciseName: string; weightKg: number; reps: number }>;
+  bodyWeightKg: number;
+  fallbackTotal: number;
+}): Promise<{ totalCaloriesBurned: number; perExercise: Record<string, number>; usedGemini: boolean }> {
+  const { sets, bodyWeightKg, fallbackTotal } = params;
+  if (sets.length === 0) {
+    return { totalCaloriesBurned: 0, perExercise: {}, usedGemini: false };
+  }
+
+  const settings = await db.appSettings.get('settings');
+  const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
+
+  if (settings?.aiProvider === 'gemini' && settings.aiConsentGranted && settings.geminiApiKey && isOnline) {
+    try {
+      const reply = await callGeminiAPI({
+        apiKey: settings.geminiApiKey,
+        model: settings.aiModel || 'gemini-3.8-flash',
+        systemPrompt:
+          'You are an exercise physiologist. Calculate realistic calories burned for the given resistance training sets based on exercise type, weight lifted (kg), reps, and user body weight (kg). Return ONLY valid JSON: {"totalCaloriesBurned": number, "perExercise": {"<exerciseId>": number}}.',
+        userPrompt: JSON.stringify({ bodyWeightKg, sets }),
+      });
+      const jsonMatch = reply.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        const parsed = JSON.parse(jsonMatch[0]) as {
+          totalCaloriesBurned?: number;
+          perExercise?: Record<string, number>;
+        };
+        if (typeof parsed.totalCaloriesBurned === 'number' && parsed.totalCaloriesBurned > 0) {
+          return {
+            totalCaloriesBurned: Math.round(parsed.totalCaloriesBurned),
+            perExercise: parsed.perExercise ?? {},
+            usedGemini: true,
+          };
+        }
+      }
+    } catch {
+      // Fall through to local estimate
+    }
+  }
+
+  return { totalCaloriesBurned: Math.round(fallbackTotal), perExercise: {}, usedGemini: false };
+}
