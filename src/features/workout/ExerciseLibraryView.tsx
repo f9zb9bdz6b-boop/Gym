@@ -165,7 +165,10 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
     const matchSearch =
       ex.name.toLowerCase().includes(search.toLowerCase()) ||
       ex.equipment.toLowerCase().includes(search.toLowerCase());
-    const matchMuscle = muscleFilter === 'ALL' || ex.primaryMuscle === muscleFilter;
+    const matchMuscle =
+      muscleFilter === 'ALL' ||
+      ex.primaryMuscle === muscleFilter ||
+      (muscleFilter === 'Quads' && ex.primaryMuscle === 'Quadriceps');
     const matchFav = !onlyFavorites || ex.isFavorite;
     return matchSearch && matchMuscle && matchFav;
   });
@@ -298,7 +301,9 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
                 : 'bg-zinc-900 text-zinc-400 hover:text-white border border-zinc-800'
             }`}
           >
-            {region === 'ALL' ? `All (${exercises.length})` : `${region} (${exercises.filter((e) => e.primaryMuscle === region).length})`}
+            {region === 'ALL'
+              ? `All (${exercises.length})`
+              : `${region} (${exercises.filter((e) => e.primaryMuscle === region || (region === 'Quads' && e.primaryMuscle === 'Quadriceps')).length})`}
           </button>
         ))}
       </div>
