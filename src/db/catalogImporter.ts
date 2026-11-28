@@ -55,6 +55,12 @@ function mapRegionToMuscleGroup(region: string): MuscleGroup {
   if (r.includes('calv')) return 'Calves';
   if (r.includes('adductor')) return 'Adductors';
   if (r.includes('abductor')) return 'Abductors';
+  if (r === 'abdominals') return 'Abdominals';
+  if (r === 'obliques') return 'Obliques';
+  if (r === 'anti-extension') return 'Anti-Extension';
+  if (r === 'anti-rotation') return 'Anti-Rotation';
+  if (r === 'anti-lateral-flexion') return 'Anti-Lateral-Flexion';
+  if (r === 'spinal-stability') return 'Spinal Stability';
   if (r.includes('abs')) return 'Abs';
   return 'Core';
 }
@@ -85,7 +91,7 @@ export async function importExerciseCatalog(catalog: ExerciseCatalogRaw): Promis
     if (existingIds.has(raw.id)) continue;
 
     const effectiveRegion =
-      (raw.body_region === 'arms' || raw.body_region === 'legs') && raw.subregion
+      (raw.body_region === 'arms' || raw.body_region === 'legs' || raw.body_region === 'abs_core') && raw.subregion
         ? raw.subregion.toLowerCase()
         : raw.body_region.toLowerCase();
 

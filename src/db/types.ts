@@ -55,6 +55,12 @@ export type MuscleGroup =
   | 'Calves'
   | 'Adductors'
   | 'Abductors'
+  | 'Abdominals'
+  | 'Obliques'
+  | 'Anti-Extension'
+  | 'Anti-Rotation'
+  | 'Anti-Lateral-Flexion'
+  | 'Spinal Stability'
   | 'Abs'
   | 'Core';
 

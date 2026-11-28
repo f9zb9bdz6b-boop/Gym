@@ -5,6 +5,7 @@ import backCatalog from '@/data/catalogs/back_exercises.json';
 import shoulderCatalog from '@/data/catalogs/shoulder_exercises.json';
 import armCatalog from '@/data/catalogs/arm_exercises.json';
 import legCatalog from '@/data/catalogs/leg_exercises.json';
+import absCoreCatalog from '@/data/catalogs/abs_core_exercises.json';
 import type {
   DailyGoal,
   ExerciseLibraryItem,
@@ -665,6 +666,102 @@ export const SEED_WORKOUT_PLANS: WorkoutPlan[] = [
     { exerciseId: 'legs.standing-band-hip-abduction', exerciseName: 'Standing Band Hip Abduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
     { exerciseId: 'legs.side-lying-leg-raise', exerciseName: 'Side-Lying Hip Abduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
   ]),
+  // Abdominals
+  makeLegPlan('plan-abdominals-a', 'Abs A — Beginner control', 'Abdominals', [
+    { exerciseId: 'abs-core.floor-crunch', exerciseName: 'Floor Crunch', targetSets: 2, targetReps: '8-15', restSeconds: 60 },
+    { exerciseId: 'abs-core.reverse-crunch', exerciseName: 'Reverse Crunch', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.dead-bug', exerciseName: 'Dead Bug', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-abdominals-b', 'Abs B — Cable and supported', 'Abdominals', [
+    { exerciseId: 'abs-core.cable-crunch', exerciseName: 'Kneeling Cable Crunch', targetSets: 3, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.stability-ball-crunch', exerciseName: 'Stability-Ball Crunch', targetSets: 2, targetReps: '10-15', restSeconds: 60 },
+    { exerciseId: 'abs-core.captains-chair-knee-raise', exerciseName: 'Captain’s Chair Knee Raise', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-abdominals-c', 'Abs C — Intermediate dynamic work', 'Abdominals', [
+    { exerciseId: 'abs-core.weighted-crunch', exerciseName: 'Weighted Crunch', targetSets: 3, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.lying-leg-raise', exerciseName: 'Lying Leg Raise', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.bicycle-crunch', exerciseName: 'Bicycle Crunch', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+  ]),
+  // Obliques
+  makeLegPlan('plan-obliques-a', 'Obliques A — Cable rotation', 'Obliques', [
+    { exerciseId: 'abs-core.cable-woodchop-high-low', exerciseName: 'High-to-Low Cable Wood Chop', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.cable-woodchop-low-high', exerciseName: 'Low-to-High Cable Wood Chop', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.side-crunch', exerciseName: 'Side-Lying Oblique Crunch', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-obliques-b', 'Obliques B — Home rotation', 'Obliques', [
+    { exerciseId: 'abs-core.standing-band-rotation', exerciseName: 'Standing Resistance-Band Rotation', targetSets: 3, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.russian-twist', exerciseName: 'Russian Twist', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.cross-body-mountain-climber', exerciseName: 'Cross-Body Mountain Climber', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-obliques-c', 'Obliques C — Lateral flexion and control', 'Obliques', [
+    { exerciseId: 'abs-core.dumbbell-side-bend', exerciseName: 'Dumbbell Side Bend', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.windshield-wiper-bent-knee', exerciseName: 'Bent-Knee Windshield Wiper', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.side-plank-hip-lift', exerciseName: 'Side Plank with Hip Lift', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+  ]),
+  // Anti-Extension
+  makeLegPlan('plan-anti-extension-a', 'Anti-extension A — Foundational', 'Anti-Extension', [
+    { exerciseId: 'abs-core.dead-bug', exerciseName: 'Dead Bug', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.forearm-plank', exerciseName: 'Forearm Plank', targetSets: 2, targetReps: '15-40 sec', restSeconds: 60 },
+    { exerciseId: 'abs-core.bear-plank-hold', exerciseName: 'Bear Plank Hold', targetSets: 2, targetReps: '15-30 sec', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-anti-extension-b', 'Anti-extension B — Rollout progression', 'Anti-Extension', [
+    { exerciseId: 'abs-core.high-plank', exerciseName: 'High Plank', targetSets: 2, targetReps: '15-40 sec', restSeconds: 60 },
+    { exerciseId: 'abs-core.kneeling-ab-wheel-rollout', exerciseName: 'Kneeling Ab Wheel Rollout', targetSets: 2, targetReps: '5-10', restSeconds: 60 },
+    { exerciseId: 'abs-core.stability-ball-rollout', exerciseName: 'Stability-Ball Rollout', targetSets: 2, targetReps: '6-12', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-anti-extension-c', 'Anti-extension C — Advanced holds', 'Anti-Extension', [
+    { exerciseId: 'abs-core.hollow-body-hold', exerciseName: 'Hollow-Body Hold', targetSets: 2, targetReps: '15-30 sec', restSeconds: 60 },
+    { exerciseId: 'abs-core.body-saw-plank', exerciseName: 'Body Saw Plank', targetSets: 2, targetReps: '6-10 controlled reps', restSeconds: 60 },
+    { exerciseId: 'abs-core.rkc-plank', exerciseName: 'RKC Plank', targetSets: 2, targetReps: '10-20 sec', restSeconds: 60 },
+  ]),
+  // Anti-Rotation
+  makeLegPlan('plan-anti-rotation-a', 'Anti-rotation A — Pallof press', 'Anti-Rotation', [
+    { exerciseId: 'abs-core.standing-pallof-press', exerciseName: 'Standing Pallof Press', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.half-kneeling-pallof-press', exerciseName: 'Half-Kneeling Pallof Press', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.plank-shoulder-tap', exerciseName: 'Plank Shoulder Tap', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-anti-rotation-b', 'Anti-rotation B — Cable and band control', 'Anti-Rotation', [
+    { exerciseId: 'abs-core.pallof-press-walkout', exerciseName: 'Pallof Press Walkout', targetSets: 2, targetReps: '4-8 steps each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.single-arm-cable-hold-core', exerciseName: 'Single-Arm Cable Anti-Rotation Hold', targetSets: 2, targetReps: '15-30 sec each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.quadruped-band-lift', exerciseName: 'Quadruped Band Anti-Rotation Lift', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-anti-rotation-c', 'Anti-rotation C — Kneeling and loaded', 'Anti-Rotation', [
+    { exerciseId: 'abs-core.tall-kneeling-pallof-press', exerciseName: 'Tall-Kneeling Pallof Press', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.bird-dog-row', exerciseName: 'Bird-Dog Dumbbell Row', targetSets: 2, targetReps: '6-8 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.renegade-row-core', exerciseName: 'Renegade Row (Core Stability)', targetSets: 2, targetReps: '5-8 each side', restSeconds: 60 },
+  ]),
+  // Anti-Lateral-Flexion
+  makeLegPlan('plan-anti-lateral-a', 'Lateral stability A — Side support', 'Anti-Lateral-Flexion', [
+    { exerciseId: 'abs-core.side-plank', exerciseName: 'Side Plank', targetSets: 2, targetReps: '15-40 sec each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.side-plank-hip-lift', exerciseName: 'Side Plank with Hip Lift', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.suitcase-carry', exerciseName: 'Suitcase Carry', targetSets: 2, targetReps: '20-40 m each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-anti-lateral-b', 'Lateral stability B — Loaded carry', 'Anti-Lateral-Flexion', [
+    { exerciseId: 'abs-core.suitcase-march', exerciseName: 'Suitcase March', targetSets: 2, targetReps: '20-40 steps each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.offset-farmer-carry', exerciseName: 'Offset Farmer Carry', targetSets: 2, targetReps: '20-40 m', restSeconds: 60 },
+    { exerciseId: 'abs-core.side-plank-reach-through', exerciseName: 'Side Plank Reach-Through', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-anti-lateral-c', 'Lateral stability C — Advanced options', 'Anti-Lateral-Flexion', [
+    { exerciseId: 'abs-core.standing-one-arm-overhead-carry', exerciseName: 'Single-Arm Overhead Carry', targetSets: 2, targetReps: '15-30 m each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.copenhagen-side-plank-core', exerciseName: 'Copenhagen Side Plank', targetSets: 2, targetReps: '10-20 sec each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.side-plank', exerciseName: 'Side Plank', targetSets: 2, targetReps: '15-40 sec each side', restSeconds: 60 },
+  ]),
+  // Spinal Stability
+  makeLegPlan('plan-spinal-stability-a', 'Spinal stability A — Beginner coordination', 'Spinal Stability', [
+    { exerciseId: 'abs-core.bird-dog-core', exerciseName: 'Bird Dog', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.bird-dog-hold', exerciseName: 'Bird Dog Hold', targetSets: 2, targetReps: '10-20 sec each side', restSeconds: 60 },
+    { exerciseId: 'abs-core.prone-cobra-hold', exerciseName: 'Prone Cobra Hold', targetSets: 2, targetReps: '10-20 sec', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-spinal-stability-b', 'Spinal stability B — Supported extension', 'Spinal Stability', [
+    { exerciseId: 'abs-core.45-degree-back-extension-core', exerciseName: '45-Degree Back Extension', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.back-extension-machine-core', exerciseName: 'Back Extension Machine', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.quadruped-lumbar-extension', exerciseName: 'Quadruped Trunk Extension', targetSets: 2, targetReps: '6-10 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-spinal-stability-c', 'Spinal stability C — Home bodyweight', 'Spinal Stability', [
+    { exerciseId: 'abs-core.prone-back-extension', exerciseName: 'Prone Back Extension', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'abs-core.superman-hold-core', exerciseName: 'Superman Hold', targetSets: 2, targetReps: '10-20 sec', restSeconds: 60 },
+    { exerciseId: 'abs-core.hip-hinge-back-extension', exerciseName: 'Hip-Hinge Back Extension', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+  ]),
 ];
 
 export const SEED_GOALS: DailyGoal[] = [
@@ -688,6 +785,7 @@ export async function ensureDatabaseSeeded(): Promise<void> {
   await importExerciseCatalog(shoulderCatalog as unknown as ExerciseCatalogRaw);
   await importExerciseCatalog(armCatalog as unknown as ExerciseCatalogRaw);
   await importExerciseCatalog(legCatalog as unknown as ExerciseCatalogRaw);
+  await importExerciseCatalog(absCoreCatalog as unknown as ExerciseCatalogRaw);
 
   const foodCount = await db.foodItems.count();
   if (foodCount === 0) {
