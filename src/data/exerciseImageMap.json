@@ -35,14 +35,14 @@
     "imageAlt": "Weighted Sit-Up exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Weighted_Sit-Ups_-_With_Bands"
+    "matchedId": "Sit-Up"
   },
   "abs-core.cable-crunch": {
     "image": "exercises/core/abs-core.cable-crunch.jpg",
     "imageAlt": "Kneeling Cable Crunch exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Cable_Crunch"
+    "matchedId": "Kneeling_Cable_Crunch_With_Alternating_Oblique_Twists"
   },
   "abs-core.ab-crunch-machine": {
     "image": "exercises/core/abs-core.ab-crunch-machine.jpg",
@@ -105,18 +105,16 @@
     "matchedId": "Russian_Twist"
   },
   "abs-core.cable-woodchop-high-low": {
-    "image": "exercises/core/abs-core.cable-woodchop-high-low.jpg",
-    "imageAlt": "High-to-Low Cable Wood Chop exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Standing_Cable_Wood_Chop"
+    "image": null,
+    "imageAlt": "High-to-Low Cable Wood Chop placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "abs-core.cable-woodchop-low-high": {
-    "image": "exercises/core/abs-core.cable-woodchop-low-high.jpg",
-    "imageAlt": "Low-to-High Cable Wood Chop exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Standing_Cable_Wood_Chop"
+    "image": null,
+    "imageAlt": "Low-to-High Cable Wood Chop placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "abs-core.landmine-rotation": {
     "image": null,
@@ -136,7 +134,7 @@
     "imageAlt": "Cable Side Bend exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Bosu_Ball_Cable_Crunch_With_Side_Bends"
+    "matchedId": "One-Arm_High-Pulley_Cable_Side_Bends"
   },
   "abs-core.side-crunch": {
     "image": null,
@@ -200,7 +198,7 @@
     "imageAlt": "Stability-Ball Rollout exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Exercise_Ball_Crunch"
+    "matchedId": "Exercise_Ball_Pull-In"
   },
   "abs-core.body-saw-plank": {
     "image": null,
@@ -216,10 +214,11 @@
     "matchedId": "Plank"
   },
   "abs-core.stability-ball-stir-the-pot": {
-    "image": null,
-    "imageAlt": "Stability-Ball Stir-the-Pot placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.stability-ball-stir-the-pot.jpg",
+    "imageAlt": "Stability-Ball Stir-the-Pot exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Exercise_Ball_Pull-In"
   },
   "abs-core.hollow-body-hold": {
     "image": null,
@@ -247,11 +246,10 @@
     "matchedId": "Pallof_Press"
   },
   "abs-core.half-kneeling-pallof-press": {
-    "image": "exercises/core/abs-core.half-kneeling-pallof-press.jpg",
-    "imageAlt": "Half-Kneeling Pallof Press exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Pallof_Press"
+    "image": null,
+    "imageAlt": "Half-Kneeling Pallof Press placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "abs-core.pallof-press-walkout": {
     "image": "exercises/core/abs-core.pallof-press-walkout.jpg",
@@ -261,11 +259,10 @@
     "matchedId": "Pallof_Press"
   },
   "abs-core.tall-kneeling-pallof-press": {
-    "image": "exercises/core/abs-core.tall-kneeling-pallof-press.jpg",
-    "imageAlt": "Tall-Kneeling Pallof Press exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Pallof_Press"
+    "image": null,
+    "imageAlt": "Tall-Kneeling Pallof Press placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "abs-core.plank-shoulder-tap": {
     "image": null,
@@ -274,10 +271,11 @@
     "imageStatus": "unavailable"
   },
   "abs-core.bird-dog-row": {
-    "image": null,
-    "imageAlt": "Bird-Dog Dumbbell Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.bird-dog-row.jpg",
+    "imageAlt": "Bird-Dog Dumbbell Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "One-Arm_Dumbbell_Row"
   },
   "abs-core.single-arm-cable-hold-core": {
     "image": null,
@@ -308,7 +306,7 @@
     "imageAlt": "Side Plank exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Plank"
+    "matchedId": "Push_Up_to_Side_Plank"
   },
   "abs-core.side-plank-hip-lift": {
     "image": null,
@@ -335,17 +333,17 @@
     "imageStatus": "unavailable"
   },
   "abs-core.side-plank-reach-through": {
-    "image": null,
-    "imageAlt": "Side Plank Reach-Through placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
-  },
-  "abs-core.standing-one-arm-overhead-carry": {
-    "image": "exercises/core/abs-core.standing-one-arm-overhead-carry.jpg",
-    "imageAlt": "Single-Arm Overhead Carry exercise demonstration",
+    "image": "exercises/core/abs-core.side-plank-reach-through.jpg",
+    "imageAlt": "Side Plank Reach-Through exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "One-Arm_Overhead_Kettlebell_Squats"
+    "matchedId": "Push_Up_to_Side_Plank"
+  },
+  "abs-core.standing-one-arm-overhead-carry": {
+    "image": null,
+    "imageAlt": "Single-Arm Overhead Carry placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "abs-core.copenhagen-side-plank-core": {
     "image": null,
@@ -421,7 +419,7 @@
     "imageAlt": "Standing Barbell Curl exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Close-Grip_Standing_Barbell_Curl"
+    "matchedId": "Barbell_Curl"
   },
   "arms.ez-bar-curl": {
     "image": "exercises/arms/arms.ez-bar-curl.jpg",
@@ -473,11 +471,10 @@
     "matchedId": "Hammer_Curls"
   },
   "arms.cross-body-hammer-curl": {
-    "image": "exercises/arms/arms.cross-body-hammer-curl.jpg",
-    "imageAlt": "Cross-Body Hammer Curl exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Cross_Body_Hammer_Curl"
+    "image": null,
+    "imageAlt": "Cross-Body Hammer Curl placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.concentration-curl": {
     "image": "exercises/arms/arms.concentration-curl.jpg",
@@ -504,7 +501,7 @@
     "imageAlt": "Barbell Drag Curl exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Barbell_Curl"
+    "matchedId": "Drag_Curl"
   },
   "arms.zottman-curl": {
     "image": "exercises/arms/arms.zottman-curl.jpg",
@@ -534,18 +531,17 @@
     "matchedId": "Barbell_Curl"
   },
   "arms.behind-back-wrist-curl": {
-    "image": "exercises/arms/arms.behind-back-wrist-curl.jpg",
-    "imageAlt": "Behind-the-Back Wrist Curl exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Standing_Palms-Up_Barbell_Behind_The_Back_Wrist_Curl"
+    "image": null,
+    "imageAlt": "Behind-the-Back Wrist Curl placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.dumbbell-wrist-curl": {
     "image": "exercises/arms/arms.dumbbell-wrist-curl.jpg",
     "imageAlt": "Seated Dumbbell Wrist Curl exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Seated_Dumbbell_Curl"
+    "matchedId": "Seated_Dumbbell_Palms-Down_Wrist_Curl"
   },
   "arms.wrist-extension-dumbbell": {
     "image": null,
@@ -573,11 +569,10 @@
     "imageStatus": "unavailable"
   },
   "arms.plate-pinch-carry": {
-    "image": "exercises/arms/arms.plate-pinch-carry.jpg",
-    "imageAlt": "Plate Pinch Carry exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Plate_Pinch"
+    "image": null,
+    "imageAlt": "Plate Pinch Carry placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.wrist-pronation-supination": {
     "image": null,
@@ -586,17 +581,17 @@
     "imageStatus": "unavailable"
   },
   "arms.cable-biceps-curl-straight-bar": {
-    "image": null,
-    "imageAlt": "Straight-Bar Cable Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
-  },
-  "arms.cable-curl-ez-bar": {
-    "image": "exercises/arms/arms.cable-curl-ez-bar.jpg",
-    "imageAlt": "EZ-Bar Cable Curl exercise demonstration",
+    "image": "exercises/arms/arms.cable-biceps-curl-straight-bar.jpg",
+    "imageAlt": "Straight-Bar Cable Curl exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "EZ-Bar_Curl"
+    "matchedId": "Cable_Wrist_Curl"
+  },
+  "arms.cable-curl-ez-bar": {
+    "image": null,
+    "imageAlt": "EZ-Bar Cable Curl placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.cable-rope-hammer-curl": {
     "image": "exercises/arms/arms.cable-rope-hammer-curl.jpg",
@@ -613,17 +608,17 @@
     "matchedId": "Standing_One-Arm_Cable_Curl"
   },
   "arms.behind-body-cable-curl": {
-    "image": null,
-    "imageAlt": "Behind-the-Body Cable Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
-  },
-  "arms.high-cable-double-biceps-curl": {
-    "image": "exercises/arms/arms.high-cable-double-biceps-curl.jpg",
-    "imageAlt": "High-Cable Double Biceps Curl exercise demonstration",
+    "image": "exercises/arms/arms.behind-body-cable-curl.jpg",
+    "imageAlt": "Behind-the-Body Cable Curl exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "High_Cable_Curls"
+    "matchedId": "Cable_Wrist_Curl"
+  },
+  "arms.high-cable-double-biceps-curl": {
+    "image": null,
+    "imageAlt": "High-Cable Double Biceps Curl placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.cable-preacher-curl": {
     "image": "exercises/arms/arms.cable-preacher-curl.jpg",
@@ -647,11 +642,10 @@
     "matchedId": "Cable_Wrist_Curl"
   },
   "arms.cable-wrist-extension": {
-    "image": "exercises/arms/arms.cable-wrist-extension.jpg",
-    "imageAlt": "Cable Wrist Extension exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Cable_Wrist_Curl"
+    "image": null,
+    "imageAlt": "Cable Wrist Extension placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.cable-pronation-supination": {
     "image": null,
@@ -671,7 +665,7 @@
     "imageAlt": "Rope Triceps Pushdown exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Triceps_Pushdown_-_Rope_Attachment"
+    "matchedId": "Triceps_Pushdown"
   },
   "arms.reverse-grip-triceps-pushdown": {
     "image": "exercises/arms/arms.reverse-grip-triceps-pushdown.jpg",
@@ -681,11 +675,10 @@
     "matchedId": "Reverse_Grip_Triceps_Pushdown"
   },
   "arms.single-arm-cable-triceps-pushdown": {
-    "image": "exercises/arms/arms.single-arm-cable-triceps-pushdown.jpg",
-    "imageAlt": "Single-Arm Cable Triceps Pushdown exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Cable_One_Arm_Tricep_Extension"
+    "image": null,
+    "imageAlt": "Single-Arm Cable Triceps Pushdown placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.overhead-rope-triceps-extension": {
     "image": "exercises/arms/arms.overhead-rope-triceps-extension.jpg",
@@ -702,24 +695,24 @@
     "matchedId": "Cable_One_Arm_Tricep_Extension"
   },
   "arms.cable-triceps-kickback": {
-    "image": null,
-    "imageAlt": "Cable Triceps Kickback placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
-  },
-  "arms.cable-cross-body-triceps-extension": {
-    "image": "exercises/arms/arms.cable-cross-body-triceps-extension.jpg",
-    "imageAlt": "Cross-Body Cable Triceps Extension exercise demonstration",
+    "image": "exercises/arms/arms.cable-triceps-kickback.jpg",
+    "imageAlt": "Cable Triceps Kickback exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Cable_Lying_Triceps_Extension"
+    "matchedId": "One-Legged_Cable_Kickback"
+  },
+  "arms.cable-cross-body-triceps-extension": {
+    "image": null,
+    "imageAlt": "Cross-Body Cable Triceps Extension placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.triceps-dip-parallel-bars": {
     "image": "exercises/arms/arms.triceps-dip-parallel-bars.jpg",
     "imageAlt": "Parallel-Bar Triceps Dip exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Parallel_Bar_Dip"
+    "matchedId": "Dips_-_Triceps_Version"
   },
   "arms.bench-dip": {
     "image": "exercises/arms/arms.bench-dip.jpg",
@@ -736,11 +729,10 @@
     "matchedId": "Close-Grip_Push-Up_off_of_a_Dumbbell"
   },
   "arms.diamond-push-up": {
-    "image": "exercises/arms/arms.diamond-push-up.jpg",
-    "imageAlt": "Diamond Push-Up exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Pushups"
+    "image": null,
+    "imageAlt": "Diamond Push-Up placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.bodyweight-triceps-extension": {
     "image": null,
@@ -793,11 +785,10 @@
     "matchedId": "Machine_Preacher_Curls"
   },
   "arms.machine-triceps-extension": {
-    "image": "exercises/arms/arms.machine-triceps-extension.jpg",
-    "imageAlt": "Seated Triceps Extension Machine exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Machine_Triceps_Extension"
+    "image": null,
+    "imageAlt": "Seated Triceps Extension Machine placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.assisted-dip-machine-triceps": {
     "image": null,
@@ -850,11 +841,10 @@
     "imageStatus": "unavailable"
   },
   "arms.band-overhead-triceps-extension": {
-    "image": "exercises/arms/arms.band-overhead-triceps-extension.jpg",
-    "imageAlt": "Resistance-Band Overhead Triceps Extension exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Speed_Band_Overhead_Triceps"
+    "image": null,
+    "imageAlt": "Resistance-Band Overhead Triceps Extension placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "arms.band-kickback-triceps": {
     "image": null,
@@ -894,11 +884,10 @@
     "imageStatus": "unavailable"
   },
   "back.barbell-bent-over-row": {
-    "image": "exercises/back/back.barbell-bent-over-row.jpg",
-    "imageAlt": "Barbell Bent-Over Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Bent_Over_Barbell_Row"
+    "image": null,
+    "imageAlt": "Barbell Bent-Over Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.barbell-pendlay-row": {
     "image": null,
@@ -907,11 +896,10 @@
     "imageStatus": "unavailable"
   },
   "back.barbell-underhand-row": {
-    "image": "exercises/back/back.barbell-underhand-row.jpg",
-    "imageAlt": "Underhand Barbell Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Upright_Barbell_Row"
+    "image": null,
+    "imageAlt": "Underhand Barbell Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.barbell-yates-row": {
     "image": null,
@@ -920,11 +908,10 @@
     "imageStatus": "unavailable"
   },
   "back.barbell-seal-row": {
-    "image": "exercises/back/back.barbell-seal-row.jpg",
-    "imageAlt": "Barbell Seal Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Upright_Barbell_Row"
+    "image": null,
+    "imageAlt": "Barbell Seal Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.barbell-meadows-row": {
     "image": null,
@@ -933,11 +920,10 @@
     "imageStatus": "unavailable"
   },
   "back.t-bar-row-landmine": {
-    "image": "exercises/back/back.t-bar-row-landmine.jpg",
-    "imageAlt": "Landmine T-Bar Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "T-Bar_Row_with_Handle"
+    "image": null,
+    "imageAlt": "Landmine T-Bar Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.dumbbell-one-arm-row": {
     "image": "exercises/back/back.dumbbell-one-arm-row.jpg",
@@ -947,10 +933,11 @@
     "matchedId": "One-Arm_Dumbbell_Row"
   },
   "back.dumbbell-chest-supported-row": {
-    "image": null,
-    "imageAlt": "Chest-Supported Dumbbell Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.dumbbell-chest-supported-row.jpg",
+    "imageAlt": "Chest-Supported Dumbbell Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "One-Arm_Dumbbell_Row"
   },
   "back.dumbbell-renegade-row": {
     "image": null,
@@ -966,10 +953,11 @@
     "matchedId": "Dumbbell_Incline_Row"
   },
   "back.dumbbell-wide-elbow-row": {
-    "image": null,
-    "imageAlt": "Wide-Elbow Dumbbell Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.dumbbell-wide-elbow-row.jpg",
+    "imageAlt": "Wide-Elbow Dumbbell Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "One-Arm_Dumbbell_Row"
   },
   "back.dumbbell-pullover-back": {
     "image": "exercises/back/back.dumbbell-pullover-back.jpg",
@@ -1013,17 +1001,17 @@
     "matchedId": "Barbell_Deadlift"
   },
   "back.dumbbell-romanian-deadlift": {
-    "image": null,
-    "imageAlt": "Dumbbell Romanian Deadlift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
-  },
-  "back.trap-bar-deadlift": {
-    "image": "exercises/back/back.trap-bar-deadlift.jpg",
-    "imageAlt": "Trap-Bar Deadlift exercise demonstration",
+    "image": "exercises/back/back.dumbbell-romanian-deadlift.jpg",
+    "imageAlt": "Dumbbell Romanian Deadlift exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Trap_Bar_Deadlift"
+    "matchedId": "Stiff-Legged_Dumbbell_Deadlift"
+  },
+  "back.trap-bar-deadlift": {
+    "image": null,
+    "imageAlt": "Trap-Bar Deadlift placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.lat-pulldown-wide-grip": {
     "image": null,
@@ -1055,7 +1043,7 @@
     "imageAlt": "Straight-Arm Cable Pulldown exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Straight-Arm_Pulldown"
+    "matchedId": "Underhand_Cable_Pulldowns"
   },
   "back.machine-high-row": {
     "image": "exercises/back/back.machine-high-row.jpg",
@@ -1108,18 +1096,16 @@
     "matchedId": "Reverse_Hyperextension"
   },
   "back.cable-seated-row-close": {
-    "image": "exercises/back/back.cable-seated-row-close.jpg",
-    "imageAlt": "Close-Grip Seated Cable Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Seated_Cable_Rows"
+    "image": null,
+    "imageAlt": "Close-Grip Seated Cable Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.cable-seated-row-wide": {
-    "image": "exercises/back/back.cable-seated-row-wide.jpg",
-    "imageAlt": "Wide-Grip Seated Cable Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Seated_Cable_Rows"
+    "image": null,
+    "imageAlt": "Wide-Grip Seated Cable Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.cable-seated-row-single-arm": {
     "image": "exercises/back/back.cable-seated-row-single-arm.jpg",
@@ -1143,25 +1129,22 @@
     "matchedId": "Elevated_Cable_Rows"
   },
   "back.cable-face-pull": {
-    "image": "exercises/back/back.cable-face-pull.jpg",
-    "imageAlt": "Cable Face Pull exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Face_Pull"
+    "image": null,
+    "imageAlt": "Cable Face Pull placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.cable-rear-delt-fly": {
-    "image": "exercises/back/back.cable-rear-delt-fly.jpg",
-    "imageAlt": "Cable Rear-Delt Fly exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Cable_Rear_Delt_Fly"
+    "image": null,
+    "imageAlt": "Cable Rear-Delt Fly placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.cable-one-arm-pulldown": {
-    "image": "exercises/back/back.cable-one-arm-pulldown.jpg",
-    "imageAlt": "Kneeling Single-Arm Cable Pulldown exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "One_Arm_Lat_Pulldown"
+    "image": null,
+    "imageAlt": "Kneeling Single-Arm Cable Pulldown placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.cable-prayer-pulldown": {
     "image": "exercises/back/back.cable-prayer-pulldown.jpg",
@@ -1171,11 +1154,10 @@
     "matchedId": "Underhand_Cable_Pulldowns"
   },
   "back.cable-pull-through": {
-    "image": "exercises/back/back.cable-pull-through.jpg",
-    "imageAlt": "Cable Pull-Through exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Pull_Through"
+    "image": null,
+    "imageAlt": "Cable Pull-Through placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.cable-good-morning": {
     "image": null,
@@ -1226,17 +1208,17 @@
     "matchedId": "Inverted_Row"
   },
   "back.feet-elevated-inverted-row": {
-    "image": null,
-    "imageAlt": "Feet-Elevated Inverted Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
-  },
-  "back.wide-grip-inverted-row": {
-    "image": "exercises/back/back.wide-grip-inverted-row.jpg",
-    "imageAlt": "Wide-Grip Inverted Row exercise demonstration",
+    "image": "exercises/back/back.feet-elevated-inverted-row.jpg",
+    "imageAlt": "Feet-Elevated Inverted Row exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
     "matchedId": "Inverted_Row"
+  },
+  "back.wide-grip-inverted-row": {
+    "image": null,
+    "imageAlt": "Wide-Grip Inverted Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.towel-row": {
     "image": null,
@@ -1301,11 +1283,10 @@
     "imageStatus": "unavailable"
   },
   "back.band-pull-apart": {
-    "image": "exercises/back/back.band-pull-apart.jpg",
-    "imageAlt": "Band Pull-Apart exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Band_Pull_Apart"
+    "image": null,
+    "imageAlt": "Band Pull-Apart placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.band-straight-arm-pulldown": {
     "image": null,
@@ -1327,11 +1308,10 @@
     "imageStatus": "unavailable"
   },
   "back.backpack-row": {
-    "image": "exercises/back/back.backpack-row.jpg",
-    "imageAlt": "Backpack Bent-Over Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Bent_Over_Barbell_Row"
+    "image": null,
+    "imageAlt": "Backpack Bent-Over Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "back.backpack-romanian-deadlift": {
     "image": "exercises/back/back.backpack-romanian-deadlift.jpg",
@@ -1341,10 +1321,11 @@
     "matchedId": "Romanian_Deadlift"
   },
   "back.table-inverted-row": {
-    "image": null,
-    "imageAlt": "Under-Table Inverted Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.table-inverted-row.jpg",
+    "imageAlt": "Under-Table Inverted Row exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Inverted_Row"
   },
   "chest.barbell-flat-bench-press": {
     "image": "exercises/chest/chest.barbell-flat-bench-press.jpg",
@@ -1361,11 +1342,10 @@
     "matchedId": "Barbell_Incline_Bench_Press_-_Medium_Grip"
   },
   "chest.barbell-low-incline-press": {
-    "image": "exercises/chest/chest.barbell-low-incline-press.jpg",
-    "imageAlt": "Barbell Low-Incline Press exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Barbell_Incline_Bench_Press_-_Medium_Grip"
+    "image": null,
+    "imageAlt": "Barbell Low-Incline Press placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.barbell-decline-bench-press": {
     "image": "exercises/chest/chest.barbell-decline-bench-press.jpg",
@@ -1375,10 +1355,11 @@
     "matchedId": "Decline_Barbell_Bench_Press"
   },
   "chest.barbell-close-grip-bench-press-chest": {
-    "image": null,
-    "imageAlt": "Close-Grip Bench Press (Chest-Supported Setup) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.barbell-close-grip-bench-press-chest.jpg",
+    "imageAlt": "Close-Grip Bench Press (Chest-Supported Setup) exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Close-Grip_Barbell_Bench_Press"
   },
   "chest.barbell-wide-grip-bench-press": {
     "image": "exercises/chest/chest.barbell-wide-grip-bench-press.jpg",
@@ -1392,7 +1373,7 @@
     "imageAlt": "Barbell Spoto Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Barbell_Bench_Press_-_Medium_Grip"
+    "matchedId": "Barbell_Shoulder_Press"
   },
   "chest.barbell-floor-press": {
     "image": "exercises/chest/chest.barbell-floor-press.jpg",
@@ -1434,7 +1415,7 @@
     "imageAlt": "Dumbbell Neutral-Grip Bench Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Dumbbell_Bench_Press_with_Neutral_Grip"
+    "matchedId": "Dumbbell_Bench_Press"
   },
   "chest.alternating-dumbbell-bench-press": {
     "image": "exercises/chest/chest.alternating-dumbbell-bench-press.jpg",
@@ -1468,7 +1449,7 @@
     "imageAlt": "Dumbbell Crush Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Close-Grip_Dumbbell_Press"
+    "matchedId": "Dumbbell_Bench_Press"
   },
   "chest.dumbbell-pullover": {
     "image": "exercises/chest/chest.dumbbell-pullover.jpg",
@@ -1488,7 +1469,7 @@
     "imageAlt": "Incline Dumbbell Fly exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Dumbbell_Incline_Row"
+    "matchedId": "Incline_Dumbbell_Flyes"
   },
   "chest.dumbbell-fly-decline": {
     "image": "exercises/chest/chest.dumbbell-fly-decline.jpg",
@@ -1498,11 +1479,10 @@
     "matchedId": "Decline_Dumbbell_Flyes"
   },
   "chest.dumbbell-around-the-world": {
-    "image": "exercises/chest/chest.dumbbell-around-the-world.jpg",
-    "imageAlt": "Dumbbell Around-the-World exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Around_The_Worlds"
+    "image": null,
+    "imageAlt": "Dumbbell Around-the-World placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.plate-squeeze-press": {
     "image": null,
@@ -1601,18 +1581,16 @@
     "imageStatus": "unavailable"
   },
   "chest.cable-crossover-high-to-low": {
-    "image": "exercises/chest/chest.cable-crossover-high-to-low.jpg",
-    "imageAlt": "High-to-Low Cable Crossover exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Low_Cable_Crossover"
+    "image": null,
+    "imageAlt": "High-to-Low Cable Crossover placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.cable-crossover-low-to-high": {
-    "image": "exercises/chest/chest.cable-crossover-low-to-high.jpg",
-    "imageAlt": "Low-to-High Cable Crossover exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Low_Cable_Crossover"
+    "image": null,
+    "imageAlt": "Low-to-High Cable Crossover placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.cable-crossover-mid-height": {
     "image": "exercises/chest/chest.cable-crossover-mid-height.jpg",
@@ -1622,18 +1600,16 @@
     "matchedId": "Cable_Crossover"
   },
   "chest.single-arm-cable-crossover-high-to-low": {
-    "image": "exercises/chest/chest.single-arm-cable-crossover-high-to-low.jpg",
-    "imageAlt": "Single-Arm High-to-Low Cable Crossover exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Single-Arm_Cable_Crossover"
+    "image": null,
+    "imageAlt": "Single-Arm High-to-Low Cable Crossover placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.single-arm-cable-crossover-low-to-high": {
-    "image": "exercises/chest/chest.single-arm-cable-crossover-low-to-high.jpg",
-    "imageAlt": "Single-Arm Low-to-High Cable Crossover exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Single-Arm_Cable_Crossover"
+    "image": null,
+    "imageAlt": "Single-Arm Low-to-High Cable Crossover placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.standing-cable-chest-press": {
     "image": "exercises/chest/chest.standing-cable-chest-press.jpg",
@@ -1654,7 +1630,7 @@
     "imageAlt": "Single-Arm Standing Cable Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Standing_One-Arm_Cable_Curl"
+    "matchedId": "Standing_Cable_Chest_Press"
   },
   "chest.half-kneeling-single-arm-cable-press": {
     "image": null,
@@ -1663,11 +1639,10 @@
     "imageStatus": "unavailable"
   },
   "chest.cable-fly-bench-flat": {
-    "image": "exercises/chest/chest.cable-fly-bench-flat.jpg",
-    "imageAlt": "Flat-Bench Cable Fly exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Flat_Bench_Cable_Flyes"
+    "image": null,
+    "imageAlt": "Flat-Bench Cable Fly placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.cable-fly-bench-incline": {
     "image": null,
@@ -1682,11 +1657,10 @@
     "imageStatus": "unavailable"
   },
   "chest.single-arm-cable-fly": {
-    "image": "exercises/chest/chest.single-arm-cable-fly.jpg",
-    "imageAlt": "Single-Arm Cable Fly exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Single-Arm_Cable_Crossover"
+    "image": null,
+    "imageAlt": "Single-Arm Cable Fly placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.low-cable-squeeze-press": {
     "image": null,
@@ -1706,14 +1680,14 @@
     "imageAlt": "Wide-Hand Push-Up exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Push-Up_Wide"
+    "matchedId": "Pushups"
   },
   "chest.push-up-close-hand": {
     "image": "exercises/chest/chest.push-up-close-hand.jpg",
     "imageAlt": "Close-Hand Push-Up exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Pushups_Close_and_Wide_Hand_Positions"
+    "matchedId": "Pushups"
   },
   "chest.push-up-deficit-handles": {
     "image": null,
@@ -1726,34 +1700,33 @@
     "imageAlt": "Feet-Elevated Push-Up exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Push-Ups_With_Feet_Elevated"
+    "matchedId": "Pushups"
   },
   "chest.push-up-hands-elevated": {
     "image": "exercises/chest/chest.push-up-hands-elevated.jpg",
     "imageAlt": "Hands-Elevated Push-Up exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Push-Ups_With_Feet_Elevated"
-  },
-  "chest.push-up-kneeling": {
-    "image": "exercises/chest/chest.push-up-kneeling.jpg",
-    "imageAlt": "Kneeling Push-Up exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
     "matchedId": "Pushups"
   },
-  "chest.push-up-staggered-hands": {
+  "chest.push-up-kneeling": {
     "image": null,
-    "imageAlt": "Staggered-Hand Push-Up placeholder",
+    "imageAlt": "Kneeling Push-Up placeholder",
     "imageSource": "Unavailable",
     "imageStatus": "unavailable"
   },
-  "chest.push-up-archer": {
-    "image": "exercises/chest/chest.push-up-archer.jpg",
-    "imageAlt": "Archer Push-Up exercise demonstration",
+  "chest.push-up-staggered-hands": {
+    "image": "exercises/chest/chest.push-up-staggered-hands.jpg",
+    "imageAlt": "Staggered-Hand Push-Up exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
     "matchedId": "Pushups"
+  },
+  "chest.push-up-archer": {
+    "image": null,
+    "imageAlt": "Archer Push-Up placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "chest.push-up-one-arm-assisted": {
     "image": "exercises/chest/chest.push-up-one-arm-assisted.jpg",
@@ -1889,11 +1862,10 @@
     "imageStatus": "unavailable"
   },
   "legs.step-up": {
-    "image": "exercises/legs/legs.step-up.jpg",
-    "imageAlt": "Dumbbell Step-Up exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Dumbbell_Step_Ups"
+    "image": null,
+    "imageAlt": "Dumbbell Step-Up placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "legs.leg-extension-machine": {
     "image": "exercises/legs/legs.leg-extension-machine.jpg",
@@ -1934,10 +1906,11 @@
     "matchedId": "Barbell_Deadlift"
   },
   "legs.dumbbell-romanian-deadlift-legs": {
-    "image": null,
-    "imageAlt": "Dumbbell Romanian Deadlift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.dumbbell-romanian-deadlift-legs.jpg",
+    "imageAlt": "Dumbbell Romanian Deadlift exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "Stiff-Legged_Dumbbell_Deadlift"
   },
   "legs.single-leg-romanian-deadlift": {
     "image": null,
@@ -1984,7 +1957,7 @@
     "imageAlt": "Glute-Ham Raise exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Glute_Ham_Raise"
+    "matchedId": "Floor_Glute-Ham_Raise"
   },
   "legs.slider-leg-curl": {
     "image": null,
@@ -2020,11 +1993,10 @@
     "imageStatus": "unavailable"
   },
   "legs.single-leg-glute-bridge": {
-    "image": "exercises/legs/legs.single-leg-glute-bridge.jpg",
-    "imageAlt": "Single-Leg Glute Bridge exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Single_Leg_Glute_Bridge"
+    "image": null,
+    "imageAlt": "Single-Leg Glute Bridge placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "legs.single-leg-hip-thrust": {
     "image": null,
@@ -2033,10 +2005,11 @@
     "imageStatus": "unavailable"
   },
   "legs.cable-glute-kickback": {
-    "image": null,
-    "imageAlt": "Cable Glute Kickback placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.cable-glute-kickback.jpg",
+    "imageAlt": "Cable Glute Kickback exercise demonstration",
+    "imageSource": "Free Exercise DB (Unlicense)",
+    "imageStatus": "matched",
+    "matchedId": "One-Legged_Cable_Kickback"
   },
   "legs.machine-glute-kickback": {
     "image": null,
@@ -2115,11 +2088,10 @@
     "imageStatus": "unavailable"
   },
   "legs.leg-press-calf-raise": {
-    "image": "exercises/legs/legs.leg-press-calf-raise.jpg",
-    "imageAlt": "Leg Press Calf Raise exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Calf_Press_On_The_Leg_Press_Machine"
+    "image": null,
+    "imageAlt": "Leg Press Calf Raise placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "legs.donkey-calf-raise": {
     "image": "exercises/legs/legs.donkey-calf-raise.jpg",
@@ -2221,11 +2193,10 @@
     "imageStatus": "unavailable"
   },
   "legs.band-monster-walk": {
-    "image": "exercises/legs/legs.band-monster-walk.jpg",
-    "imageAlt": "Resistance-Band Monster Walk exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Monster_Walk"
+    "image": null,
+    "imageAlt": "Resistance-Band Monster Walk placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "legs.standing-band-hip-abduction": {
     "image": null,
@@ -2238,7 +2209,7 @@
     "imageAlt": "Barbell Overhead Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Barbell_Bench_Press_-_Medium_Grip"
+    "matchedId": "Barbell_Shoulder_Press"
   },
   "shoulders.seated-barbell-overhead-press": {
     "image": "exercises/shoulders/shoulders.seated-barbell-overhead-press.jpg",
@@ -2259,7 +2230,7 @@
     "imageAlt": "Behind-the-Neck Barbell Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Standing_Barbell_Press_Behind_Neck"
+    "matchedId": "Barbell_Shoulder_Press"
   },
   "shoulders.dumbbell-shoulder-press": {
     "image": "exercises/shoulders/shoulders.dumbbell-shoulder-press.jpg",
@@ -2273,14 +2244,14 @@
     "imageAlt": "Seated Dumbbell Shoulder Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Dumbbell_Shoulder_Press"
+    "matchedId": "Seated_Dumbbell_Press"
   },
   "shoulders.neutral-grip-dumbbell-press": {
     "image": "exercises/shoulders/shoulders.neutral-grip-dumbbell-press.jpg",
     "imageAlt": "Neutral-Grip Dumbbell Press exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Dumbbell_Bench_Press_with_Neutral_Grip"
+    "matchedId": "Dumbbell_Bench_Press"
   },
   "shoulders.single-arm-dumbbell-press": {
     "image": "exercises/shoulders/shoulders.single-arm-dumbbell-press.jpg",
@@ -2361,7 +2332,7 @@
     "imageAlt": "Barbell Front Raise exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Front_Barbell_Squat"
+    "matchedId": "Front_Raise_And_Pullover"
   },
   "shoulders.cable-front-raise": {
     "image": "exercises/shoulders/shoulders.cable-front-raise.jpg",
@@ -2378,25 +2349,22 @@
     "matchedId": "Front_Plate_Raise"
   },
   "shoulders.cable-y-raise": {
-    "image": "exercises/shoulders/shoulders.cable-y-raise.jpg",
-    "imageAlt": "Cable Y-Raise exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Front_Cable_Raise"
+    "image": null,
+    "imageAlt": "Cable Y-Raise placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.incline-dumbbell-y-raise": {
-    "image": "exercises/shoulders/shoulders.incline-dumbbell-y-raise.jpg",
-    "imageAlt": "Incline-Bench Dumbbell Y-Raise exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Dumbbell_Incline_Shoulder_Raise"
+    "image": null,
+    "imageAlt": "Incline-Bench Dumbbell Y-Raise placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.dumbbell-rear-delt-fly": {
-    "image": "exercises/shoulders/shoulders.dumbbell-rear-delt-fly.jpg",
-    "imageAlt": "Bent-Over Dumbbell Rear-Delt Fly exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Bent_Over_Dumbbell_Rear_Delt_Raise_With_Head_On_Bench"
+    "image": null,
+    "imageAlt": "Bent-Over Dumbbell Rear-Delt Fly placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.chest-supported-rear-delt-fly": {
     "image": null,
@@ -2415,14 +2383,13 @@
     "imageAlt": "Cable Rear-Delt Crossover exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Cable_Rear_Delt_Fly"
+    "matchedId": "Cable_Crossover"
   },
   "shoulders.face-pull-rope": {
-    "image": "exercises/shoulders/shoulders.face-pull-rope.jpg",
-    "imageAlt": "Rope Cable Face Pull exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Face_Pull"
+    "image": null,
+    "imageAlt": "Rope Cable Face Pull placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.band-face-pull-shoulder": {
     "image": null,
@@ -2435,7 +2402,7 @@
     "imageAlt": "Dumbbell Upright Row exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Standing_Dumbbell_Upright_Row"
+    "matchedId": "Dumbbell_One-Arm_Upright_Row"
   },
   "shoulders.barbell-upright-row": {
     "image": "exercises/shoulders/shoulders.barbell-upright-row.jpg",
@@ -2452,11 +2419,10 @@
     "matchedId": "Upright_Cable_Row"
   },
   "shoulders.wide-grip-upright-row": {
-    "image": "exercises/shoulders/shoulders.wide-grip-upright-row.jpg",
-    "imageAlt": "Wide-Grip Cable Upright Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Upright_Cable_Row"
+    "image": null,
+    "imageAlt": "Wide-Grip Cable Upright Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.dumbbell-shrug-shoulders": {
     "image": "exercises/shoulders/shoulders.dumbbell-shrug-shoulders.jpg",
@@ -2477,7 +2443,7 @@
     "imageAlt": "Behind-the-Back Barbell Shrug exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Barbell_Shrug_Behind_The_Back"
+    "matchedId": "Barbell_Shrug"
   },
   "shoulders.cable-shrug-shoulders": {
     "image": "exercises/shoulders/shoulders.cable-shrug-shoulders.jpg",
@@ -2557,25 +2523,22 @@
     "matchedId": "Dumbbell_Raise"
   },
   "shoulders.band-pull-apart-shoulder": {
-    "image": "exercises/shoulders/shoulders.band-pull-apart-shoulder.jpg",
-    "imageAlt": "Resistance-Band Pull-Apart exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Band_Pull_Apart"
+    "image": null,
+    "imageAlt": "Resistance-Band Pull-Apart placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.pike-push-up": {
-    "image": "exercises/shoulders/shoulders.pike-push-up.jpg",
-    "imageAlt": "Pike Push-Up exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Pushups"
+    "image": null,
+    "imageAlt": "Pike Push-Up placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.feet-elevated-pike-push-up": {
-    "image": "exercises/shoulders/shoulders.feet-elevated-pike-push-up.jpg",
-    "imageAlt": "Feet-Elevated Pike Push-Up exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Push-Ups_With_Feet_Elevated"
+    "image": null,
+    "imageAlt": "Feet-Elevated Pike Push-Up placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.wall-walk": {
     "image": null,
@@ -2615,11 +2578,10 @@
     "imageStatus": "unavailable"
   },
   "shoulders.band-lateral-raise": {
-    "image": "exercises/shoulders/shoulders.band-lateral-raise.jpg",
-    "imageAlt": "Resistance-Band Lateral Raise exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Lateral_Raise_-_With_Bands"
+    "image": null,
+    "imageAlt": "Resistance-Band Lateral Raise placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.band-front-raise": {
     "image": null,
@@ -2628,18 +2590,16 @@
     "imageStatus": "unavailable"
   },
   "shoulders.band-pull-apart-high": {
-    "image": "exercises/shoulders/shoulders.band-pull-apart-high.jpg",
-    "imageAlt": "High-Angle Band Pull-Apart exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Band_Pull_Apart"
+    "image": null,
+    "imageAlt": "High-Angle Band Pull-Apart placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.band-pull-apart-low": {
-    "image": "exercises/shoulders/shoulders.band-pull-apart-low.jpg",
-    "imageAlt": "Low-Angle Band Pull-Apart exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Band_Pull_Apart"
+    "image": null,
+    "imageAlt": "Low-Angle Band Pull-Apart placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "shoulders.wall-slide": {
     "image": null,
@@ -2701,11 +2661,10 @@
     "matchedId": "Pullups"
   },
   "ex-barbell-row": {
-    "image": "exercises/back/ex-barbell-row.jpg",
-    "imageAlt": "Bent-Over Barbell Row exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Bent_Over_Barbell_Row"
+    "image": null,
+    "imageAlt": "Bent-Over Barbell Row placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "ex-overhead-press": {
     "image": "exercises/shoulders/ex-overhead-press.jpg",
@@ -2729,18 +2688,17 @@
     "matchedId": "Barbell_Curl"
   },
   "ex-tricep-pushdown": {
-    "image": "exercises/arms/ex-tricep-pushdown.jpg",
-    "imageAlt": "Cable Tricep Pushdown exercise demonstration",
-    "imageSource": "Free Exercise DB (Unlicense)",
-    "imageStatus": "matched",
-    "matchedId": "Triceps_Pushdown"
+    "image": null,
+    "imageAlt": "Cable Tricep Pushdown placeholder",
+    "imageSource": "Unavailable",
+    "imageStatus": "unavailable"
   },
   "ex-wrist-curl": {
     "image": "exercises/arms/ex-wrist-curl.jpg",
     "imageAlt": "Dumbbell Wrist Curl exercise demonstration",
     "imageSource": "Free Exercise DB (Unlicense)",
     "imageStatus": "matched",
-    "matchedId": "Dumbbell_Bicep_Curl"
+    "matchedId": "Seated_Dumbbell_Palms-Down_Wrist_Curl"
   },
   "ex-squat": {
     "image": "exercises/legs/ex-squat.jpg",

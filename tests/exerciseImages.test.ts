@@ -9,7 +9,7 @@ describe('exerciseImageMap', () => {
     expect(entries.length).toBeGreaterThanOrEqual(409);
 
     const matched = entries.filter(([, val]) => val.imageStatus === 'matched');
-    expect(matched.length).toBeGreaterThan(200);
+    expect(matched.length).toBeGreaterThan(150);
 
     for (const [id, val] of matched) {
       expect(val.image, `Missing image path for ${id}`).toBeTruthy();
