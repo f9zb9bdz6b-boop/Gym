@@ -83,17 +83,28 @@ export async function importExerciseCatalog(catalog: ExerciseCatalogRaw): Promis
     throw new Error(`Catalog ${catalog.catalog_id} count mismatch: expected ${catalog.exercise_count}, got ${catalog.exercises.length}`);
   }
 
-  const existingIds = new Set(await db.exerciseLibrary.toCollection().primaryKeys());
+  const existingMap = new Map(
+    (await db.exerciseLibrary.toArray()).map((ex) => [ex.id, ex])
+  );
   const now = new Date().toISOString();
   const toInsert: ExerciseLibraryItem[] = [];
 
   for (const raw of catalog.exercises) {
-    if (existingIds.has(raw.id)) continue;
-
     const effectiveRegion =
       (raw.body_region === 'arms' || raw.body_region === 'legs' || raw.body_region === 'abs_core') && raw.subregion
         ? raw.subregion.toLowerCase()
         : raw.body_region.toLowerCase();
+    const mappedPrimary = mapRegionToMuscleGroup(effectiveRegion);
+    const existing = existingMap.get(raw.id);
+    if (existing) {
+      if (!existing.isCustom && (existing.primaryMuscle !== mappedPrimary || existing.bodyRegion !== effectiveRegion)) {
+        await db.exerciseLibrary.update(raw.id, {
+          bodyRegion: effectiveRegion,
+          primaryMuscle: mappedPrimary,
+        });
+      }
+      continue;
+    }
 
     toInsert.push({
       id: raw.id,
