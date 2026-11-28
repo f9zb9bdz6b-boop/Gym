@@ -1,4 +1,5 @@
 import { db } from './database';
+import { getExerciseImageEntry } from '@/data/exerciseImages';
 import type { ExerciseCategory, ExerciseDifficulty, ExerciseLibraryItem, MuscleGroup } from './types';
 
 export interface CatalogExerciseRaw {
@@ -96,11 +97,23 @@ export async function importExerciseCatalog(catalog: ExerciseCatalogRaw): Promis
         : raw.body_region.toLowerCase();
     const mappedPrimary = mapRegionToMuscleGroup(effectiveRegion);
     const existing = existingMap.get(raw.id);
+    const imgEntry = getExerciseImageEntry(raw.id);
+
     if (existing) {
-      if (!existing.isCustom && (existing.primaryMuscle !== mappedPrimary || existing.bodyRegion !== effectiveRegion)) {
+      if (
+        !existing.isCustom &&
+        (existing.primaryMuscle !== mappedPrimary ||
+          existing.bodyRegion !== effectiveRegion ||
+          existing.image !== (imgEntry?.image ?? null) ||
+          existing.imageStatus !== (imgEntry?.imageStatus ?? 'unavailable'))
+      ) {
         await db.exerciseLibrary.update(raw.id, {
           bodyRegion: effectiveRegion,
           primaryMuscle: mappedPrimary,
+          image: imgEntry?.image ?? null,
+          imageAlt: imgEntry?.imageAlt ?? `${raw.name} exercise demonstration`,
+          imageSource: imgEntry?.imageSource ?? 'Unavailable',
+          imageStatus: imgEntry?.imageStatus ?? 'unavailable',
         });
       }
       continue;
@@ -125,6 +138,10 @@ export async function importExerciseCatalog(catalog: ExerciseCatalogRaw): Promis
       safetyCautions: raw.safety_cautions,
       availability: raw.availability,
       tags: raw.tags,
+      image: imgEntry?.image ?? null,
+      imageAlt: imgEntry?.imageAlt ?? `${raw.name} exercise demonstration`,
+      imageSource: imgEntry?.imageSource ?? 'Unavailable',
+      imageStatus: imgEntry?.imageStatus ?? 'unavailable',
       calorieEstimation: raw.calorie_estimation
         ? {
             modelId: raw.calorie_estimation.model_id,

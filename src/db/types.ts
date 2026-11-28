@@ -110,6 +110,10 @@ export interface ExerciseLibraryItem {
     demonstration: ExerciseImageSlot;
     muscleAnatomy: ExerciseImageSlot;
   };
+  image?: string | null;
+  imageAlt?: string;
+  imageSource?: string;
+  imageStatus?: 'matched' | 'manually_verified' | 'unavailable';
   mediaPlaceholder?: string;
   caloriesBurnedPerSet?: number;
   notes?: string;

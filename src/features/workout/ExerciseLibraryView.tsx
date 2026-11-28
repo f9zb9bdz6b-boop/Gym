@@ -3,6 +3,8 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/database';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
 import { generateExerciseDetailsWithAI } from '@/lib/ai/aiService';
+import { resolveExerciseImage } from '@/data/exerciseImages';
+import { ExerciseImage } from '@/components/ui/ExerciseImage';
 import { ExerciseDetailView } from './ExerciseDetailView';
 import { ExerciseQuickPreviewModal } from './ExerciseQuickPreviewModal';
 import { VisualMuscleSelector } from './VisualMuscleSelector';
@@ -18,7 +20,6 @@ import {
   Dumbbell,
   Eye,
   Flame,
-  Image as ImageIcon,
   Layers,
   Pencil,
   Plus,
@@ -581,7 +582,7 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 md:gap-4">
             {filtered.map((ex) => {
-              const demoUri = ex.images?.demonstration?.uri || null;
+              const { src, alt } = resolveExerciseImage(ex);
               return (
                 <div
                   key={ex.id}
@@ -590,22 +591,14 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
                   <div>
                     <div
                       onClick={() => openDetails(ex)}
-                      className="relative aspect-video bg-zinc-950 flex items-center justify-center cursor-pointer overflow-hidden border-b border-zinc-800/70"
+                      className="relative aspect-[4/3] bg-zinc-950 flex items-center justify-center cursor-pointer overflow-hidden border-b border-zinc-800/70"
                     >
-                      {demoUri ? (
-                        <img
-                          src={demoUri}
-                          alt={ex.name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                      ) : (
-                        <div className="flex flex-col items-center justify-center text-zinc-600 gap-1">
-                          <ImageIcon className="h-5 w-5" />
-                          <span className="text-[10px] uppercase tracking-wider text-zinc-500">
-                            {ex.subregion || ex.primaryMuscle}
-                          </span>
-                        </div>
-                      )}
+                      <ExerciseImage
+                        src={src}
+                        alt={alt}
+                        fallbackLabel={ex.subregion || ex.primaryMuscle}
+                        imgClassName="object-contain group-hover:scale-105 transition-transform duration-300"
+                      />
 
                       <button
                         onClick={(e) => {

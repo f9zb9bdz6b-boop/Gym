@@ -1,6 +1,8 @@
-import { ArrowRight, Dumbbell, Image as ImageIcon, Star, X } from 'lucide-react';
+import { ArrowRight, Dumbbell, Star, X } from 'lucide-react';
 import type { ExerciseLibraryItem } from '@/db/types';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
+import { resolveExerciseImage } from '@/data/exerciseImages';
+import { ExerciseImage } from '@/components/ui/ExerciseImage';
 import { Button } from '@/components/ui/Button';
 
 interface ExerciseQuickPreviewModalProps {
@@ -16,7 +18,7 @@ export function ExerciseQuickPreviewModal({
   onViewFullDetails,
   onSelectExercise,
 }: ExerciseQuickPreviewModalProps) {
-  const demoUri = exercise.images?.demonstration?.uri || null;
+  const { src, alt } = resolveExerciseImage(exercise);
   const shortDesc =
     exercise.formGuidance ||
     exercise.instructions?.[0] ||
@@ -30,17 +32,13 @@ export function ExerciseQuickPreviewModal({
       aria-label={`Quick preview: ${exercise.name}`}
     >
       <div className="w-full max-w-md rounded-3xl border border-zinc-800 bg-zinc-950 overflow-hidden shadow-2xl">
-        <div className="relative aspect-video bg-zinc-900 flex items-center justify-center border-b border-zinc-800/80">
-          {demoUri ? (
-            <img src={demoUri} alt={exercise.name} className="w-full h-full object-cover" />
-          ) : (
-            <div className="flex flex-col items-center justify-center text-zinc-500 gap-2">
-              <div className="h-11 w-11 rounded-2xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center">
-                <ImageIcon className="h-5 w-5" />
-              </div>
-              <span className="text-xs">{exercise.subregion || exercise.primaryMuscle}</span>
-            </div>
-          )}
+        <div className="relative aspect-[4/3] bg-zinc-950 flex items-center justify-center border-b border-zinc-800/80">
+          <ExerciseImage
+            src={src}
+            alt={alt}
+            fallbackLabel={exercise.subregion || exercise.primaryMuscle}
+            imgClassName="object-contain"
+          />
 
           <button
             onClick={onClose}

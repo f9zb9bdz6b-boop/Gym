@@ -22,6 +22,8 @@ import {
 import type { ExerciseLibraryItem } from '@/db/types';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
 import { generateExerciseDetailsWithAI } from '@/lib/ai/aiService';
+import { resolveExerciseImage } from '@/data/exerciseImages';
+import { ExerciseImage } from '@/components/ui/ExerciseImage';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { AnatomyViewerPanel } from '@/features/anatomy/components/AnatomyViewerPanel';
@@ -110,7 +112,8 @@ export function ExerciseDetailView({
   const estimatedCalories =
     metValue !== null ? Math.round(((metValue * 3.5 * bodyWeightKg) / 200) * durationMin) : null;
 
-  const demoUri = exercise.images?.demonstration?.uri || null;
+  const resolvedDemo = resolveExerciseImage(exercise);
+  const demoUri = resolvedDemo.src;
   const anatomyUri = exercise.images?.muscleAnatomy?.uri || null;
 
   async function handleAskAI() {
@@ -224,10 +227,10 @@ export function ExerciseDetailView({
                 <div className="lg:col-span-7 space-y-3">
                   <div className="relative aspect-video rounded-2xl border border-zinc-800 bg-zinc-900/60 overflow-hidden flex items-center justify-center">
                     {demoUri ? (
-                      <img
+                      <ExerciseImage
                         src={demoUri}
-                        alt={`${exercise.name} — ${gallerySlot}`}
-                        className="w-full h-full object-cover"
+                        alt={resolvedDemo.alt}
+                        imgClassName="object-contain"
                       />
                     ) : (
                       <div className="flex flex-col items-center justify-center text-center p-6 space-y-2">
