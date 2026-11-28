@@ -4,6 +4,7 @@ import chestCatalog from '@/data/catalogs/chest_exercises.json';
 import backCatalog from '@/data/catalogs/back_exercises.json';
 import shoulderCatalog from '@/data/catalogs/shoulder_exercises.json';
 import armCatalog from '@/data/catalogs/arm_exercises.json';
+import legCatalog from '@/data/catalogs/leg_exercises.json';
 import type {
   DailyGoal,
   ExerciseLibraryItem,
@@ -533,7 +534,138 @@ export const SEED_FOODS: FoodItem[] = [
   },
 ];
 
-export const SEED_WORKOUT_PLANS: WorkoutPlan[] = [];
+function makeLegPlan(
+  id: string,
+  name: string,
+  description: string,
+  exercises: Array<{ exerciseId: string; exerciseName: string; targetSets: number; targetReps: string; restSeconds: number }>
+): WorkoutPlan {
+  return {
+    id,
+    name,
+    splitType: 'Custom',
+    description,
+    days: [
+      {
+        id: `${id}-day-1`,
+        dayName: name,
+        isRestDay: false,
+        exercises: exercises.map((ex, idx) => ({
+          id: `${id}-ex-${idx + 1}`,
+          exerciseId: ex.exerciseId,
+          exerciseName: ex.exerciseName,
+          targetSets: ex.targetSets,
+          targetReps: ex.targetReps,
+          restSeconds: ex.restSeconds,
+        })),
+      },
+    ],
+    isActive: false,
+    isArchived: false,
+    isTemplate: true,
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+export const SEED_WORKOUT_PLANS: WorkoutPlan[] = [
+  // Quads
+  makeLegPlan('plan-quads-a', 'Quads A — Squat strength', 'Quads', [
+    { exerciseId: 'legs.barbell-back-squat', exerciseName: 'Barbell Back Squat', targetSets: 3, targetReps: '6-10', restSeconds: 120 },
+    { exerciseId: 'legs.leg-press', exerciseName: 'Leg Press', targetSets: 2, targetReps: '8-12', restSeconds: 90 },
+    { exerciseId: 'legs.leg-extension-machine', exerciseName: 'Leg Extension Machine', targetSets: 2, targetReps: '10-15', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-quads-b', 'Quads B — Dumbbell and unilateral', 'Quads', [
+    { exerciseId: 'legs.goblet-squat', exerciseName: 'Goblet Squat', targetSets: 3, targetReps: '8-12', restSeconds: 90 },
+    { exerciseId: 'legs.reverse-lunge', exerciseName: 'Reverse Lunge', targetSets: 2, targetReps: '8-12 each side', restSeconds: 90 },
+    { exerciseId: 'legs.heel-elevated-goblet-squat', exerciseName: 'Heel-Elevated Goblet Squat', targetSets: 2, targetReps: '10-15', restSeconds: 90 },
+  ]),
+  makeLegPlan('plan-quads-c', 'Quads C — Machine and isometric', 'Quads', [
+    { exerciseId: 'legs.hack-squat-machine', exerciseName: 'Hack Squat Machine', targetSets: 3, targetReps: '8-12', restSeconds: 120 },
+    { exerciseId: 'legs.leg-extension-machine', exerciseName: 'Leg Extension Machine', targetSets: 2, targetReps: '10-15', restSeconds: 60 },
+    { exerciseId: 'legs.wall-sit', exerciseName: 'Wall Sit', targetSets: 2, targetReps: '20-45 sec', restSeconds: 60 },
+  ]),
+  // Hamstrings
+  makeLegPlan('plan-hamstrings-a', 'Hamstrings A — Hip hinge', 'Hamstrings', [
+    { exerciseId: 'legs.barbell-romanian-deadlift-legs', exerciseName: 'Barbell Romanian Deadlift', targetSets: 3, targetReps: '6-10', restSeconds: 120 },
+    { exerciseId: 'legs.seated-leg-curl', exerciseName: 'Seated Leg Curl', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'legs.single-leg-romanian-deadlift', exerciseName: 'Single-Leg Romanian Deadlift', targetSets: 2, targetReps: '8-10 each side', restSeconds: 90 },
+  ]),
+  makeLegPlan('plan-hamstrings-b', 'Hamstrings B — Knee flexion', 'Hamstrings', [
+    { exerciseId: 'legs.seated-leg-curl', exerciseName: 'Seated Leg Curl', targetSets: 3, targetReps: '8-12', restSeconds: 60 },
+    { exerciseId: 'legs.lying-leg-curl', exerciseName: 'Lying Leg Curl', targetSets: 2, targetReps: '10-15', restSeconds: 60 },
+    { exerciseId: 'legs.slider-leg-curl', exerciseName: 'Slider Leg Curl', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-hamstrings-c', 'Hamstrings C — Home setup', 'Hamstrings', [
+    { exerciseId: 'legs.dumbbell-romanian-deadlift-legs', exerciseName: 'Dumbbell Romanian Deadlift', targetSets: 3, targetReps: '8-12', restSeconds: 90 },
+    { exerciseId: 'legs.stability-ball-leg-curl', exerciseName: 'Stability-Ball Leg Curl', targetSets: 2, targetReps: '8-15', restSeconds: 60 },
+    { exerciseId: 'legs.slider-leg-curl', exerciseName: 'Slider Leg Curl', targetSets: 2, targetReps: '8-12', restSeconds: 60 },
+  ]),
+  // Glutes
+  makeLegPlan('plan-glutes-a', 'Glutes A — Hip thrust focus', 'Glutes', [
+    { exerciseId: 'legs.barbell-hip-thrust', exerciseName: 'Barbell Hip Thrust', targetSets: 3, targetReps: '8-12', restSeconds: 120 },
+    { exerciseId: 'legs.cable-glute-kickback', exerciseName: 'Cable Glute Kickback', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.banded-glute-bridge', exerciseName: 'Banded Glute Bridge', targetSets: 2, targetReps: '12-20', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-glutes-b', 'Glutes B — Unilateral control', 'Glutes', [
+    { exerciseId: 'legs.dumbbell-step-up-glute', exerciseName: 'High-Box Step-Up (Glute Emphasis)', targetSets: 3, targetReps: '8-12 each side', restSeconds: 90 },
+    { exerciseId: 'legs.single-leg-hip-thrust', exerciseName: 'Single-Leg Hip Thrust', targetSets: 2, targetReps: '8-12 each side', restSeconds: 90 },
+    { exerciseId: 'legs.clamshell', exerciseName: 'Side-Lying Clamshell', targetSets: 2, targetReps: '12-20 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-glutes-c', 'Glutes C — Home equipment-light', 'Glutes', [
+    { exerciseId: 'legs.dumbbell-glute-bridge', exerciseName: 'Dumbbell Glute Bridge', targetSets: 3, targetReps: '10-15', restSeconds: 90 },
+    { exerciseId: 'legs.single-leg-glute-bridge', exerciseName: 'Single-Leg Glute Bridge', targetSets: 2, targetReps: '8-12 each side', restSeconds: 60 },
+    { exerciseId: 'legs.frog-pump', exerciseName: 'Frog Pump', targetSets: 2, targetReps: '15-25', restSeconds: 60 },
+  ]),
+  // Calves
+  makeLegPlan('plan-calves-a', 'Calves A — Straight-knee emphasis', 'Calves', [
+    { exerciseId: 'legs.standing-calf-raise', exerciseName: 'Standing Calf Raise', targetSets: 3, targetReps: '8-15', restSeconds: 60 },
+    { exerciseId: 'legs.leg-press-calf-raise', exerciseName: 'Leg Press Calf Raise', targetSets: 2, targetReps: '10-15', restSeconds: 60 },
+    { exerciseId: 'legs.tibialis-raise', exerciseName: 'Tibialis Raise', targetSets: 2, targetReps: '12-20', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-calves-b', 'Calves B — Soleus emphasis', 'Calves', [
+    { exerciseId: 'legs.seated-calf-raise', exerciseName: 'Seated Calf Raise', targetSets: 3, targetReps: '10-20', restSeconds: 60 },
+    { exerciseId: 'legs.bent-knee-dumbbell-calf-raise', exerciseName: 'Bent-Knee Dumbbell Calf Raise', targetSets: 2, targetReps: '12-20', restSeconds: 60 },
+    { exerciseId: 'legs.tibialis-raise', exerciseName: 'Tibialis Raise', targetSets: 2, targetReps: '12-20', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-calves-c', 'Calves C — Home and single-leg', 'Calves', [
+    { exerciseId: 'legs.single-leg-calf-raise', exerciseName: 'Single-Leg Calf Raise', targetSets: 3, targetReps: '8-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.calf-raise-on-stair', exerciseName: 'Calf Raise on Step', targetSets: 2, targetReps: '12-20', restSeconds: 60 },
+    { exerciseId: 'legs.tibialis-raise', exerciseName: 'Tibialis Raise', targetSets: 2, targetReps: '12-20', restSeconds: 60 },
+  ]),
+  // Adductors
+  makeLegPlan('plan-adductors-a', 'Adductors A — Machine focus', 'Adductors', [
+    { exerciseId: 'legs.hip-adduction-machine', exerciseName: 'Hip Adduction Machine', targetSets: 3, targetReps: '10-15', restSeconds: 60 },
+    { exerciseId: 'legs.lateral-lunge-adductor', exerciseName: 'Lateral Lunge', targetSets: 2, targetReps: '8-10 each side', restSeconds: 90 },
+    { exerciseId: 'legs.sumo-squat-adductor', exerciseName: 'Sumo Squat', targetSets: 2, targetReps: '8-12', restSeconds: 90 },
+  ]),
+  makeLegPlan('plan-adductors-b', 'Adductors B — Lateral strength', 'Adductors', [
+    { exerciseId: 'legs.lateral-lunge-adductor', exerciseName: 'Lateral Lunge', targetSets: 3, targetReps: '8-12 each side', restSeconds: 90 },
+    { exerciseId: 'legs.cable-hip-adduction', exerciseName: 'Standing Cable Hip Adduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.side-lying-hip-adduction', exerciseName: 'Side-Lying Hip Adduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-adductors-c', 'Adductors C — Floor and supported', 'Adductors', [
+    { exerciseId: 'legs.side-lying-hip-adduction', exerciseName: 'Side-Lying Hip Adduction', targetSets: 3, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.sumo-squat-adductor', exerciseName: 'Sumo Squat', targetSets: 2, targetReps: '8-12', restSeconds: 90 },
+    { exerciseId: 'legs.copenhagen-plank', exerciseName: 'Copenhagen Plank', targetSets: 2, targetReps: '10-20 sec each side', restSeconds: 60 },
+  ]),
+  // Abductors
+  makeLegPlan('plan-abductors-a', 'Abductors A — Machine focus', 'Abductors', [
+    { exerciseId: 'legs.hip-abduction-machine', exerciseName: 'Hip Abduction Machine', targetSets: 3, targetReps: '10-15', restSeconds: 60 },
+    { exerciseId: 'legs.standing-cable-hip-abduction', exerciseName: 'Standing Cable Hip Abduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.band-lateral-walk', exerciseName: 'Resistance-Band Lateral Walk', targetSets: 2, targetReps: '8-12 steps each direction', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-abductors-b', 'Abductors B — Cable and bodyweight', 'Abductors', [
+    { exerciseId: 'legs.standing-cable-hip-abduction', exerciseName: 'Standing Cable Hip Abduction', targetSets: 3, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.side-lying-leg-raise', exerciseName: 'Side-Lying Hip Abduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.band-monster-walk', exerciseName: 'Resistance-Band Monster Walk', targetSets: 2, targetReps: '8-12 steps each direction', restSeconds: 60 },
+  ]),
+  makeLegPlan('plan-abductors-c', 'Abductors C — Home band session', 'Abductors', [
+    { exerciseId: 'legs.band-lateral-walk', exerciseName: 'Resistance-Band Lateral Walk', targetSets: 3, targetReps: '8-12 steps each direction', restSeconds: 60 },
+    { exerciseId: 'legs.standing-band-hip-abduction', exerciseName: 'Standing Band Hip Abduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+    { exerciseId: 'legs.side-lying-leg-raise', exerciseName: 'Side-Lying Hip Abduction', targetSets: 2, targetReps: '10-15 each side', restSeconds: 60 },
+  ]),
+];
 
 export const SEED_GOALS: DailyGoal[] = [
   { id: 'goal-calories', title: 'Hit Daily Calorie Target', category: 'nutrition', targetValue: 1, unit: 'day', isActive: true, createdAt: now },
@@ -555,15 +687,17 @@ export async function ensureDatabaseSeeded(): Promise<void> {
   await importExerciseCatalog(backCatalog as unknown as ExerciseCatalogRaw);
   await importExerciseCatalog(shoulderCatalog as unknown as ExerciseCatalogRaw);
   await importExerciseCatalog(armCatalog as unknown as ExerciseCatalogRaw);
+  await importExerciseCatalog(legCatalog as unknown as ExerciseCatalogRaw);
 
   const foodCount = await db.foodItems.count();
   if (foodCount === 0) {
     await db.foodItems.bulkAdd(SEED_FOODS);
   }
 
-  const planCount = await db.workoutPlans.count();
-  if (planCount === 0) {
-    await db.workoutPlans.bulkAdd(SEED_WORKOUT_PLANS);
+  const existingPlanIds = new Set(await db.workoutPlans.toCollection().primaryKeys());
+  const missingPlans = SEED_WORKOUT_PLANS.filter((p) => !existingPlanIds.has(p.id));
+  if (missingPlans.length > 0) {
+    await db.workoutPlans.bulkAdd(missingPlans);
   }
 
   const goalCount = await db.dailyGoals.count();

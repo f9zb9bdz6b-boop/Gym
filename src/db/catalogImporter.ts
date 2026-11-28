@@ -53,6 +53,8 @@ function mapRegionToMuscleGroup(region: string): MuscleGroup {
   if (r.includes('hamstring')) return 'Hamstrings';
   if (r.includes('glute')) return 'Glutes';
   if (r.includes('calv')) return 'Calves';
+  if (r.includes('adductor')) return 'Adductors';
+  if (r.includes('abductor')) return 'Abductors';
   if (r.includes('abs')) return 'Abs';
   return 'Core';
 }
@@ -83,7 +85,7 @@ export async function importExerciseCatalog(catalog: ExerciseCatalogRaw): Promis
     if (existingIds.has(raw.id)) continue;
 
     const effectiveRegion =
-      raw.body_region === 'arms' && raw.subregion
+      (raw.body_region === 'arms' || raw.body_region === 'legs') && raw.subregion
         ? raw.subregion.toLowerCase()
         : raw.body_region.toLowerCase();
 

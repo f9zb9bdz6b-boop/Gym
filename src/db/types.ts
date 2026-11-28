@@ -53,6 +53,8 @@ export type MuscleGroup =
   | 'Hamstrings'
   | 'Glutes'
   | 'Calves'
+  | 'Adductors'
+  | 'Abductors'
   | 'Abs'
   | 'Core';
 
