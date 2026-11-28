@@ -541,9 +541,12 @@ export const SEED_GOALS: DailyGoal[] = [
 ];
 
 export async function ensureDatabaseSeeded(): Promise<void> {
-  const exCount = await db.exerciseLibrary.count();
-  if (exCount === 0) {
-    await db.exerciseLibrary.bulkAdd(SEED_EXERCISES);
+  // Remove legacy ex-* seed exercises so only catalog & custom exercises remain
+  const legacyKeys = (await db.exerciseLibrary.toCollection().primaryKeys()).filter((id) =>
+    String(id).startsWith('ex-')
+  );
+  if (legacyKeys.length > 0) {
+    await db.exerciseLibrary.bulkDelete(legacyKeys);
   }
   await importExerciseCatalog(chestCatalog as unknown as ExerciseCatalogRaw);
 
