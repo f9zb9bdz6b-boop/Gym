@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '@/db/database';
 import { workoutRepo } from '@/db/repositories/workoutRepo';
-import type { ExerciseLibraryItem, MuscleGroup } from '@/db/types';
+import { generateExerciseDetailsWithAI } from '@/lib/ai/aiService';
+import type { ExerciseDifficulty, ExerciseLibraryItem, MuscleGroup } from '@/db/types';
 import { Card, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Input, Select } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
 import { useAppStore } from '@/stores/useAppStore';
-import { Search, Star, Plus, X, Dumbbell } from 'lucide-react';
+import { Search, Star, Plus, X, Dumbbell, Sparkles, Pencil } from 'lucide-react';
 
 const MUSCLE_GROUPS: MuscleGroup[] = [
   'Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Forearms',
@@ -22,71 +23,265 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
   const [muscleFilter, setMuscleFilter] = useState<string>('ALL');
   const [onlyFavorites, setOnlyFavorites] = useState(false);
   const [selectedEx, setSelectedEx] = useState<ExerciseLibraryItem | null>(null);
-  const [showCreate, setShowCreate] = useState(false);
+  const [showForm, setShowForm] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
 
-  const [newName, setNewName] = useState('');
-  const [newMuscle, setNewMuscle] = useState<MuscleGroup>('Chest');
-  const [newEquip, setNewEquip] = useState('Barbell');
-  const [newGuidance, setNewGuidance] = useState('');
+  // Form state
+  const [name, setName] = useState('');
+  const [primaryMuscle, setPrimaryMuscle] = useState<MuscleGroup>('Chest');
+  const [secondaryMuscles, setSecondaryMuscles] = useState<MuscleGroup[]>([]);
+  const [equipment, setEquipment] = useState('Barbell');
+  const [difficulty, setDifficulty] = useState<ExerciseDifficulty>('intermediate');
+  const [caloriesPerSet, setCaloriesPerSet] = useState<number>(8);
+  const [instructionsText, setInstructionsText] = useState('');
+  const [formGuidance, setFormGuidance] = useState('');
+  const [mistakesText, setMistakesText] = useState('');
+  const [aiGenerating, setAiGenerating] = useState(false);
+
+  const resetForm = () => {
+    setEditingId(null);
+    setName('');
+    setPrimaryMuscle('Chest');
+    setSecondaryMuscles([]);
+    setEquipment('Barbell');
+    setDifficulty('intermediate');
+    setCaloriesPerSet(8);
+    setInstructionsText('');
+    setFormGuidance('');
+    setMistakesText('');
+  };
+
+  const openCreate = () => {
+    resetForm();
+    setShowForm(true);
+  };
+
+  const openEdit = (ex: ExerciseLibraryItem) => {
+    setEditingId(ex.id);
+    setName(ex.name);
+    setPrimaryMuscle(ex.primaryMuscle);
+    setSecondaryMuscles(ex.secondaryMuscles ?? []);
+    setEquipment(ex.equipment);
+    setDifficulty(ex.difficulty);
+    setCaloriesPerSet(ex.caloriesBurnedPerSet ?? 8);
+    setInstructionsText(ex.instructions.join('\n'));
+    setFormGuidance(ex.formGuidance);
+    setMistakesText(ex.commonMistakes.join('\n'));
+    setShowForm(true);
+  };
+
+  const toggleSecondary = (m: MuscleGroup) => {
+    if (m === primaryMuscle) return;
+    setSecondaryMuscles((prev) => (prev.includes(m) ? prev.filter((x) => x !== m) : [...prev, m]));
+  };
+
+  const handleAutoFillAI = async () => {
+    if (!name.trim()) {
+      addToast({ title: 'Enter an exercise name first', type: 'error' });
+      return;
+    }
+    setAiGenerating(true);
+    try {
+      const res = await generateExerciseDetailsWithAI({
+        name: name.trim(),
+        primaryMuscle,
+        secondaryMuscles,
+        equipment,
+      });
+      setInstructionsText(res.instructions.join('\n'));
+      setFormGuidance(res.formGuidance);
+      setMistakesText(res.commonMistakes.join('\n'));
+      addToast({
+        title: res.usedGemini ? 'Generated with Gemini' : 'Generated with Local Engine',
+        description: 'You can customize any field before or after saving.',
+      });
+    } finally {
+      setAiGenerating(false);
+    }
+  };
+
+  const handleSave = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim()) return;
+
+    let instructions = instructionsText.split('\n').map((s) => s.trim()).filter(Boolean);
+    let guidance = formGuidance.trim();
+    let mistakes = mistakesText.split('\n').map((s) => s.trim()).filter(Boolean);
+
+    // Auto-generate via Gemini/local if user left them blank
+    if (instructions.length === 0 || !guidance || mistakes.length === 0) {
+      setAiGenerating(true);
+      try {
+        const ai = await generateExerciseDetailsWithAI({
+          name: name.trim(),
+          primaryMuscle,
+          secondaryMuscles,
+          equipment,
+        });
+        if (instructions.length === 0) instructions = ai.instructions;
+        if (!guidance) guidance = ai.formGuidance;
+        if (mistakes.length === 0) mistakes = ai.commonMistakes;
+      } finally {
+        setAiGenerating(false);
+      }
+    }
+
+    if (editingId) {
+      await workoutRepo.updateExercise(editingId, {
+        name: name.trim(),
+        primaryMuscle,
+        secondaryMuscles,
+        equipment,
+        difficulty,
+        caloriesBurnedPerSet: Number(caloriesPerSet) || 8,
+        instructions,
+        formGuidance: guidance,
+        commonMistakes: mistakes,
+      });
+      addToast({ title: 'Exercise updated' });
+    } else {
+      await workoutRepo.saveCustomExercise({
+        name: name.trim(),
+        primaryMuscle,
+        secondaryMuscles,
+        equipment,
+        difficulty,
+        category: 'hypertrophy',
+        caloriesBurnedPerSet: Number(caloriesPerSet) || 8,
+        instructions,
+        formGuidance: guidance,
+        commonMistakes: mistakes,
+        mediaPlaceholder: 'Custom Exercise',
+        isFavorite: false,
+      });
+      addToast({ title: 'Custom exercise added' });
+    }
+
+    setShowForm(false);
+    resetForm();
+  };
 
   const filtered = exercises.filter((ex) => {
-    const matchSearch = ex.name.toLowerCase().includes(search.toLowerCase()) || ex.equipment.toLowerCase().includes(search.toLowerCase());
+    const matchSearch =
+      ex.name.toLowerCase().includes(search.toLowerCase()) ||
+      ex.equipment.toLowerCase().includes(search.toLowerCase());
     const matchMuscle = muscleFilter === 'ALL' || ex.primaryMuscle === muscleFilter;
     const matchFav = !onlyFavorites || ex.isFavorite;
     return matchSearch && matchMuscle && matchFav;
   });
-
-  const handleCreate = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!newName.trim()) return;
-    await workoutRepo.saveCustomExercise({
-      name: newName.trim(),
-      primaryMuscle: newMuscle,
-      secondaryMuscles: [],
-      equipment: newEquip,
-      difficulty: 'intermediate',
-      category: 'hypertrophy',
-      instructions: [newGuidance || 'Perform with controlled form and full range of motion.'],
-      formGuidance: newGuidance || 'Maintain neutral spine and controlled tempo.',
-      commonMistakes: ['Using excessive momentum'],
-      mediaPlaceholder: 'Custom Exercise',
-      isFavorite: false,
-    });
-    setNewName('');
-    setNewGuidance('');
-    setShowCreate(false);
-    addToast({ title: 'Custom exercise added' });
-  };
 
   return (
     <div className="space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <h2 className="text-xl font-bold text-white">Exercise Library</h2>
-          <p className="text-xs text-zinc-400">{exercises.length} exercises across 12 muscle groups</p>
+          <p className="text-xs text-zinc-400">
+            {exercises.length} exercises · Add custom exercises with Gemini auto-guidance &amp; edit anytime
+          </p>
         </div>
-        <Button size="sm" onClick={() => setShowCreate(!showCreate)}>
+        <Button size="sm" onClick={openCreate}>
           <Plus className="h-4 w-4" /> Custom Exercise
         </Button>
       </div>
 
-      {showCreate && (
-        <Card>
-          <form onSubmit={handleCreate} className="space-y-3">
-            <CardTitle>Create Custom Exercise</CardTitle>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              <Input label="Exercise Name" value={newName} onChange={(e) => setNewName(e.target.value)} required />
-              <Select label="Primary Muscle" value={newMuscle} onChange={(e) => setNewMuscle(e.target.value as MuscleGroup)}>
+      {showForm && (
+        <Card className="border-lime-400/30">
+          <form onSubmit={handleSave} className="space-y-4">
+            <CardHeader>
+              <CardTitle>{editingId ? 'Customize Exercise' : 'Add Custom Exercise'}</CardTitle>
+              <Button
+                type="button"
+                size="sm"
+                variant="secondary"
+                onClick={handleAutoFillAI}
+                disabled={aiGenerating}
+              >
+                <Sparkles className={`h-3.5 w-3.5 text-lime-400 ${aiGenerating ? 'animate-spin' : ''}`} />
+                {aiGenerating ? 'Generating...' : 'Auto-Fill with Gemini'}
+              </Button>
+            </CardHeader>
+
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
+              <Input label="Exercise Name" value={name} onChange={(e) => setName(e.target.value)} required />
+              <Select label="Primary Muscle" value={primaryMuscle} onChange={(e) => setPrimaryMuscle(e.target.value as MuscleGroup)}>
                 {MUSCLE_GROUPS.map((m) => (
                   <option key={m} value={m}>{m}</option>
                 ))}
               </Select>
-              <Input label="Equipment" value={newEquip} onChange={(e) => setNewEquip(e.target.value)} />
+              <Input label="Equipment" value={equipment} onChange={(e) => setEquipment(e.target.value)} />
+              <Input
+                label="Calories Burned / Set"
+                type="number"
+                min={1}
+                value={caloriesPerSet}
+                onChange={(e) => setCaloriesPerSet(Number(e.target.value))}
+              />
             </div>
-            <Input label="Form Guidance" value={newGuidance} onChange={(e) => setNewGuidance(e.target.value)} placeholder="Key cues..." />
+
+            <div>
+              <label className="block text-xs font-medium text-zinc-400 mb-1.5">Secondary Muscle Groups</label>
+              <div className="flex flex-wrap gap-1.5">
+                {MUSCLE_GROUPS.filter((m) => m !== primaryMuscle).map((m) => {
+                  const active = secondaryMuscles.includes(m);
+                  return (
+                    <button
+                      key={m}
+                      type="button"
+                      onClick={() => toggleSecondary(m)}
+                      className={`px-2.5 py-1 rounded-lg text-[11px] font-medium border cursor-pointer transition-colors ${
+                        active
+                          ? 'bg-lime-400/15 text-lime-300 border-lime-400/40'
+                          : 'bg-zinc-900 text-zinc-400 border-zinc-800 hover:border-zinc-700'
+                      }`}
+                    >
+                      {m}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+                  Instructions (one step per line — auto-filled if blank)
+                </label>
+                <textarea
+                  rows={3}
+                  value={instructionsText}
+                  onChange={(e) => setInstructionsText(e.target.value)}
+                  placeholder="Step 1...&#10;Step 2..."
+                  className="w-full rounded-xl border border-zinc-800 bg-zinc-900/80 p-3 text-xs text-zinc-100 placeholder:text-zinc-500"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-zinc-400 mb-1.5">
+                  Common Mistakes (one per line — auto-filled if blank)
+                </label>
+                <textarea
+                  rows={3}
+                  value={mistakesText}
+                  onChange={(e) => setMistakesText(e.target.value)}
+                  placeholder="Mistake 1...&#10;Mistake 2..."
+                  className="w-full rounded-xl border border-zinc-800 bg-zinc-900/80 p-3 text-xs text-zinc-100 placeholder:text-zinc-500"
+                />
+              </div>
+            </div>
+
+            <Input
+              label="Form Guidance (auto-filled if blank)"
+              value={formGuidance}
+              onChange={(e) => setFormGuidance(e.target.value)}
+              placeholder="Key posture & tempo cues..."
+            />
+
             <div className="flex justify-end gap-2">
-              <Button type="button" variant="ghost" size="sm" onClick={() => setShowCreate(false)}>Cancel</Button>
-              <Button type="submit" size="sm">Save Exercise</Button>
+              <Button type="button" variant="ghost" size="sm" onClick={() => setShowForm(false)}>
+                Cancel
+              </Button>
+              <Button type="submit" size="sm" disabled={aiGenerating}>
+                {editingId ? 'Save Changes' : 'Save Exercise'}
+              </Button>
             </div>
           </form>
         </Card>
@@ -132,18 +327,29 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
                 >
                   {ex.name}
                 </button>
-                <button
-                  onClick={() => workoutRepo.toggleExerciseFavorite(ex.id)}
-                  className="text-zinc-500 hover:text-amber-400 cursor-pointer"
-                  aria-label="Toggle favorite"
-                >
-                  <Star className={`h-4 w-4 ${ex.isFavorite ? 'fill-amber-400 text-amber-400' : ''}`} />
-                </button>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <button
+                    onClick={() => openEdit(ex)}
+                    className="text-zinc-500 hover:text-white cursor-pointer"
+                    aria-label="Edit exercise"
+                    title="Customize exercise"
+                  >
+                    <Pencil className="h-3.5 w-3.5" />
+                  </button>
+                  <button
+                    onClick={() => workoutRepo.toggleExerciseFavorite(ex.id)}
+                    className="text-zinc-500 hover:text-amber-400 cursor-pointer"
+                    aria-label="Toggle favorite"
+                  >
+                    <Star className={`h-4 w-4 ${ex.isFavorite ? 'fill-amber-400 text-amber-400' : ''}`} />
+                  </button>
+                </div>
               </div>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 <Badge variant="lime">{ex.primaryMuscle}</Badge>
+                {ex.secondaryMuscles?.map((m) => <Badge key={m}>{m}</Badge>)}
                 <Badge>{ex.equipment}</Badge>
-                <Badge>{ex.difficulty}</Badge>
+                <Badge variant="warning">~{ex.caloriesBurnedPerSet ?? 8} kcal/set</Badge>
               </div>
             </div>
             <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-800/70">
@@ -151,7 +357,7 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
                 onClick={() => setSelectedEx(ex)}
                 className="text-xs text-zinc-400 hover:text-zinc-200 cursor-pointer"
               >
-                View form & cues
+                View form &amp; cues
               </button>
               {onSelectExercise && (
                 <Button size="sm" onClick={() => onSelectExercise(ex)}>
@@ -171,18 +377,21 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
                 <Dumbbell className="h-5 w-5 text-lime-400" />
                 <CardTitle>{selectedEx.name}</CardTitle>
               </div>
-              <button onClick={() => setSelectedEx(null)} className="text-zinc-400 hover:text-white cursor-pointer">
-                <X className="h-5 w-5" />
-              </button>
+              <div className="flex items-center gap-2">
+                <Button size="sm" variant="outline" onClick={() => { setSelectedEx(null); openEdit(selectedEx); }}>
+                  <Pencil className="h-3.5 w-3.5" /> Edit
+                </Button>
+                <button onClick={() => setSelectedEx(null)} className="text-zinc-400 hover:text-white cursor-pointer">
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
             </CardHeader>
             <div className="space-y-4 text-xs">
               <div className="flex flex-wrap gap-1.5">
                 <Badge variant="lime">{selectedEx.primaryMuscle}</Badge>
                 {selectedEx.secondaryMuscles.map((m) => <Badge key={m}>{m}</Badge>)}
                 <Badge>{selectedEx.equipment}</Badge>
-              </div>
-              <div className="rounded-xl bg-zinc-900 p-3 border border-zinc-800 text-zinc-400 italic">
-                {selectedEx.mediaPlaceholder ?? 'Demonstration asset placeholder'}
+                <Badge variant="warning">~{selectedEx.caloriesBurnedPerSet ?? 8} kcal/set</Badge>
               </div>
               <div>
                 <p className="font-semibold text-zinc-200 mb-1">Instructions</p>

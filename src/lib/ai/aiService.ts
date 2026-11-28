@@ -185,3 +185,60 @@ export async function askFitnessAI(prompt: string, contextHint?: string): Promis
     providerUsed: 'Local Deterministic (Offline)',
   };
 }
+
+export async function generateExerciseDetailsWithAI(params: {
+  name: string;
+  primaryMuscle: string;
+  secondaryMuscles: string[];
+  equipment: string;
+}): Promise<{
+  instructions: string[];
+  formGuidance: string;
+  commonMistakes: string[];
+  usedGemini: boolean;
+}> {
+  const { name, primaryMuscle, secondaryMuscles, equipment } = params;
+  const settings = await db.appSettings.get('settings');
+  const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true;
+
+  if (settings?.aiProvider === 'gemini' && settings.aiConsentGranted && settings.geminiApiKey && isOnline) {
+    try {
+      const reply = await callGeminiAPI({
+        apiKey: settings.geminiApiKey,
+        model: settings.aiModel || 'gemini-3.8-flash',
+        systemPrompt:
+          'You are a strength & conditioning coach. Return ONLY valid JSON with keys: "instructions" (array of 3-4 concise step strings), "formGuidance" (1 concise sentence), and "commonMistakes" (array of 2-3 concise strings).',
+        userPrompt: `Exercise: ${name}\nPrimary Muscle: ${primaryMuscle}\nSecondary Muscles: ${secondaryMuscles.join(', ') || 'None'}\nEquipment: ${equipment}`,
+      });
+      const jsonMatch = reply.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        const parsed = JSON.parse(jsonMatch[0]) as {
+          instructions?: string[];
+          formGuidance?: string;
+          commonMistakes?: string[];
+        };
+        if (Array.isArray(parsed.instructions) && parsed.formGuidance && Array.isArray(parsed.commonMistakes)) {
+          return {
+            instructions: parsed.instructions,
+            formGuidance: parsed.formGuidance,
+            commonMistakes: parsed.commonMistakes,
+            usedGemini: true,
+          };
+        }
+      }
+    } catch {
+      // Fall through to deterministic fallback
+    }
+  }
+
+  return {
+    instructions: [
+      `Set up with ${equipment} targeting ${primaryMuscle}.`,
+      `Perform the movement through a full, controlled range of motion.`,
+      `Pause briefly at peak contraction, then lower under control.`,
+    ],
+    formGuidance: `Keep your core braced, maintain neutral posture, and focus tension on ${primaryMuscle}.`,
+    commonMistakes: ['Using excessive momentum', 'Cutting range of motion short', 'Rushing the eccentric phase'],
+    usedGemini: false,
+  };
+}

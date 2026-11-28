@@ -33,6 +33,10 @@ export const workoutRepo = {
     return record;
   },
 
+  async updateExercise(id: string, updates: Partial<ExerciseLibraryItem>): Promise<void> {
+    await db.exerciseLibrary.update(id, updates);
+  },
+
   // --- Workout Plans ---
   async getWorkoutPlans(): Promise<WorkoutPlan[]> {
     return db.workoutPlans.toArray();
@@ -186,12 +190,19 @@ export const workoutRepo = {
     const uniqueExercises = new Set(completedSets.map((s) => s.exerciseId));
     const prCount = completedSets.filter((s) => s.isPR).length;
 
+    const allExercises = await db.exerciseLibrary.toArray();
+    const calMap = new Map(allExercises.map((e) => [e.id, e.caloriesBurnedPerSet ?? 8]));
+    const totalCaloriesBurned = Math.round(
+      completedSets.reduce((sum, s) => sum + (calMap.get(s.exerciseId) ?? 8), 0)
+    );
+
     const updated: WorkoutSession = {
       ...session,
       endedAt: new Date().toISOString(),
       durationSeconds,
       status: 'completed',
       totalVolumeKg: Math.round(totalVolumeKg),
+      totalCaloriesBurned,
       totalSets: completedSets.length,
       exercisesCompleted: uniqueExercises.size,
       personalRecordsCount: prCount,

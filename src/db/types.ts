@@ -71,6 +71,7 @@ export interface ExerciseLibraryItem {
   formGuidance: string;
   commonMistakes: string[];
   mediaPlaceholder?: string;
+  caloriesBurnedPerSet?: number;
   notes?: string;
   isFavorite: boolean;
   isCustom: boolean;
@@ -135,6 +136,7 @@ export interface WorkoutSession {
   durationSeconds: number;
   status: 'in_progress' | 'completed' | 'abandoned';
   totalVolumeKg: number;
+  totalCaloriesBurned?: number;
   totalSets: number;
   exercisesCompleted: number;
   personalRecordsCount: number;
