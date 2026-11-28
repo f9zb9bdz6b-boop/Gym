@@ -82,12 +82,17 @@ export async function importExerciseCatalog(catalog: ExerciseCatalogRaw): Promis
   for (const raw of catalog.exercises) {
     if (existingIds.has(raw.id)) continue;
 
+    const effectiveRegion =
+      raw.body_region === 'arms' && raw.subregion
+        ? raw.subregion.toLowerCase()
+        : raw.body_region.toLowerCase();
+
     toInsert.push({
       id: raw.id,
       name: raw.name,
-      bodyRegion: raw.body_region,
+      bodyRegion: effectiveRegion,
       subregion: raw.subregion,
-      primaryMuscle: mapRegionToMuscleGroup(raw.body_region),
+      primaryMuscle: mapRegionToMuscleGroup(effectiveRegion),
       primaryMuscles: raw.primary_muscles,
       secondaryMuscles: mapSecondaryMuscles(raw.secondary_muscles),
       secondaryMuscleLabels: raw.secondary_muscles,

@@ -288,7 +288,7 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
       )}
 
       <div className="flex flex-wrap gap-1.5">
-        {(['ALL', 'Chest', 'Back', 'Shoulders'] as const).map((region) => (
+        {(['ALL', 'Chest', 'Back', 'Shoulders', 'Biceps', 'Triceps', 'Forearms'] as const).map((region) => (
           <button
             key={region}
             onClick={() => setMuscleFilter(region)}
