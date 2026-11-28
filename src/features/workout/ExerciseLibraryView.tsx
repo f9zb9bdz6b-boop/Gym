@@ -347,9 +347,14 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
               </div>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 <Badge variant="lime">{ex.primaryMuscle}</Badge>
+                {ex.subregion && <Badge>{ex.subregion}</Badge>}
                 {ex.secondaryMuscles?.map((m) => <Badge key={m}>{m}</Badge>)}
                 <Badge>{ex.equipment}</Badge>
-                <Badge variant="warning">~{ex.caloriesBurnedPerSet ?? 8} kcal/set</Badge>
+                {ex.calorieEstimation?.metAssumption.sourceStatus === 'to_be_configured' ? (
+                  <Badge>MET: To be configured</Badge>
+                ) : ex.caloriesBurnedPerSet ? (
+                  <Badge variant="warning">~{ex.caloriesBurnedPerSet} kcal/set</Badge>
+                ) : null}
               </div>
             </div>
             <div className="mt-4 flex items-center justify-between pt-3 border-t border-zinc-800/70">
@@ -389,10 +394,33 @@ export function ExerciseLibraryView({ onSelectExercise }: { onSelectExercise?: (
             <div className="space-y-4 text-xs">
               <div className="flex flex-wrap gap-1.5">
                 <Badge variant="lime">{selectedEx.primaryMuscle}</Badge>
+                {selectedEx.subregion && <Badge>{selectedEx.subregion}</Badge>}
                 {selectedEx.secondaryMuscles.map((m) => <Badge key={m}>{m}</Badge>)}
                 <Badge>{selectedEx.equipment}</Badge>
-                <Badge variant="warning">~{selectedEx.caloriesBurnedPerSet ?? 8} kcal/set</Badge>
               </div>
+              {selectedEx.primaryMuscles && (
+                <div>
+                  <p className="font-semibold text-zinc-200 mb-1">Primary &amp; Secondary Muscles</p>
+                  <p className="text-zinc-300">Primary: {selectedEx.primaryMuscles.join(', ')}</p>
+                  {selectedEx.secondaryMuscleLabels && selectedEx.secondaryMuscleLabels.length > 0 && (
+                    <p className="text-zinc-400">Secondary: {selectedEx.secondaryMuscleLabels.join(', ')}</p>
+                  )}
+                </div>
+              )}
+              {selectedEx.safetyCautions && selectedEx.safetyCautions.length > 0 && (
+                <div>
+                  <p className="font-semibold text-amber-300 mb-1">Safety Cautions</p>
+                  <ul className="list-disc list-inside space-y-1 text-zinc-400">
+                    {selectedEx.safetyCautions.map((c, i) => <li key={i}>{c}</li>)}
+                  </ul>
+                </div>
+              )}
+              {selectedEx.calorieEstimation?.metAssumption.sourceStatus === 'to_be_configured' && (
+                <div className="rounded-xl bg-zinc-900 p-3 border border-zinc-800 text-zinc-400">
+                  <p className="font-semibold text-zinc-200 mb-0.5">Calorie Estimation</p>
+                  <p>Not configured yet (requires documented MET value &amp; source).</p>
+                </div>
+              )}
               <div>
                 <p className="font-semibold text-zinc-200 mb-1">Instructions</p>
                 <ol className="list-decimal list-inside space-y-1 text-zinc-400">

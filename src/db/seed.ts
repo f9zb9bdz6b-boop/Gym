@@ -1,4 +1,6 @@
 import { db } from './database';
+import { importExerciseCatalog, type ExerciseCatalogRaw } from './catalogImporter';
+import chestCatalog from '@/data/catalogs/chest_exercises.json';
 import type {
   DailyGoal,
   ExerciseLibraryItem,
@@ -543,6 +545,7 @@ export async function ensureDatabaseSeeded(): Promise<void> {
   if (exCount === 0) {
     await db.exerciseLibrary.bulkAdd(SEED_EXERCISES);
   }
+  await importExerciseCatalog(chestCatalog as unknown as ExerciseCatalogRaw);
 
   const foodCount = await db.foodItems.count();
   if (foodCount === 0) {

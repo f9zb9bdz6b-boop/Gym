@@ -57,19 +57,51 @@ export type MuscleGroup =
   | 'Core';
 
 export type ExerciseDifficulty = 'beginner' | 'intermediate' | 'advanced';
-export type ExerciseCategory = 'strength' | 'hypertrophy' | 'compound' | 'isolation' | 'cardio' | 'mobility';
+export type ExerciseCategory = 'strength' | 'hypertrophy' | 'compound' | 'isolation' | 'isometric' | 'cardio' | 'mobility';
+
+export interface ExerciseCalorieEstimation {
+  modelId: string;
+  method: string;
+  metAssumption: {
+    sourceStatus: 'to_be_configured' | 'configured';
+    value: number | null;
+    sourceName?: string;
+    selectionGuidance?: string;
+  };
+  caveats: string[];
+}
+
+export interface ExerciseImageSlot {
+  assetId: string | null;
+  uri: string | null;
+  status: 'placeholder' | 'licensed';
+  licenseStatus: string;
+}
 
 export interface ExerciseLibraryItem {
   id: string;
   name: string;
+  bodyRegion?: string;
+  subregion?: string;
   primaryMuscle: MuscleGroup;
+  primaryMuscles?: string[];
   secondaryMuscles: MuscleGroup[];
+  secondaryMuscleLabels?: string[];
+  muscleTargetingNotes?: string;
   equipment: string;
   difficulty: ExerciseDifficulty;
   category: ExerciseCategory;
   instructions: string[];
   formGuidance: string;
   commonMistakes: string[];
+  safetyCautions?: string[];
+  availability?: { home: boolean; gym: boolean };
+  tags?: string[];
+  calorieEstimation?: ExerciseCalorieEstimation;
+  images?: {
+    demonstration: ExerciseImageSlot;
+    muscleAnatomy: ExerciseImageSlot;
+  };
   mediaPlaceholder?: string;
   caloriesBurnedPerSet?: number;
   notes?: string;
