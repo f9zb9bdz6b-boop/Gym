@@ -97,10 +97,11 @@
     "matchedId": "wger:2674"
   },
   "abs-core.captains-chair-leg-raise": {
-    "image": null,
-    "imageAlt": "Captain’s Chair Straight-Leg Raise placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.captains-chair-leg-raise.webp",
+    "imageAlt": "Captain’s Chair Straight-Leg Raise exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:captains-chair-knee-raise"
   },
   "abs-core.russian-twist": {
     "image": "exercises/core/abs-core.russian-twist.jpg",
@@ -237,10 +238,11 @@
     "matchedId": "wger:297"
   },
   "abs-core.bear-plank-hold": {
-    "image": null,
-    "imageAlt": "Bear Plank Hold placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.bear-plank-hold.webp",
+    "imageAlt": "Bear Plank Hold exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:bear-plank-hold"
   },
   "abs-core.trx-body-saw": {
     "image": null,
@@ -322,16 +324,18 @@
     "matchedId": "Push_Up_to_Side_Plank"
   },
   "abs-core.side-plank-hip-lift": {
-    "image": null,
-    "imageAlt": "Side Plank with Hip Lift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/abs-core.side-plank-hip-lift.webp",
+    "imageAlt": "Side Plank with Hip Lift exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:side-plank-leg-lift"
   },
   "abs-core.suitcase-carry": {
-    "image": null,
-    "imageAlt": "Suitcase Carry placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.suitcase-carry.webp",
+    "imageAlt": "Suitcase Carry exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:suitcase-carry"
   },
   "abs-core.suitcase-march": {
     "image": null,
@@ -359,10 +363,11 @@
     "imageStatus": "unavailable"
   },
   "abs-core.copenhagen-side-plank-core": {
-    "image": null,
-    "imageAlt": "Copenhagen Side Plank placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.copenhagen-side-plank-core.webp",
+    "imageAlt": "Copenhagen Side Plank exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:copenhagen-plank"
   },
   "abs-core.bird-dog-core": {
     "image": "exercises/core/abs-core.bird-dog-core.png",
@@ -372,10 +377,11 @@
     "matchedId": "wger:1572"
   },
   "abs-core.prone-back-extension": {
-    "image": null,
-    "imageAlt": "Prone Back Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.prone-back-extension.webp",
+    "imageAlt": "Prone Back Extension exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:back-extension"
   },
   "abs-core.superman-hold-core": {
     "image": "exercises/core/abs-core.superman-hold-core.jpg",
@@ -385,10 +391,11 @@
     "matchedId": "Superman"
   },
   "abs-core.45-degree-back-extension-core": {
-    "image": null,
-    "imageAlt": "45-Degree Back Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/core/abs-core.45-degree-back-extension-core.webp",
+    "imageAlt": "45-Degree Back Extension exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:back-extension"
   },
   "abs-core.back-extension-machine-core": {
     "image": "exercises/core/abs-core.back-extension-machine-core.jpg",
@@ -424,10 +431,11 @@
     "matchedId": "wger:1572"
   },
   "abs-core.hip-hinge-back-extension": {
-    "image": null,
-    "imageAlt": "Hip-Hinge Back Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/abs-core.hip-hinge-back-extension.webp",
+    "imageAlt": "Hip-Hinge Back Extension exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:back-extension"
   },
   "arms.barbell-standing-curl": {
     "image": "exercises/arms/arms.barbell-standing-curl.jpg",
@@ -506,10 +514,11 @@
     "matchedId": "Incline_Dumbbell_Curl"
   },
   "arms.spider-curl": {
-    "image": null,
-    "imageAlt": "Spider Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.spider-curl.webp",
+    "imageAlt": "Spider Curl exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:spider-curl"
   },
   "arms.drag-curl": {
     "image": "exercises/arms/arms.drag-curl.jpg",
@@ -526,10 +535,11 @@
     "matchedId": "Zottman_Curl"
   },
   "arms.reverse-curl-ez": {
-    "image": null,
-    "imageAlt": "EZ-Bar Reverse Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.reverse-curl-ez.webp",
+    "imageAlt": "EZ-Bar Reverse Curl exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:ez-bar-reverse-curl"
   },
   "arms.reverse-curl-dumbbell": {
     "image": "exercises/arms/arms.reverse-curl-dumbbell.jpg",
@@ -603,10 +613,11 @@
     "matchedId": "Cable_Wrist_Curl"
   },
   "arms.cable-curl-ez-bar": {
-    "image": null,
-    "imageAlt": "EZ-Bar Cable Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.cable-curl-ez-bar.webp",
+    "imageAlt": "EZ-Bar Cable Curl exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:cable-curl"
   },
   "arms.cable-rope-hammer-curl": {
     "image": "exercises/arms/arms.cable-rope-hammer-curl.jpg",
@@ -690,10 +701,11 @@
     "matchedId": "Reverse_Grip_Triceps_Pushdown"
   },
   "arms.single-arm-cable-triceps-pushdown": {
-    "image": null,
-    "imageAlt": "Single-Arm Cable Triceps Pushdown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.single-arm-cable-triceps-pushdown.webp",
+    "imageAlt": "Single-Arm Cable Triceps Pushdown exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:tricep-pushdown"
   },
   "arms.overhead-rope-triceps-extension": {
     "image": "exercises/arms/arms.overhead-rope-triceps-extension.jpg",
@@ -744,10 +756,11 @@
     "matchedId": "Close-Grip_Push-Up_off_of_a_Dumbbell"
   },
   "arms.diamond-push-up": {
-    "image": null,
-    "imageAlt": "Diamond Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.diamond-push-up.webp",
+    "imageAlt": "Diamond Push-Up exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:diamond-push-ups"
   },
   "arms.bodyweight-triceps-extension": {
     "image": null,
@@ -774,10 +787,11 @@
     "imageStatus": "unavailable"
   },
   "arms.dead-hang": {
-    "image": null,
-    "imageAlt": "Dead Hang placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.dead-hang.webp",
+    "imageAlt": "Dead Hang exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:dead-hang"
   },
   "arms.fingertip-push-up-progression": {
     "image": null,
@@ -806,10 +820,11 @@
     "imageStatus": "unavailable"
   },
   "arms.assisted-dip-machine-triceps": {
-    "image": null,
-    "imageAlt": "Assisted Dip Machine (Triceps Emphasis) placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/arms.assisted-dip-machine-triceps.webp",
+    "imageAlt": "Assisted Dip Machine (Triceps Emphasis) exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:assisted-dips"
   },
   "arms.triceps-press-machine": {
     "image": "exercises/arms/arms.triceps-press-machine.jpg",
@@ -906,10 +921,11 @@
     "matchedId": "Bent_Over_Barbell_Row"
   },
   "back.barbell-pendlay-row": {
-    "image": null,
-    "imageAlt": "Pendlay Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.barbell-pendlay-row.webp",
+    "imageAlt": "Pendlay Row exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:pendlay-row"
   },
   "back.barbell-underhand-row": {
     "image": null,
@@ -956,10 +972,11 @@
     "matchedId": "One-Arm_Dumbbell_Row"
   },
   "back.dumbbell-renegade-row": {
-    "image": null,
-    "imageAlt": "Renegade Row placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.dumbbell-renegade-row.webp",
+    "imageAlt": "Renegade Row exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:renegade-row"
   },
   "back.dumbbell-incline-row": {
     "image": "exercises/back/back.dumbbell-incline-row.jpg",
@@ -1036,16 +1053,18 @@
     "imageStatus": "unavailable"
   },
   "back.lat-pulldown-neutral-grip": {
-    "image": null,
-    "imageAlt": "Neutral-Grip Lat Pulldown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.lat-pulldown-neutral-grip.webp",
+    "imageAlt": "Neutral-Grip Lat Pulldown exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:lat-pulldown"
   },
   "back.lat-pulldown-underhand": {
-    "image": null,
-    "imageAlt": "Underhand Lat Pulldown placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.lat-pulldown-underhand.webp",
+    "imageAlt": "Underhand Lat Pulldown exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:lat-pulldown"
   },
   "back.single-arm-lat-pulldown": {
     "image": "exercises/back/back.single-arm-lat-pulldown.jpg",
@@ -1082,10 +1101,11 @@
     "matchedId": "wger:1725"
   },
   "back.chest-supported-row-machine": {
-    "image": null,
-    "imageAlt": "Chest-Supported Row Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/back.chest-supported-row-machine.webp",
+    "imageAlt": "Chest-Supported Row Machine exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:chest-supported-machine-row"
   },
   "back.iso-lateral-row-machine": {
     "image": null,
@@ -1147,10 +1167,11 @@
     "matchedId": "Elevated_Cable_Rows"
   },
   "back.cable-face-pull": {
-    "image": null,
-    "imageAlt": "Cable Face Pull placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-face-pull.webp",
+    "imageAlt": "Cable Face Pull exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:face-pull"
   },
   "back.cable-rear-delt-fly": {
     "image": "exercises/back/back.cable-rear-delt-fly.png",
@@ -1173,10 +1194,11 @@
     "matchedId": "Underhand_Cable_Pulldowns"
   },
   "back.cable-pull-through": {
-    "image": null,
-    "imageAlt": "Cable Pull-Through placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.cable-pull-through.webp",
+    "imageAlt": "Cable Pull-Through exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:cable-pull-through"
   },
   "back.cable-good-morning": {
     "image": null,
@@ -1246,10 +1268,11 @@
     "imageStatus": "unavailable"
   },
   "back.back-extension-floor": {
-    "image": null,
-    "imageAlt": "Prone Back Extension placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/back.back-extension-floor.webp",
+    "imageAlt": "Prone Back Extension exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:back-extension"
   },
   "back.superman-hold": {
     "image": "exercises/back/back.superman-hold.jpg",
@@ -1479,10 +1502,11 @@
     "matchedId": "Bent-Arm_Dumbbell_Pullover"
   },
   "chest.dumbbell-fly-flat": {
-    "image": null,
-    "imageAlt": "Flat Dumbbell Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.dumbbell-fly-flat.webp",
+    "imageAlt": "Flat Dumbbell Fly exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:db-fly"
   },
   "chest.dumbbell-fly-incline": {
     "image": "exercises/chest/chest.dumbbell-fly-incline.jpg",
@@ -1511,10 +1535,11 @@
     "imageStatus": "unavailable"
   },
   "chest.plate-pullover": {
-    "image": null,
-    "imageAlt": "Plate Pullover placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.plate-pullover.webp",
+    "imageAlt": "Plate Pullover exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:plate-pullover"
   },
   "chest.smith-machine-flat-press": {
     "image": "exercises/chest/chest.smith-machine-flat-press.jpg",
@@ -1577,16 +1602,18 @@
     "imageStatus": "unavailable"
   },
   "chest.converging-chest-press": {
-    "image": null,
-    "imageAlt": "Converging Chest Press Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.converging-chest-press.webp",
+    "imageAlt": "Converging Chest Press Machine exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:chest-press-machine"
   },
   "chest.standing-chest-press-machine": {
-    "image": null,
-    "imageAlt": "Standing Chest Press Machine placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.standing-chest-press-machine.webp",
+    "imageAlt": "Standing Chest Press Machine exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:chest-press-machine"
   },
   "chest.pec-deck-fly": {
     "image": null,
@@ -1659,10 +1686,11 @@
     "imageStatus": "unavailable"
   },
   "chest.cable-fly-bench-flat": {
-    "image": null,
-    "imageAlt": "Flat-Bench Cable Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.cable-fly-bench-flat.webp",
+    "imageAlt": "Flat-Bench Cable Fly exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:cable-fly"
   },
   "chest.cable-fly-bench-incline": {
     "image": null,
@@ -1677,10 +1705,11 @@
     "imageStatus": "unavailable"
   },
   "chest.single-arm-cable-fly": {
-    "image": null,
-    "imageAlt": "Single-Arm Cable Fly placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.single-arm-cable-fly.webp",
+    "imageAlt": "Single-Arm Cable Fly exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:cable-fly"
   },
   "chest.low-cable-squeeze-press": {
     "image": null,
@@ -1710,10 +1739,11 @@
     "matchedId": "Pushups"
   },
   "chest.push-up-deficit-handles": {
-    "image": null,
-    "imageAlt": "Deficit Push-Up on Handles placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.push-up-deficit-handles.webp",
+    "imageAlt": "Deficit Push-Up on Handles exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:deficit-push-ups"
   },
   "chest.push-up-feet-elevated": {
     "image": "exercises/chest/chest.push-up-feet-elevated.jpg",
@@ -1743,10 +1773,11 @@
     "matchedId": "Pushups"
   },
   "chest.push-up-archer": {
-    "image": null,
-    "imageAlt": "Archer Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.push-up-archer.webp",
+    "imageAlt": "Archer Push-Up exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:archer-push-ups"
   },
   "chest.push-up-one-arm-assisted": {
     "image": "exercises/chest/chest.push-up-one-arm-assisted.jpg",
@@ -1756,10 +1787,11 @@
     "matchedId": "Single-Arm_Push-Up"
   },
   "chest.ring-push-up": {
-    "image": null,
-    "imageAlt": "Ring Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/chest/chest.ring-push-up.webp",
+    "imageAlt": "Ring Push-Up exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:ring-push-up"
   },
   "chest.suspension-trainer-chest-press": {
     "image": null,
@@ -1844,10 +1876,11 @@
     "matchedId": "Goblet_Squat"
   },
   "legs.heel-elevated-goblet-squat": {
-    "image": null,
-    "imageAlt": "Heel-Elevated Goblet Squat placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.heel-elevated-goblet-squat.webp",
+    "imageAlt": "Heel-Elevated Goblet Squat exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:goblet-squat"
   },
   "legs.hack-squat-machine": {
     "image": "exercises/legs/legs.hack-squat-machine.jpg",
@@ -1864,28 +1897,32 @@
     "matchedId": "Leg_Press"
   },
   "legs.bulgarian-split-squat": {
-    "image": null,
-    "imageAlt": "Bulgarian Split Squat placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.bulgarian-split-squat.webp",
+    "imageAlt": "Bulgarian Split Squat exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:bulgarian-split-squat"
   },
   "legs.walking-lunge": {
-    "image": null,
-    "imageAlt": "Walking Lunge placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.walking-lunge.webp",
+    "imageAlt": "Walking Lunge exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:walking-lunge"
   },
   "legs.reverse-lunge": {
-    "image": null,
-    "imageAlt": "Reverse Lunge placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.reverse-lunge.webp",
+    "imageAlt": "Reverse Lunge exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:reverse-lunge"
   },
   "legs.step-up": {
-    "image": null,
-    "imageAlt": "Dumbbell Step-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.step-up.webp",
+    "imageAlt": "Dumbbell Step-Up exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:db-step-up-to-balance"
   },
   "legs.leg-extension-machine": {
     "image": "exercises/legs/legs.leg-extension-machine.jpg",
@@ -1901,10 +1938,11 @@
     "imageStatus": "unavailable"
   },
   "legs.wall-sit": {
-    "image": null,
-    "imageAlt": "Wall Sit placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.wall-sit.webp",
+    "imageAlt": "Wall Sit exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:wall-sit"
   },
   "legs.cyclist-squat": {
     "image": null,
@@ -1913,10 +1951,11 @@
     "imageStatus": "unavailable"
   },
   "legs.sissy-squat-assisted": {
-    "image": null,
-    "imageAlt": "Assisted Sissy Squat placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.sissy-squat-assisted.webp",
+    "imageAlt": "Assisted Sissy Squat exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:sissy-squat"
   },
   "legs.barbell-romanian-deadlift-legs": {
     "image": "exercises/legs/legs.barbell-romanian-deadlift-legs.jpg",
@@ -1933,10 +1972,11 @@
     "matchedId": "Stiff-Legged_Dumbbell_Deadlift"
   },
   "legs.single-leg-romanian-deadlift": {
-    "image": null,
-    "imageAlt": "Single-Leg Romanian Deadlift placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.single-leg-romanian-deadlift.webp",
+    "imageAlt": "Single-Leg Romanian Deadlift exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:romanian-deadlift"
   },
   "legs.barbell-good-morning-legs": {
     "image": "exercises/legs/legs.barbell-good-morning-legs.jpg",
@@ -1967,10 +2007,11 @@
     "matchedId": "Standing_Leg_Curl"
   },
   "legs.nordic-hamstring-curl": {
-    "image": null,
-    "imageAlt": "Nordic Hamstring Curl placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/arms/legs.nordic-hamstring-curl.webp",
+    "imageAlt": "Nordic Hamstring Curl exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:nordic-hamstring-curl"
   },
   "legs.glute-ham-raise": {
     "image": "exercises/legs/legs.glute-ham-raise.jpg",
@@ -2014,16 +2055,18 @@
     "imageStatus": "unavailable"
   },
   "legs.single-leg-glute-bridge": {
-    "image": null,
-    "imageAlt": "Single-Leg Glute Bridge placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.single-leg-glute-bridge.webp",
+    "imageAlt": "Single-Leg Glute Bridge exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:single-leg-glute-bridge-hold"
   },
   "legs.single-leg-hip-thrust": {
-    "image": null,
-    "imageAlt": "Single-Leg Hip Thrust placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.single-leg-hip-thrust.webp",
+    "imageAlt": "Single-Leg Hip Thrust exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:single-leg-hip-thrust"
   },
   "legs.cable-glute-kickback": {
     "image": "exercises/legs/legs.cable-glute-kickback.jpg",
@@ -2057,10 +2100,11 @@
     "imageStatus": "unavailable"
   },
   "legs.banded-glute-bridge": {
-    "image": null,
-    "imageAlt": "Banded Glute Bridge placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.banded-glute-bridge.webp",
+    "imageAlt": "Banded Glute Bridge exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:banded-glute-bridge"
   },
   "legs.clamshell": {
     "image": null,
@@ -2135,10 +2179,11 @@
     "imageStatus": "unavailable"
   },
   "legs.jump-rope-calf-conditioning": {
-    "image": null,
-    "imageAlt": "Jump Rope placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.jump-rope-calf-conditioning.webp",
+    "imageAlt": "Jump Rope exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:jump-rope"
   },
   "legs.pogo-hops": {
     "image": null,
@@ -2167,16 +2212,18 @@
     "matchedId": "Cable_Hip_Adduction"
   },
   "legs.side-lying-hip-adduction": {
-    "image": null,
-    "imageAlt": "Side-Lying Hip Adduction placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.side-lying-hip-adduction.webp",
+    "imageAlt": "Side-Lying Hip Adduction exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:side-lying-hip-adduction-hold"
   },
   "legs.copenhagen-plank": {
-    "image": null,
-    "imageAlt": "Copenhagen Plank placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.copenhagen-plank.webp",
+    "imageAlt": "Copenhagen Plank exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:copenhagen-plank"
   },
   "legs.lateral-lunge-adductor": {
     "image": "exercises/shoulders/legs.lateral-lunge-adductor.png",
@@ -2186,10 +2233,11 @@
     "matchedId": "wger:1604"
   },
   "legs.sumo-squat-adductor": {
-    "image": null,
-    "imageAlt": "Sumo Squat placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.sumo-squat-adductor.webp",
+    "imageAlt": "Sumo Squat exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:sumo-squat"
   },
   "legs.hip-abduction-machine": {
     "image": "exercises/legs/legs.hip-abduction-machine.jpg",
@@ -2205,10 +2253,11 @@
     "imageStatus": "unavailable"
   },
   "legs.side-lying-leg-raise": {
-    "image": null,
-    "imageAlt": "Side-Lying Hip Abduction placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.side-lying-leg-raise.webp",
+    "imageAlt": "Side-Lying Hip Abduction exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:side-lying-hip-abduction"
   },
   "legs.band-lateral-walk": {
     "image": null,
@@ -2223,10 +2272,11 @@
     "imageStatus": "unavailable"
   },
   "legs.standing-band-hip-abduction": {
-    "image": null,
-    "imageAlt": "Standing Band Hip Abduction placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/legs/legs.standing-band-hip-abduction.webp",
+    "imageAlt": "Standing Band Hip Abduction exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:banded-standing-hip-abduction"
   },
   "shoulders.barbell-overhead-press": {
     "image": "exercises/shoulders/shoulders.barbell-overhead-press.jpg",
@@ -2292,10 +2342,11 @@
     "matchedId": "Arnold_Dumbbell_Press"
   },
   "shoulders.landmine-press": {
-    "image": null,
-    "imageAlt": "Landmine Press placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.landmine-press.webp",
+    "imageAlt": "Landmine Press exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:landmine-press"
   },
   "shoulders.half-kneeling-landmine-press": {
     "image": null,
@@ -2412,10 +2463,11 @@
     "matchedId": "Cable_Crossover"
   },
   "shoulders.face-pull-rope": {
-    "image": null,
-    "imageAlt": "Rope Cable Face Pull placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/back/shoulders.face-pull-rope.webp",
+    "imageAlt": "Rope Cable Face Pull exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:face-pull"
   },
   "shoulders.band-face-pull-shoulder": {
     "image": null,
@@ -2562,10 +2614,11 @@
     "matchedId": "wger:454"
   },
   "shoulders.feet-elevated-pike-push-up": {
-    "image": null,
-    "imageAlt": "Feet-Elevated Pike Push-Up placeholder",
-    "imageSource": "Unavailable",
-    "imageStatus": "unavailable"
+    "image": "exercises/shoulders/shoulders.feet-elevated-pike-push-up.webp",
+    "imageAlt": "Feet-Elevated Pike Push-Up exercise demonstration",
+    "imageSource": "RepDB (repdb.co)",
+    "imageStatus": "matched",
+    "matchedId": "repdb:pike-push-ups"
   },
   "shoulders.wall-walk": {
     "image": null,
