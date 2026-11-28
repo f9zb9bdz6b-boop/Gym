@@ -93,7 +93,7 @@ export function LiveWorkoutLogger() {
         setCompletedSummary(summary);
         addToast({
           title: 'Workout Completed!',
-          description: `Volume: ${summary.totalVolumeKg} kg · ~${summary.totalCaloriesBurned ?? 0} kcal${aiRes.usedGemini ? ' (Gemini)' : ''}`,
+          description: `~${summary.totalCaloriesBurned ?? 0} kcal burned${aiRes.usedGemini ? ' (Gemini)' : ''}`,
         });
       }
     } finally {
@@ -143,8 +143,8 @@ export function LiveWorkoutLogger() {
             <p className="text-base font-bold text-amber-400">~{completedSummary.totalCaloriesBurned ?? 0} kcal</p>
           </div>
           <div className="rounded-xl bg-zinc-900 p-3 border border-zinc-800">
-            <p className="text-[11px] text-zinc-400">Volume</p>
-            <p className="text-base font-bold text-lime-400">{completedSummary.totalVolumeKg} kg</p>
+            <p className="text-[11px] text-zinc-400">Sets Completed</p>
+            <p className="text-base font-bold text-lime-400">{completedSummary.totalSets}</p>
           </div>
           <div className="rounded-xl bg-zinc-900 p-3 border border-zinc-800">
             <p className="text-[11px] text-zinc-400">PRs</p>
@@ -182,7 +182,6 @@ export function LiveWorkoutLogger() {
   }, {});
 
   const completedSets = sessionSets.filter((s) => s.completed);
-  const totalVolume = completedSets.reduce((sum, s) => sum + s.weightKg * s.reps, 0);
   const dynamicTotalCalories = Math.round(
     completedSets.reduce(
       (sum, s) =>
@@ -210,7 +209,6 @@ export function LiveWorkoutLogger() {
             </div>
             <div className="flex flex-wrap items-center gap-3 text-xs text-zinc-400 mt-1">
               <span>Sets: <strong className="text-white">{completedSets.length}</strong></span>
-              <span>Volume: <strong className="text-lime-400">{Math.round(totalVolume)} kg</strong></span>
               <span className="inline-flex items-center gap-1">
                 <Flame className="h-3.5 w-3.5 text-amber-400" />
                 Est. Burned: <strong className="text-amber-400">~{totalCaloriesBurned} kcal</strong>

@@ -45,7 +45,7 @@ export function ProgressHub() {
   ).sort((a, b) => a.date.localeCompare(b.date));
 
   const totalWorkouts = sessions.length;
-  const totalVolume = sessions.reduce((s, w) => s + w.totalVolumeKg, 0);
+  const totalCaloriesBurned = sessions.reduce((s, w) => s + (w.totalCaloriesBurned ?? 0), 0);
   const totalPRs = sessions.reduce((s, w) => s + w.personalRecordsCount, 0);
 
   return (
@@ -77,8 +77,8 @@ export function ProgressHub() {
           <p className="text-2xl font-bold text-white mt-1">{totalWorkouts}</p>
         </Card>
         <Card>
-          <p className="text-xs text-zinc-400">Total Volume Lifted</p>
-          <p className="text-2xl font-bold text-lime-400 mt-1">{totalVolume.toLocaleString()} kg</p>
+          <p className="text-xs text-zinc-400">Total Calories Burned</p>
+          <p className="text-2xl font-bold text-lime-400 mt-1">~{totalCaloriesBurned.toLocaleString()} kcal</p>
         </Card>
         <Card>
           <p className="text-xs text-zinc-400">Personal Records</p>
@@ -132,14 +132,14 @@ export function ProgressHub() {
           <CardHeader>
             <div className="flex items-center gap-2">
               <Dumbbell className="h-4 w-4 text-lime-400" />
-              <CardTitle>Workout Volume (kg)</CardTitle>
+              <CardTitle>Workout Calories Burned (kcal)</CardTitle>
             </div>
             <Badge>{sessions.length} sessions</Badge>
           </CardHeader>
           <div className="h-64">
             {sessions.length === 0 ? (
               <div className="flex h-full items-center justify-center text-xs text-zinc-500">
-                Complete a workout to see volume trends.
+                Complete a workout to see calories burned.
               </div>
             ) : (
               <ResponsiveContainer width="100%" height="100%">
@@ -148,7 +148,7 @@ export function ProgressHub() {
                   <XAxis dataKey="date" stroke="#71717a" fontSize={11} />
                   <YAxis stroke="#71717a" fontSize={11} />
                   <Tooltip contentStyle={{ backgroundColor: '#18181b', borderColor: '#27272a', fontSize: '12px' }} />
-                  <Bar dataKey="totalVolumeKg" fill="#a3e635" radius={[6, 6, 0, 0]} name="Volume (kg)" />
+                  <Bar dataKey="totalCaloriesBurned" fill="#a3e635" radius={[6, 6, 0, 0]} name="Calories Burned (kcal)" />
                 </BarChart>
               </ResponsiveContainer>
             )}

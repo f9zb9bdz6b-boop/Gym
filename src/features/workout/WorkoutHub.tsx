@@ -301,7 +301,6 @@ export function WorkoutHub() {
                   <p className="text-xs text-zinc-400">{formatDate(s.date)}</p>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge variant="lime">{s.totalVolumeKg} kg volume</Badge>
                   <Badge variant="warning">~{s.totalCaloriesBurned ?? 0} kcal</Badge>
                   <Badge>{s.totalSets} sets</Badge>
                   {s.personalRecordsCount > 0 && <Badge variant="info">{s.personalRecordsCount} PRs</Badge>}
